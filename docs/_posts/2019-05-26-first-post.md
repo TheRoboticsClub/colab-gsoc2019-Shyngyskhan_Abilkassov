@@ -1,6 +1,7 @@
 ---
 layout: post
-title: About me and my project
+title: Week 0. Hello GSoC
+subtitle: A little bit about me and my project
 ---
 
 **In this post I'll introduce myself and tell about the project I'm going to work this summer.**
