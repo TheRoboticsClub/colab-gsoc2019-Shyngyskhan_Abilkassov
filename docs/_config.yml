@@ -14,10 +14,10 @@ baseurl: "/colab-gsoc2019-Shyngyskhan_Abilkassov"
 # Of course don't forget to change the username and projectname to YOUR username and project
 
 # Name of website
-title: My GSoC-2019 Blog
+title: My website
 
 # Short description of your site
-description: -- JDE Robotics
+description: A virtual proof that name is awesome!
 
 # --- Navigation bar options --- #
 
@@ -32,7 +32,7 @@ navbar-links:
 
 # Image to show in the navigation bar - image must be a square (width = height)
 # Remove this parameter if you don't want an image in the navbar
-avatar: "/img/logo.png"
+avatar: "/img/avatar-icon.png"
 
 # If you want to have an image logo in the top-left corner instead of the title text,
 # then specify the following parameter
@@ -64,7 +64,7 @@ footer-link-col: "#404040"
 # Change all these values or delete the ones you don't want.
 # Important: you must keep the "name" parameter, everything else you can remove
 author:
-  name: Shyngyskhan Abilkassov
+  name: Some Person
 
 # Select your active Social Network Links.
 # Uncomment the links you want to show in the footer and add your information to each link.
@@ -75,18 +75,18 @@ social-network-links:
   email: "s.abilkassov@gmail.com"
   facebook: abilkassov
   github: kurshakuz
-  # twitter: 
+  twitter: daattali
 #  reddit: yourname
-#  google-plus: 
-#  linkedin: 
+#  google-plus: +DeanAttali
+#  linkedin: daattali
 #  xing: yourname
-#  stackoverflow: ""
-#  snapchat: 
-#  instagram: 
-#  youtube: 
+#  stackoverflow: "3943160/daattali"
+#  snapchat: deanat78
+#  instagram: deanat78
+#  youtube: user/deanat78
 #  spotify: yourname
-#  telephone:
-#  steam: 
+#  telephone: +14159998888
+#  steam: deanat78
 #  twitch: yourname
 #  yelp: yourname
 
@@ -99,7 +99,7 @@ share-links-active:
 
 # How to display the link to the website in the footer
 # Remove this if you don't want a link in the footer
-url-pretty: "theroboticsclub.github.io/colab-gsoc2019-Shyngyskhan_Abilkassov/"  # eg. "deanattali.com/beautiful-jekyll"
+url-pretty: "MyWebsite.com"  # eg. "deanattali.com/beautiful-jekyll"
 
 # --- Web Statistics Section --- #
 
