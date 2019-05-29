@@ -1,0 +1,3 @@
+https://www.youtube.com/watch?v=T7X_p_KMwus - How to open a solidworks model in gazebo
+
+https://spectrum.ieee.org/robotics/robotics-software/three-engineers-hundreds-of-robots-one-warehouse - KIVA Robot information
