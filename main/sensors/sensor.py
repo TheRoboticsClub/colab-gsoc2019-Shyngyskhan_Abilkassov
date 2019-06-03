@@ -30,9 +30,9 @@ class Sensor(threading.Thread):
     def __init__(self, grid, pose3d, start):
         self.grid = grid
         self.pose3d = pose3d
-	self.grid.initPose(self.pose3d.getPose3d().x, 
-		       self.pose3d.getPose3d().y, 
-		       self.pose3d.getPose3d().yaw)
+        self.grid.initPose(self.pose3d.getPose3d().x,
+                           self.pose3d.getPose3d().y,
+                           self.pose3d.getPose3d().yaw)
 
         self.kill_event = threading.Event()
         self.thread = ThreadSensor(self, self.kill_event)
@@ -50,15 +50,13 @@ class Sensor(threading.Thread):
     def stop(self):
         self.kill_event.set()
 
-
     def update(self):
-	self.grid.updatePose(self.pose3d.getPose3d().x, 
-		         self.pose3d.getPose3d().y, 
-		         self.pose3d.getPose3d().yaw)
-        
+        self.grid.updatePose(self.pose3d.getPose3d().x,
+                             self.pose3d.getPose3d().y,
+                             self.pose3d.getPose3d().yaw)
+
     def setGetPathSignal(self, signal):
         self.getPathSig = signal
-
 
     def getPose3D(self):
         return self.pose3d.getPose3d()
@@ -70,4 +68,4 @@ class Sensor(threading.Thread):
         return self.pose3d.getPose3d().y
 
     def getRobotTheta(self):
-        return self.pose3d.getPose3d().yaw    
+        return self.pose3d.getPose3d().yaw

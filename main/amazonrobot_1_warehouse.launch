@@ -10,15 +10,13 @@
     <arg name="debug" value="false"/>
     <arg name="verbose" default="true"/>
   </include>
-  
-  <!--<node pkg="nodelet" type="nodelet" name="mobile_base_nodelet_manager" args="manager"/>
-  <node pkg="nodelet" type="nodelet" name="cmd_vel_mux"
-        args="load yocs_cmd_vel_mux/CmdVelMuxNodelet mobile_base_nodelet_manager">
-    <param name="yaml_cfg_file" value="$(find turtlebot_bringup)/param/mux.yaml" />
-    <remap from="cmd_vel_mux/output" to="mobile_base/commands/velocity"/>
+
+  <node pkg="laser_filters" type="scan_to_scan_filter_chain" name="laser_filter">
+    <rosparam command="load" file="./hokuyo_config.yaml" /> 
+    <remap from="scan" to="amazon_warehouse_robot/laser/scan" />
   </node>
-  
-  <node pkg="robot_state_publisher" type="robot_state_publisher" name="robot_state_publisher">
-    <param name="publish_frequency" type="double" value="30.0" />
-  </node>-->
+
+  <node pkg="tf" type="static_transform_publisher" name="laser_broadcaster" 
+    args="0.139000 0.000000 0.15 0.000000 0.000000 0.000000 /amazon_warehouse_robot/base /amazon_warehouse_robot/hokuyo_link 20" />
+
 </launch>

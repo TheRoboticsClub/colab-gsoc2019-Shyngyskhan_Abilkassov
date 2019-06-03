@@ -52,31 +52,30 @@ if __name__ == '__main__':
         print('ERROR: python2 globalNavigation.py [MAP CONFIG file] [YAML CONFIG file]')
         sys.exit(-1)
 
-    app = QApplication(sys.argv)
-    frame = MainWindow()
-    grid = Grid(frame)
+    app = QApplication(sys.argv) 
+    myGUI = MainWindow()
+
+    grid = Grid(myGUI)
+    
+    motors = PublisherMotors("/amazon_warehouse_robot/cmd_vel", 0.5, 0.1)
+    pose = ListenerPose3d("/amazon_warehouse_robot/odom")
+    vel = Velocity(0, 0, motors.getMaxV(), motors.getMaxW())
+    sensor = Sensor(grid, pose, True)
+    sensor.setGetPathSignal(myGUI.getPathSig)
+    
+    myGUI.setVelocity(vel)
+    myGUI.setGrid(grid)
+    myGUI.setSensor(sensor)
+    algorithm = MyAlgorithm(grid, sensor, vel)
+    myGUI.setAlgorithm(algorithm)
+    myGUI.show()
 
     removeMapFromArgs()
 
-    motors = PublisherMotors("/cmd_vel", 0.5, 0.1)
-    pose = ListenerPose3d("/odom")
-
-    vel = Velocity(0, 0, motors.getMaxV(), motors.getMaxW())
-
-    frame.setVelocity(vel)
-    sensor = Sensor(grid, pose, True)
-    sensor.setGetPathSignal(frame.getPathSig)
-    frame.setGrid(grid)
-    frame.setSensor(sensor)
-    algorithm = MyAlgorithm(grid, sensor, vel)
-    frame.setAlgorithm(algorithm)
-    frame.show()
-    
     t1 = ThreadMotors(motors, vel)
     t1.daemon = True
     t1.start()
-
-    t2 = ThreadGUI(frame)  
+    t2 = ThreadGUI(myGUI)  
     t2.daemon = True
     t2.start()
     
