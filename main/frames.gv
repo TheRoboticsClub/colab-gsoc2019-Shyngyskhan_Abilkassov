@@ -1,0 +1,15 @@
+digraph G {
+"amazon_warehouse_robot/base" -> "amazon_warehouse_robot/hokuyo_link"[label="Broadcaster: /base_to_laser\nAverage rate: 49.970 Hz\nMost recent transform: 1820.273 ( -0.016 sec old)\nBuffer length: 4.963 sec\n"];
+"amazon_warehouse_robot/odom" -> "amazon_warehouse_robot/base"[label="Broadcaster: /gazebo\nAverage rate: 10.204 Hz\nMost recent transform: 1820.200 ( 0.057 sec old)\nBuffer length: 4.900 sec\n"];
+"map" -> "amazon_warehouse_robot/odom"[label="Broadcaster: /map_to_odom\nAverage rate: 10.192 Hz\nMost recent transform: 1820.349 ( -0.092 sec old)\nBuffer length: 4.906 sec\n"];
+"amazon_warehouse_robot/amazon_warehouse_robot::chassis" -> "amazon_warehouse_robot/amazon_warehouse_robot::left_wheel"[label="Broadcaster: /gazebo\nAverage rate: 10.202 Hz\nMost recent transform: 1820.201 ( 0.056 sec old)\nBuffer length: 4.901 sec\n"];
+"amazon_warehouse_robot/amazon_warehouse_robot::chassis" -> "amazon_warehouse_robot/amazon_warehouse_robot::right_wheel"[label="Broadcaster: /gazebo\nAverage rate: 10.202 Hz\nMost recent transform: 1820.201 ( 0.056 sec old)\nBuffer length: 4.901 sec\n"];
+edge [style=invis];
+ subgraph cluster_legend { style=bold; color=black; label ="view_frames Result";
+"Recorded at time: 1820.257"[ shape=plaintext ] ;
+ }->"amazon_warehouse_robot/amazon_warehouse_robot::chassis";
+edge [style=invis];
+ subgraph cluster_legend { style=bold; color=black; label ="view_frames Result";
+"Recorded at time: 1820.257"[ shape=plaintext ] ;
+ }->"map";
+}

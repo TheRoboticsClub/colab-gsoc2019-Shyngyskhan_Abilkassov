@@ -15,3 +15,12 @@ http://www.theconstructsim.com/ros-projects-exploring-ros-using-2-wheeled-robot-
 
 
 rosrun map_server map_server map.yaml
+
+rosrun amcl amcl scan:=scan_filtered _odom_frame:=amazon_warehouse_robot/odom use_map_topic:=true
+rosrun amcl amcl scan:=/amazon_warehouse_robot/laser/scan _odom_frame:=/amazon_warehouse_robot/odom
+rosrun map_server map_server map.yaml
+
+
+rosrun rqt_graph rqt_graph
+rosrun tf view_frames
+
