@@ -8,6 +8,7 @@ from PyQt5 import QtGui, QtCore
 from PyQt5.QtWidgets import QWidget, QLabel
 from PyQt5.QtCore import QPointF
 import cv2
+import yaml
 
 class Map(QWidget):
     
@@ -22,6 +23,7 @@ class Map(QWidget):
         self.lastPos = None
         self.lastDest = None
 
+        self.palettesList = yaml.load(open('./gui/palettes_coords.yaml'))["coords"]
 
     def readConfFile(self):
         lines = None
@@ -72,12 +74,23 @@ class Map(QWidget):
         print("Destiny: ", x, ", ", y)
         rX, rY = self.parent.grid.gridToWorld(x,y) 
         print("WORLD: ", rX, ", ", rY)
+
+        # centered_rX, centered_rY = self.coordToClosestPalette(rX, rY)
+
         self.parent.grid.setDestiny(x, y)
         self.parent.grid.resetPath()
         self.parent.grid.resetGrid()
         self.parent.setDestinyXYValues("{0:.2f}".format(rX),"{0:.2f}".format(rY))
 
-
+    def coordToClosestPalette(self, rX, rY):
+        for coordinate in self.palettesList:
+            if (abs(rX - coordinate['x']) < 0.5):
+                # print("x axis found")
+                if (abs(rY - coordinate['y']) < 1):
+                    # print("y axis found")
+                    print("Closest palette: ", coordinate['x'], ", ", coordinate['y'])
+                    return coordinate['x'], coordinate['y']
+        return 0, 0
 
     def setPainterSettings(self, painter, color, width):
         pen = QtGui.QPen(color)
@@ -143,9 +156,15 @@ class Map(QWidget):
         copy = self.pixmap.copy()
         painter = self.getPainter(copy)
 
+        print("DEST: ", dest)
         if dest != None:
             self.setPainterSettings(painter, QtCore.Qt.red, 3)
-            self.paintDestiny(painter, dest)
+            rX, rY = self.parent.grid.gridToWorld(dest[0], dest[1])
+            centered_rX, centered_rY = self.coordToClosestPalette(rX, rY)
+            
+            new_dest = self.parent.grid.worldToGrid(centered_rX, centered_rY)
+
+            self.paintDestiny(painter, new_dest)
 
         self.setPainterSettings(painter, QtCore.Qt.green, 3)
         self.paintPath(painter, path)
