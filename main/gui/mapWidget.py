@@ -82,11 +82,11 @@ class Map(QWidget):
         self.parent.grid.resetGrid()
         self.parent.setDestinyXYValues("{0:.2f}".format(rX),"{0:.2f}".format(rY))
 
-    def coordToClosestPalette(self, rX, rY):
+    def coordToClosestPalette(self, x, y):
         for coordinate in self.palettesList:
-            if (abs(rX - coordinate['x']) < 0.5):
+            if (abs(x - coordinate['x']) < 10):
                 # print("x axis found")
-                if (abs(rY - coordinate['y']) < 1):
+                if (abs(y - coordinate['y']) < 10):
                     # print("y axis found")
                     print("Closest palette: ", coordinate['x'], ", ", coordinate['y'])
                     return coordinate['x'], coordinate['y']
@@ -156,15 +156,12 @@ class Map(QWidget):
         copy = self.pixmap.copy()
         painter = self.getPainter(copy)
 
-        print("DEST: ", dest)
         if dest != None:
-            self.setPainterSettings(painter, QtCore.Qt.red, 3)
-            rX, rY = self.parent.grid.gridToWorld(dest[0], dest[1])
-            centered_rX, centered_rY = self.coordToClosestPalette(rX, rY)
-            
-            new_dest = self.parent.grid.worldToGrid(centered_rX, centered_rY)
+            # self.setPainterSettings(painter, QtCore.Qt.red, 3)
+            # new_dest = self.coordToClosestPalette(dest[0], dest[1])
+            print("DEST: ", dest)
 
-            self.paintDestiny(painter, new_dest)
+            self.paintDestiny(painter, dest)
 
         self.setPainterSettings(painter, QtCore.Qt.green, 3)
         self.paintPath(painter, path)
