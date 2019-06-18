@@ -75,8 +75,6 @@ class Map(QWidget):
         rX, rY = self.parent.grid.gridToWorld(x,y) 
         print("WORLD: ", rX, ", ", rY)
 
-        # centered_rX, centered_rY = self.coordToClosestPalette(rX, rY)
-
         self.parent.grid.setDestiny(x, y)
         self.parent.grid.resetPath()
         self.parent.grid.resetGrid()
@@ -90,7 +88,7 @@ class Map(QWidget):
                     # print("y axis found")
                     print("Closest palette: ", coordinate['x'], ", ", coordinate['y'])
                     return coordinate['x'], coordinate['y']
-        return 0, 0
+        return (200, 141)
 
     def setPainterSettings(self, painter, color, width):
         pen = QtGui.QPen(color)
@@ -157,11 +155,18 @@ class Map(QWidget):
         painter = self.getPainter(copy)
 
         if dest != None:
-            # self.setPainterSettings(painter, QtCore.Qt.red, 3)
-            # new_dest = self.coordToClosestPalette(dest[0], dest[1])
-            print("DEST: ", dest)
+            self.setPainterSettings(painter, QtCore.Qt.red, 3)
 
-            self.paintDestiny(painter, dest)
+            if ((dest[0] > 310) and (dest[1] > 95) and (dest[1] < 185)):
+                print("Going to pick-up room")
+                self.paintDestiny(painter, dest)
+            elif ((dest[1] > 255) and (dest[0] < 315) and (dest[0] > 85)):
+                print("Going to charging point")
+                self.paintDestiny(painter, dest)
+            else:
+                newDest = self.coordToClosestPalette(dest[0], dest[1])
+                print("DEST: ", newDest)
+                self.paintDestiny(painter, newDest)
 
         self.setPainterSettings(painter, QtCore.Qt.green, 3)
         self.paintPath(painter, path)
@@ -170,9 +175,12 @@ class Map(QWidget):
         self.paintPosition(pos[0], pos[1], grid.getAngle(), copy, painter)
 
         self.mapWidget.setPixmap(copy)
+        
+        self.lastDest = dest
+
         self.lock.release()
         painter.end()
 
         self.lastPos = pos
-        self.lastDest = dest
+        
         grid.pathFinded = False
