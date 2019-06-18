@@ -8,6 +8,7 @@ from PyQt5 import QtGui, QtCore
 from PyQt5.QtWidgets import QWidget, QLabel
 from PyQt5.QtCore import QPointF
 import cv2
+import yaml
 
 class Map(QWidget):
     
@@ -22,6 +23,7 @@ class Map(QWidget):
         self.lastPos = None
         self.lastDest = None
 
+        self.palettesList = yaml.load(open('./gui/palettes_coords.yaml'))["coords"]
 
     def readConfFile(self):
         lines = None
@@ -72,12 +74,21 @@ class Map(QWidget):
         print("Destiny: ", x, ", ", y)
         rX, rY = self.parent.grid.gridToWorld(x,y) 
         print("WORLD: ", rX, ", ", rY)
+
         self.parent.grid.setDestiny(x, y)
         self.parent.grid.resetPath()
         self.parent.grid.resetGrid()
         self.parent.setDestinyXYValues("{0:.2f}".format(rX),"{0:.2f}".format(rY))
 
-
+    def coordToClosestPalette(self, x, y):
+        for coordinate in self.palettesList:
+            if (abs(x - coordinate['x']) < 10):
+                # print("x axis found")
+                if (abs(y - coordinate['y']) < 10):
+                    # print("y axis found")
+                    print("Closest palette: ", coordinate['x'], ", ", coordinate['y'])
+                    return coordinate['x'], coordinate['y']
+        return (200, 141)
 
     def setPainterSettings(self, painter, color, width):
         pen = QtGui.QPen(color)
@@ -145,7 +156,17 @@ class Map(QWidget):
 
         if dest != None:
             self.setPainterSettings(painter, QtCore.Qt.red, 3)
-            self.paintDestiny(painter, dest)
+
+            if ((dest[0] > 310) and (dest[1] > 95) and (dest[1] < 185)):
+                print("Going to pick-up room")
+                self.paintDestiny(painter, dest)
+            elif ((dest[1] > 255) and (dest[0] < 315) and (dest[0] > 85)):
+                print("Going to charging point")
+                self.paintDestiny(painter, dest)
+            else:
+                newDest = self.coordToClosestPalette(dest[0], dest[1])
+                print("DEST: ", newDest)
+                self.paintDestiny(painter, newDest)
 
         self.setPainterSettings(painter, QtCore.Qt.green, 3)
         self.paintPath(painter, path)
@@ -154,9 +175,12 @@ class Map(QWidget):
         self.paintPosition(pos[0], pos[1], grid.getAngle(), copy, painter)
 
         self.mapWidget.setPixmap(copy)
+        
+        self.lastDest = dest
+
         self.lock.release()
         painter.end()
 
         self.lastPos = pos
-        self.lastDest = dest
+        
         grid.pathFinded = False
