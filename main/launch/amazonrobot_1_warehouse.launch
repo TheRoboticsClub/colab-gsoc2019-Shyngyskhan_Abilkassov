@@ -20,10 +20,10 @@
     args="0.139000 0.000000 0.15 0.000000 0.000000 0.000000 /amazon_warehouse_robot/base /amazon_warehouse_robot/hokuyo_link 20" />
 
   <node pkg="tf" type="static_transform_publisher" name="map_to_odom" 
-    args="0 0 0.1 0 0 0 1.0 /map /amazon_warehouse_robot/odom 100" />
+    args="0 0 0.05 0 0 0 /map /amazon_warehouse_robot/odom 100" />
 
   <node pkg="tf" type="static_transform_publisher" name="base_to_chassis" 
-    args="0 0 0.1 0 0 0 1.0  /amazon_warehouse_robot/base /amazon_warehouse_robot/amazon_warehouse_robot::chassis 100" />
+    args="0 0 0 0 0 0  /amazon_warehouse_robot/base /amazon_warehouse_robot/amazon_warehouse_robot::chassis 100" />
 
   <!-- <node pkg="tf" type="static_transform_publisher" name="merger" 
     args="0 0 0 0 0 0 0 /amazon_warehouse_robot/base /amazon_warehouse_robot/amazon_warehouse_robot::chassis 100" /> -->
