@@ -35,6 +35,8 @@ from sensors.grid import Grid
 
 from interfaces.motors import PublisherMotors		
 from interfaces.pose3d import ListenerPose3d
+from interfaces.path import ListenerPath
+from interfaces.goal import PublisherGoal
 
 import signal
 
@@ -59,6 +61,10 @@ if __name__ == '__main__':
     
     motors = PublisherMotors("/amazon_warehouse_robot/cmd_vel", 0.5, 0.1)
     pose = ListenerPose3d("/amazon_warehouse_robot/odom")
+
+    pathListener = ListenerPath("/move_base/NavfnROS/plan")
+    goalListener = PublisherGoal("/move_base/current_goal")
+
     vel = Velocity(0, 0, motors.getMaxV(), motors.getMaxW())
     sensor = Sensor(grid, pose, True)
     sensor.setGetPathSignal(myGUI.getPathSig)
@@ -66,7 +72,7 @@ if __name__ == '__main__':
     myGUI.setVelocity(vel)
     myGUI.setGrid(grid)
     myGUI.setSensor(sensor)
-    algorithm = MyAlgorithm(grid, sensor, vel)
+    algorithm = MyAlgorithm(grid, sensor, vel, pathListener, goalListener)
     myGUI.setAlgorithm(algorithm)
     myGUI.show()
 

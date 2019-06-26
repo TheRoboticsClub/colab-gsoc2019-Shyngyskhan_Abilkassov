@@ -182,3 +182,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
     def setDestinyXYValues(self,newX,newY):
         self.XValue.setText(str(newX))
         self.YValue.setText(str(newY))
+
+    def setPositionXYValues(self, newX, newY):
+        self.VValue.setText(str(newX))
+        self.WValue.setText(str(newY))
