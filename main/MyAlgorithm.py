@@ -7,9 +7,12 @@ import sys
 import threading
 import time
 from datetime import datetime
-from ompl_solution.Point2DPlanning import Plane2DEnvironment
 import sys
-from purePursuit import State, calc_target_index, pure_pursuit_control
+
+from ompl_solution.Point2DPlanning import Plane2DEnvironment
+
+
+from interfaces.move_base_client import movebase_client
 
 time_cycle = 80
 
@@ -106,9 +109,13 @@ class MyAlgorithm(threading.Thread):
         destInWorld = self.grid.gridToWorld(dest[0], dest[1])
 
         # print destInWorld
-        self.goal.setPose(destInWorld[0], destInWorld[1])
+        # self.goal.setPose(destInWorld[0], destInWorld[1])
+
+        movebase_client(destInWorld[0], destInWorld[1])
 
         pathArray = self.path.getPath()
+
+        # print pathArray
         pathlist = [[] for i in range(2)]
         num = 0
         pathX_old = -1
@@ -129,6 +136,7 @@ class MyAlgorithm(threading.Thread):
         self.grid.setPathFinded()
 
         npPathList = np.array(pathlist)
+        # print pathlist
         print npPathList
         self.grid.setWorldPathArray(npPathList)
 

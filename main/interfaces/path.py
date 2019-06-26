@@ -63,6 +63,3 @@ class ListenerPath:
         self.lock.release()
         
         return path
-
-
-# path = ListenerPath("/move_base/NavfnROS/plan")
