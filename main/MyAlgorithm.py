@@ -7,10 +7,7 @@ import sys
 import threading
 import time
 from datetime import datetime
-import sys
-
-from ompl_solution.Point2DPlanning import Plane2DEnvironment
-
+import yaml
 
 from interfaces.move_base_client import movebase_client
 
@@ -42,6 +39,7 @@ class MyAlgorithm(threading.Thread):
         self.path = pathListener
         self.goal = goalListener
         sensor.getPathSig.connect(self.generatePath)
+        self.palettesList = yaml.load(open('./palettes_coords.yaml'))["coords"]
 
         self.stop_event = threading.Event()
         self.kill_event = threading.Event()
@@ -85,13 +83,14 @@ class MyAlgorithm(threading.Thread):
         Call to grid.setPath(path) method for setting the path. """
     def generatePath(self, list):
         print("LOOKING FOR SHORTER PATH")
-
         dest = self.grid.getDestiny()
-        destInWorld = self.grid.gridToWorld(dest[0], dest[1])
+        validDest = self.destToValidLoc(dest[0], dest[1])
+        # print dest
+        # print validDest
+    
+        destInWorld = self.grid.gridToWorld(validDest[0], validDest[1])
 
-        # print destInWorld
         # self.goal.setPose(destInWorld[0], destInWorld[1])
-
         movebase_client(destInWorld[0], destInWorld[1])
 
         pathArray = self.path.getPath()
@@ -124,16 +123,24 @@ class MyAlgorithm(threading.Thread):
         # print npPathList[1].shape
         self.grid.setWorldPathArray(npPathList)
 
-    def coordToClosestPalette(self, x, y):
-        for coordinate in self.palettesList:
-            if (abs(x - coordinate['x']) < 10):
-                # print("x axis found")
-                if (abs(y - coordinate['y']) < 10):
-                    # print("y axis found")
-                    print("Closest palette: ", coordinate['x'], ", ", coordinate['y'])
-                    return coordinate['x'], coordinate['y']
-        return (200, 141)
+    def destToValidLoc(self, x, y):
+        gridPos = self.grid.getPose()
 
+        if ((x > 310) and (y > 125) and (y < 185)):
+            print("Going to pick-up room")
+            return x, y
+        elif ((y > 255) and (x < 315) and (x > 85)):
+            print("Going to charging point")
+            return x, y
+        else:
+            for coordinate in self.palettesList:
+                if (abs(x - coordinate['x']) < 10):
+                    if (abs(y - coordinate['y']) < 10):
+                        print("Closest palette: ", coordinate['x'], ", ", coordinate['y'])
+                        print("Approximating to closest palette...")
+                        return coordinate['x'], coordinate['y']
+            print("Not valid dest, remaining at rest")
+            return gridPos[0], gridPos[1]
 
     """ Write in this method the code necessary for going to the desired place,
         once you have generated the shorter path.

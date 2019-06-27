@@ -8,7 +8,6 @@ from PyQt5 import QtGui, QtCore
 from PyQt5.QtWidgets import QWidget, QLabel
 from PyQt5.QtCore import QPointF
 import cv2
-import yaml
 
 class Map(QWidget):
     
@@ -22,8 +21,6 @@ class Map(QWidget):
 
         self.lastPos = None
         self.lastDest = None
-
-        self.palettesList = yaml.load(open('./gui/palettes_coords.yaml'))["coords"]
 
     def readConfFile(self):
         lines = None
@@ -79,16 +76,6 @@ class Map(QWidget):
         self.parent.grid.resetPath()
         self.parent.grid.resetGrid()
         self.parent.setDestinyXYValues("{0:.2f}".format(rX),"{0:.2f}".format(rY))
-
-    # def coordToClosestPalette(self, x, y):
-    #     for coordinate in self.palettesList:
-    #         if (abs(x - coordinate['x']) < 10):
-    #             # print("x axis found")
-    #             if (abs(y - coordinate['y']) < 10):
-    #                 # print("y axis found")
-    #                 print("Closest palette: ", coordinate['x'], ", ", coordinate['y'])
-    #                 return coordinate['x'], coordinate['y']
-    #     return (200, 141)
 
     def setPainterSettings(self, painter, color, width):
         pen = QtGui.QPen(color)
