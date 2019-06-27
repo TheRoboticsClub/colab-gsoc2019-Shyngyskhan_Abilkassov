@@ -83,25 +83,6 @@ class MyAlgorithm(threading.Thread):
         The destiny is chosen in the GUI, making double click in the map.
         This method will be call when you press the Generate Path button.
         Call to grid.setPath(path) method for setting the path. """
-    def get2DoubleArrayFromPath(self):
-        pathArray = self.path.getPath()
-        pathlist = [[] for i in range(2)]
-
-        pathX_old = -1
-        pathY_old = -1
-
-        for i in range(len(pathArray)):
-            pathX = pathArray[i].pose.position.x
-            pathY = pathArray[i].pose.position.y
-
-            if pathX != pathX_old or pathY != pathY_old:
-                pathlist[0].append(pathX)
-                pathlist[1].append(pathY)
-                pathX_old = pathX
-                pathY_old = pathY
-
-        return pathlist
-
     def generatePath(self, list):
         print("LOOKING FOR SHORTER PATH")
 
@@ -126,7 +107,9 @@ class MyAlgorithm(threading.Thread):
             pathY = pathArray[i].pose.position.y
 
             if pathX != pathX_old or pathY != pathY_old:
-                self.grid.setPathVal(int(pathX), int(pathY), num)
+                tmp = self.grid.worldToGrid(pathX, pathY)
+                self.grid.setPathVal(int(tmp[0]), int(tmp[1]), num)
+
                 pathlist[0].append(pathX)
                 pathlist[1].append(pathY)
                 pathX_old = pathX
@@ -137,8 +120,19 @@ class MyAlgorithm(threading.Thread):
 
         npPathList = np.array(pathlist)
         # print pathlist
-        print npPathList
+        # print npPathList[0].shape
+        # print npPathList[1].shape
         self.grid.setWorldPathArray(npPathList)
+
+    def coordToClosestPalette(self, x, y):
+        for coordinate in self.palettesList:
+            if (abs(x - coordinate['x']) < 10):
+                # print("x axis found")
+                if (abs(y - coordinate['y']) < 10):
+                    # print("y axis found")
+                    print("Closest palette: ", coordinate['x'], ", ", coordinate['y'])
+                    return coordinate['x'], coordinate['y']
+        return (200, 141)
 
 
     """ Write in this method the code necessary for going to the desired place,
