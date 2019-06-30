@@ -8,8 +8,10 @@ import threading
 import time
 from datetime import datetime
 import yaml
+import rospy
+from std_msgs.msg import Float32
 
-from interfaces.move_base_client import movebase_client
+from interfaces.move_base_client import MoveBaseClient
 
 time_cycle = 80
 
@@ -40,6 +42,11 @@ class MyAlgorithm(threading.Thread):
         self.goal = goalListener
         sensor.getPathSig.connect(self.generatePath)
         self.palettesList = yaml.load(open('./palettes_coords.yaml'))["coords"]
+        self.jointForce = 0
+        self.pub = rospy.Publisher('amazon_warehouse_robot/joint_cmd', Float32, queue_size=10)
+        self.client = MoveBaseClient()
+
+        self.isFinished = False
 
         self.stop_event = threading.Event()
         self.kill_event = threading.Event()
@@ -87,15 +94,18 @@ class MyAlgorithm(threading.Thread):
         validDest = self.destToValidLoc(dest[0], dest[1])
         # print dest
         # print validDest
-    
+
+        # destInWorld = self.grid.gridToWorld(dest[0], dest[1])
         destInWorld = self.grid.gridToWorld(validDest[0], validDest[1])
 
         # self.goal.setPose(destInWorld[0], destInWorld[1])
-        movebase_client(destInWorld[0], destInWorld[1])
+        self.client.send_goal_to_client(destInWorld[0], destInWorld[1])
 
+        self.drawPath()
+
+    def drawPath(self):
         pathArray = self.path.getPath()
 
-        # print pathArray
         pathlist = [[] for i in range(2)]
         num = 0
         pathX_old = -1
@@ -118,10 +128,18 @@ class MyAlgorithm(threading.Thread):
         self.grid.setPathFinded()
 
         npPathList = np.array(pathlist)
-        # print pathlist
-        # print npPathList[0].shape
-        # print npPathList[1].shape
         self.grid.setWorldPathArray(npPathList)
+
+
+    def liftDropExecute(self):
+        if self.jointForce != 25:
+            self.jointForce = 25
+            self.pub.publish(self.jointForce)
+            print ('Platform Lifted!')
+        else:
+            self.jointForce = 0
+            self.pub.publish(self.jointForce)
+            print ('Platform Dropped!')
 
     def destToValidLoc(self, x, y):
         gridPos = self.grid.getPose()
@@ -146,9 +164,16 @@ class MyAlgorithm(threading.Thread):
         once you have generated the shorter path.
         This method will be periodically called after you press the GO! button. """
     def execute(self):
-        # if self.gotoPointChecked:
-        #     self.gotoPoint()
-        # else:
-        #     self.moveOnPath()
+        # print("Starting")
 
-        print("Starting")
+        if ((self.client.get_result_from_client() != None) and (self.isFinished == False)):
+            self.liftDropExecute()
+
+            destInWorld = self.grid.gridToWorld(355, 150)
+            self.client.send_goal_to_client(destInWorld[0], destInWorld[1])
+            self.drawPath()
+
+            self.isFinished = True
+
+
+        

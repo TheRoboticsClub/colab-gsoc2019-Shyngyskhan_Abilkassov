@@ -147,8 +147,8 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         self.VValue.setText(str(-newV))
         myW = newW * self.vel.getMaxW()
         myV = -newV * self.vel.getMaxV()
-        self.vel.setV(myV)
-        self.vel.setW(myW)
+        # self.vel.setV(myV)
+        # self.vel.setW(myW)
 
     def getPlanner(self):
         planner = self.plannerBox.currentText()

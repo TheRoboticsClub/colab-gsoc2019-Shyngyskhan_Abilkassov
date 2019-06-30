@@ -59,7 +59,7 @@ if __name__ == '__main__':
 
     grid = Grid(myGUI)
     
-    motors = PublisherMotors("/amazon_warehouse_robot/cmd_vel", 0.5, 0.1)
+    motors = PublisherMotors("/amazon_warehouse_robot/cmd_vel", 1, 0.3)
     pose = ListenerPose3d("/amazon_warehouse_robot/odom")
 
     pathListener = ListenerPath("/move_base/NavfnROS/plan")
