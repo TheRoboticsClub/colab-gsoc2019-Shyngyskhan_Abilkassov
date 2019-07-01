@@ -93,11 +93,9 @@ class MyAlgorithm(threading.Thread):
         print("LOOKING FOR SHORTER PATH")
         dest = self.grid.getDestiny()
         validDest = self.destToValidLoc(dest[0], dest[1])
-        # print dest
-        # print validDest
 
-        destInWorld = self.grid.gridToWorld(dest[0], dest[1])
-        # destInWorld = self.grid.gridToWorld(validDest[0], validDest[1])
+        # destInWorld = self.grid.gridToWorld(dest[0], dest[1])
+        destInWorld = self.grid.gridToWorld(validDest[0], validDest[1])
 
         # self.goal.setPose(destInWorld[0], destInWorld[1])
         self.client.send_goal_to_client(destInWorld[0], destInWorld[1])
@@ -168,6 +166,8 @@ class MyAlgorithm(threading.Thread):
         # print("Starting")
 
         if ((self.client.get_result_from_client() != None) and (self.isDelivered == False) and (self.isFinished == False)):
+            print("Reached palette, lifting it, and going to drop point")
+
             self.liftDropExecute()
 
             destInWorld = self.grid.gridToWorld(355, 150)
@@ -177,9 +177,11 @@ class MyAlgorithm(threading.Thread):
             self.isDelivered = True
 
         if ((self.client.get_result_from_client() != None) and (self.isDelivered == True) and (self.isFinished == False)):
+            print("Reached drop point, leaving palette, and going to charging point")
+
             self.liftDropExecute()
 
-            destInWorld = self.grid.gridToWorld(355, 150)
+            destInWorld = self.grid.gridToWorld(230, 265)
             self.client.send_goal_to_client(destInWorld[0], destInWorld[1])
             self.drawPath()
 
