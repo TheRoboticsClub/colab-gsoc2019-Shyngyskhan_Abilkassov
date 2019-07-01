@@ -6,9 +6,10 @@ class MoveBaseClient():
     def __init__(self):
         self.client = actionlib.SimpleActionClient('move_base', MoveBaseAction)
         self.client.wait_for_server()
-        self.goal =  MoveBaseGoal()
+        self.goal = None
 
     def send_goal_to_client(self, posX, posY):
+        self.goal = MoveBaseGoal()
         self.goal.target_pose.header.frame_id = "map"
         self.goal.target_pose.header.stamp = rospy.Time.now()
         self.goal.target_pose.pose.position.x = posX
@@ -17,7 +18,10 @@ class MoveBaseClient():
 
         self.client.send_goal(self.goal)
         print("Goal Sent")
-        self.client.wait_for_result(rospy.Duration(0.8))
+        self.client.wait_for_result(rospy.Duration(1))
 
     def get_result_from_client(self):
-        return self.client.get_result()
+        if (self.goal):
+            return self.client.get_result()
+        else:
+            return None

@@ -93,14 +93,18 @@ class MyAlgorithm(threading.Thread):
         print("LOOKING FOR SHORTER PATH")
         dest = self.grid.getDestiny()
         validDest = self.destToValidLoc(dest[0], dest[1])
+        pose = self.grid.getPose() 
 
-        # destInWorld = self.grid.gridToWorld(dest[0], dest[1])
-        destInWorld = self.grid.gridToWorld(validDest[0], validDest[1])
+        if ((pose[0] == validDest[0])) and ((pose[1] == validDest[1])):
+            print("Not valid dest, remaining at rest")
+        else:
+            # destInWorld = self.grid.gridToWorld(dest[0], dest[1])
+            destInWorld = self.grid.gridToWorld(validDest[0], validDest[1])
+    
+            # self.goal.setPose(destInWorld[0], destInWorld[1])
+            self.client.send_goal_to_client(destInWorld[0], destInWorld[1])
 
-        # self.goal.setPose(destInWorld[0], destInWorld[1])
-        self.client.send_goal_to_client(destInWorld[0], destInWorld[1])
-
-        self.drawPath()
+            self.drawPath()
 
     def drawPath(self):
         pathArray = self.path.getPath()
@@ -144,19 +148,18 @@ class MyAlgorithm(threading.Thread):
         gridPos = self.grid.getPose()
 
         if ((x > 310) and (y > 125) and (y < 185)):
-            print("Going to pick-up room")
+            # print("Going to pick-up room")
             return x, y
         elif ((y > 255) and (x < 315) and (x > 85)):
-            print("Going to charging point")
+            # print("Going to charging point")
             return x, y
         else:
             for coordinate in self.palettesList:
                 if (abs(x - coordinate['x']) < 10):
                     if (abs(y - coordinate['y']) < 10):
-                        print("Closest palette: ", coordinate['x'], ", ", coordinate['y'])
-                        print("Approximating to closest palette...")
+                        # print("Closest palette: ", coordinate['x'], ", ", coordinate['y'])
+                        # print("Approximating to closest palette...")
                         return coordinate['x'], coordinate['y']
-            print("Not valid dest, remaining at rest")
             return gridPos[0], gridPos[1]
 
     """ Write in this method the code necessary for going to the desired place,
@@ -164,17 +167,21 @@ class MyAlgorithm(threading.Thread):
         This method will be periodically called after you press the GO! button. """
     def execute(self):
         # print("Starting")
+        dest = self.grid.getDestiny()
+        pose = self.grid.getPose()
+        validDest = self.destToValidLoc(dest[0], dest[1])
 
         if ((self.client.get_result_from_client() != None) and (self.isDelivered == False) and (self.isFinished == False)):
-            print("Reached palette, lifting it, and going to drop point")
-
-            self.liftDropExecute()
-
-            destInWorld = self.grid.gridToWorld(355, 150)
-            self.client.send_goal_to_client(destInWorld[0], destInWorld[1])
-            self.drawPath()
-
-            self.isDelivered = True
+        
+            if ((pose[0] - validDest[0]) < 2) and ((pose[1] - validDest[1]) < 2):
+                print("Reached palette, lifting it, and going to drop point")
+                self.liftDropExecute()
+                destInWorld = self.grid.gridToWorld(355, 150)
+                self.client.send_goal_to_client(destInWorld[0], destInWorld[1])
+                self.drawPath()
+                self.isDelivered = True
+            else:
+                print ("Reached given point")
 
         if ((self.client.get_result_from_client() != None) and (self.isDelivered == True) and (self.isFinished == False)):
             print("Reached drop point, leaving palette, and going to charging point")
@@ -187,4 +194,69 @@ class MyAlgorithm(threading.Thread):
 
             self.isFinished = True
 
-        # if ((self.client.get_result_from_client() != None) and (self.isDelivered == True) and (self.isFinished == False)):
+    # if ((self.client.get_result_from_client() != None) and (self.isDelivered == True) and (self.isFinished == False)):
+
+
+    # def destToValidLoc(self, x, y):
+    #     gridPos = self.grid.getPose()
+
+    #     if ((x > 310) and (y > 125) and (y < 185)):
+    #         print("Going to pick-up room")
+    #         self.isPaletteChosen = False
+    #         return x, y
+    #     elif ((y > 255) and (x < 315) and (x > 85)):
+    #         print("Going to charging point")
+    #         self.isPaletteChosen = False
+    #         return x, y
+    #     else:
+    #         for coordinate in self.palettesList:
+    #             if (abs(x - coordinate['x']) < 10):
+    #                 if (abs(y - coordinate['y']) < 10):
+    #                     print("Closest palette: ", coordinate['x'], ", ", coordinate['y'])
+    #                     print("Approximating to closest palette...")
+    #                     self.isPaletteChosen = True
+    #                     return coordinate['x'], coordinate['y']
+    #         print("Not valid dest, remaining at rest")
+    #         self.isPaletteChosen = False
+    #         return gridPos[0], gridPos[1]
+
+    # """ Write in this method the code necessary for going to the desired place,
+    #     once you have generated the shorter path.
+    #     This method will be periodically called after you press the GO! button. """
+    # def execute(self):
+    #     # print("Starting")      
+    #     if (self.grid.getDestiny()):
+
+    #         if (self.isPaletteChosen == False):
+    #             dest = self.grid.getDestiny()
+    #             validDest = self.destToValidLoc(dest[0], dest[1])
+    #             destInWorld = self.grid.gridToWorld(validDest[0], validDest[1])
+    #             # self.goal.setPose(destInWorld[0], destInWorld[1])
+    #             self.client.send_goal_to_client(destInWorld[0], destInWorld[1])
+    #             self.drawPath()
+
+    #         if ((self.isDelivered) and (self.isFinished)):
+    #             self.grid.resetPath()
+    #             print("Task finished")
+
+    #         elif ((self.client.get_result_from_client() != None) and (self.isDelivered == False) and (self.isFinished == False)):
+    #             print("Reached palette, lifting it, and going to drop point")
+
+    #             self.liftDropExecute()
+
+    #             destInWorld = self.grid.gridToWorld(355, 150)
+    #             self.client.send_goal_to_client(destInWorld[0], destInWorld[1])
+    #             self.drawPath()
+
+    #             self.isDelivered = True
+
+    #         elif ((self.client.get_result_from_client() != None) and (self.isDelivered == True) and (self.isFinished == False)):
+    #             print("Reached drop point, leaving palette, and going to charging point")
+
+    #             self.liftDropExecute()
+
+    #             destInWorld = self.grid.gridToWorld(230, 260)
+    #             self.client.send_goal_to_client(destInWorld[0], destInWorld[1])
+    #             self.drawPath()
+
+    #             self.isFinished = True
