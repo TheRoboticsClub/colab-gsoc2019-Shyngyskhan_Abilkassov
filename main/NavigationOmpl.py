@@ -59,11 +59,14 @@ if __name__ == '__main__':
 
     grid = Grid(myGUI)
     
-    motors = PublisherMotors("/amazon_warehouse_robot/cmd_vel", 0.5, 0.1)
+    # Had to send commands to fake topic as for some reason GUI sends empty messages on this publisher
+    motors = PublisherMotors("/amazon_warehouse_robot/cmd_vel1", 0.5, 0.25)
+    # I have tried to comment out different sendV setV commands but unsuccessfully
+    # Will solve it later
     pose = ListenerPose3d("/amazon_warehouse_robot/odom")
 
     pathListener = ListenerPath("/move_base/NavfnROS/plan")
-    goalListener = PublisherGoal("/move_base/current_goal")
+    goalPublisher = PublisherGoal("/move_base/current_goal")
 
     vel = Velocity(0, 0, motors.getMaxV(), motors.getMaxW())
     sensor = Sensor(grid, pose, True)
@@ -72,7 +75,7 @@ if __name__ == '__main__':
     myGUI.setVelocity(vel)
     myGUI.setGrid(grid)
     myGUI.setSensor(sensor)
-    algorithm = MyAlgorithm(grid, sensor, vel, pathListener, goalListener)
+    algorithm = MyAlgorithm(grid, sensor, vel, pathListener, goalPublisher)
     myGUI.setAlgorithm(algorithm)
     myGUI.show()
 

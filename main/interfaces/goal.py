@@ -66,7 +66,7 @@ class PublisherGoal:
         return path
 
     def setPose(self, posX, posY):
-        self.msg.header.frame_id = "/map"
+        self.msg.header.frame_id = "map"
 
         self.msg.pose.position.x = posX
         self.msg.pose.position.y = posY

@@ -7,9 +7,11 @@ import sys
 import threading
 import time
 from datetime import datetime
-from ompl_solution.Point2DPlanning import Plane2DEnvironment
-import sys
-from purePursuit import State, calc_target_index, pure_pursuit_control
+import yaml
+import rospy
+from std_msgs.msg import Float32
+
+from interfaces.move_base_client import MoveBaseClient
 
 time_cycle = 80
 
@@ -39,6 +41,13 @@ class MyAlgorithm(threading.Thread):
         self.path = pathListener
         self.goal = goalListener
         sensor.getPathSig.connect(self.generatePath)
+        self.palettesList = yaml.load(open('./palettes_coords.yaml'))["coords"]
+        self.jointForce = 0
+        self.pub = rospy.Publisher('amazon_warehouse_robot/joint_cmd', Float32, queue_size=10)
+        self.client = MoveBaseClient()
+
+        self.isDelivered = False
+        self.isFinished = False
 
         self.stop_event = threading.Event()
         self.kill_event = threading.Event()
@@ -80,35 +89,22 @@ class MyAlgorithm(threading.Thread):
         The destiny is chosen in the GUI, making double click in the map.
         This method will be call when you press the Generate Path button.
         Call to grid.setPath(path) method for setting the path. """
-    def get2DoubleArrayFromPath(self):
-        pathArray = self.path.getPath()
-        pathlist = [[] for i in range(2)]
-
-        pathX_old = -1
-        pathY_old = -1
-
-        for i in range(len(pathArray)):
-            pathX = pathArray[i].pose.position.x
-            pathY = pathArray[i].pose.position.y
-
-            if pathX != pathX_old or pathY != pathY_old:
-                pathlist[0].append(pathX)
-                pathlist[1].append(pathY)
-                pathX_old = pathX
-                pathY_old = pathY
-
-        return pathlist
-
     def generatePath(self, list):
         print("LOOKING FOR SHORTER PATH")
-
         dest = self.grid.getDestiny()
-        destInWorld = self.grid.gridToWorld(dest[0], dest[1])
+        validDest = self.destToValidLoc(dest[0], dest[1])
 
-        # print destInWorld
-        self.goal.setPose(destInWorld[0], destInWorld[1])
+        # destInWorld = self.grid.gridToWorld(dest[0], dest[1])
+        destInWorld = self.grid.gridToWorld(validDest[0], validDest[1])
 
+        # self.goal.setPose(destInWorld[0], destInWorld[1])
+        self.client.send_goal_to_client(destInWorld[0], destInWorld[1])
+
+        self.drawPath()
+
+    def drawPath(self):
         pathArray = self.path.getPath()
+
         pathlist = [[] for i in range(2)]
         num = 0
         pathX_old = -1
@@ -119,7 +115,9 @@ class MyAlgorithm(threading.Thread):
             pathY = pathArray[i].pose.position.y
 
             if pathX != pathX_old or pathY != pathY_old:
-                self.grid.setPathVal(int(pathX), int(pathY), num)
+                tmp = self.grid.worldToGrid(pathX, pathY)
+                self.grid.setPathVal(int(tmp[0]), int(tmp[1]), num)
+
                 pathlist[0].append(pathX)
                 pathlist[1].append(pathY)
                 pathX_old = pathX
@@ -129,17 +127,64 @@ class MyAlgorithm(threading.Thread):
         self.grid.setPathFinded()
 
         npPathList = np.array(pathlist)
-        print npPathList
         self.grid.setWorldPathArray(npPathList)
 
+
+    def liftDropExecute(self):
+        if self.jointForce != 25:
+            self.jointForce = 25
+            self.pub.publish(self.jointForce)
+            print ('Platform Lifted!')
+        else:
+            self.jointForce = 0
+            self.pub.publish(self.jointForce)
+            print ('Platform Dropped!')
+
+    def destToValidLoc(self, x, y):
+        gridPos = self.grid.getPose()
+
+        if ((x > 310) and (y > 125) and (y < 185)):
+            print("Going to pick-up room")
+            return x, y
+        elif ((y > 255) and (x < 315) and (x > 85)):
+            print("Going to charging point")
+            return x, y
+        else:
+            for coordinate in self.palettesList:
+                if (abs(x - coordinate['x']) < 10):
+                    if (abs(y - coordinate['y']) < 10):
+                        print("Closest palette: ", coordinate['x'], ", ", coordinate['y'])
+                        print("Approximating to closest palette...")
+                        return coordinate['x'], coordinate['y']
+            print("Not valid dest, remaining at rest")
+            return gridPos[0], gridPos[1]
 
     """ Write in this method the code necessary for going to the desired place,
         once you have generated the shorter path.
         This method will be periodically called after you press the GO! button. """
     def execute(self):
-        # if self.gotoPointChecked:
-        #     self.gotoPoint()
-        # else:
-        #     self.moveOnPath()
+        # print("Starting")
 
-        print("Starting")
+        if ((self.client.get_result_from_client() != None) and (self.isDelivered == False) and (self.isFinished == False)):
+            print("Reached palette, lifting it, and going to drop point")
+
+            self.liftDropExecute()
+
+            destInWorld = self.grid.gridToWorld(355, 150)
+            self.client.send_goal_to_client(destInWorld[0], destInWorld[1])
+            self.drawPath()
+
+            self.isDelivered = True
+
+        if ((self.client.get_result_from_client() != None) and (self.isDelivered == True) and (self.isFinished == False)):
+            print("Reached drop point, leaving palette, and going to charging point")
+
+            self.liftDropExecute()
+
+            destInWorld = self.grid.gridToWorld(230, 265)
+            self.client.send_goal_to_client(destInWorld[0], destInWorld[1])
+            self.drawPath()
+
+            self.isFinished = True
+
+        # if ((self.client.get_result_from_client() != None) and (self.isDelivered == True) and (self.isFinished == False)):
