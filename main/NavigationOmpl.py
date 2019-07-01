@@ -59,7 +59,10 @@ if __name__ == '__main__':
 
     grid = Grid(myGUI)
     
-    motors = PublisherMotors("/amazon_warehouse_robot/cmd_vel", 1, 0.3)
+    # Had to send commands to fake topic as for some reason GUI sends empty messages on this publisher
+    motors = PublisherMotors("/amazon_warehouse_robot/cmd_vel1", 0.5, 0.25)
+    # I have tried to comment out different sendV setV commands but unsuccessfully
+    # Will solve it later
     pose = ListenerPose3d("/amazon_warehouse_robot/odom")
 
     pathListener = ListenerPath("/move_base/NavfnROS/plan")

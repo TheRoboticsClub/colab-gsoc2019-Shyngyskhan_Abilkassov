@@ -46,6 +46,7 @@ class MyAlgorithm(threading.Thread):
         self.pub = rospy.Publisher('amazon_warehouse_robot/joint_cmd', Float32, queue_size=10)
         self.client = MoveBaseClient()
 
+        self.isDelivered = False
         self.isFinished = False
 
         self.stop_event = threading.Event()
@@ -95,8 +96,8 @@ class MyAlgorithm(threading.Thread):
         # print dest
         # print validDest
 
-        # destInWorld = self.grid.gridToWorld(dest[0], dest[1])
-        destInWorld = self.grid.gridToWorld(validDest[0], validDest[1])
+        destInWorld = self.grid.gridToWorld(dest[0], dest[1])
+        # destInWorld = self.grid.gridToWorld(validDest[0], validDest[1])
 
         # self.goal.setPose(destInWorld[0], destInWorld[1])
         self.client.send_goal_to_client(destInWorld[0], destInWorld[1])
@@ -166,7 +167,16 @@ class MyAlgorithm(threading.Thread):
     def execute(self):
         # print("Starting")
 
-        if ((self.client.get_result_from_client() != None) and (self.isFinished == False)):
+        if ((self.client.get_result_from_client() != None) and (self.isDelivered == False) and (self.isFinished == False)):
+            self.liftDropExecute()
+
+            destInWorld = self.grid.gridToWorld(355, 150)
+            self.client.send_goal_to_client(destInWorld[0], destInWorld[1])
+            self.drawPath()
+
+            self.isDelivered = True
+
+        if ((self.client.get_result_from_client() != None) and (self.isDelivered == True) and (self.isFinished == False)):
             self.liftDropExecute()
 
             destInWorld = self.grid.gridToWorld(355, 150)
@@ -175,5 +185,4 @@ class MyAlgorithm(threading.Thread):
 
             self.isFinished = True
 
-
-        
+        # if ((self.client.get_result_from_client() != None) and (self.isDelivered == True) and (self.isFinished == False)):
