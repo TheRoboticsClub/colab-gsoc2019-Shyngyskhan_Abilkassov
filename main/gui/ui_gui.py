@@ -133,7 +133,7 @@ class Ui_MainWindow(object):
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "Global Navigation"))
-        self.getPathButton.setText(_translate("MainWindow", "Generate Path"))
+        self.getPathButton.setText(_translate("MainWindow", "Send Goal"))
         self.playButton.setText(_translate("MainWindow", "GO!"))
         self.stopButton.setText(_translate("MainWindow", "Stop"))
         self.destinyLabel.setText(_translate("MainWindow", "Destiny:"))
