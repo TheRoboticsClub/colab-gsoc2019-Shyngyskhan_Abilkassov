@@ -71,7 +71,12 @@
     <rosparam file="$(find amazon_navigation)/config/local_costmap_params.yaml" command="load" />
     <rosparam file="$(find amazon_navigation)/config/global_costmap_params.yaml" command="load" /> 
     <rosparam file="$(find amazon_navigation)/config/base_local_planner_params.yaml" command="load" />
-    <remap from="cmd_vel" to="/amazon_warehouse_robot/cmd_vel"/>
+    <!-- <remap from="cmd_vel" to="/amazon_warehouse_robot/cmd_vel"/> -->
+  </node>
+
+  <node pkg="nodelet" type="nodelet" name="cmd_vel_mux" args="load cmd_vel_mux/CmdVelMuxNodelet amazon">
+    <param name="yaml_cfg_file"value="$(find amazon_navigation)/config/mux_params.yaml"/>
+    <remap from="cmd_vel_mux/mux_cmd_vel" to="amazon_warehouse_robot/cmd_vel"/>
   </node>
 
 </launch> 
