@@ -1,29 +1,16 @@
 # amazonwarehouse
 
+Running current implementation steps:
+
+1. It is currently needed to create your own package in your catkin workspace called "amazon_navigation". Copy the contents of catkin_files there. You should have config, launch, and maps folders.
+
+2. Source that workspace
+possibly do 
+```
 source /opt/jderobot/share/jderobot/gazebo/gazebo-setup.sh
 source /opt/jderobot/share/jderobot/gazebo/gazebo-assets-setup.sh
+```
 
-python2 NavigationOmpl.py amazonMap.conf 
+3. Run ```roslaunch amazonrobot_1_warehouse.launch```
 
-rosrun gmapping slam_gmapping scan:=/amazon_warehouse_robot/laser/scan _base_frame:=amazon_warehouse_robot/base _odom_frame:=amazon_warehouse_robot/odom angularUpdate:=0.0 linearUpdate:=0.0
-rosrun gmapping slam_gmapping scan:=amazon_warehouse_robot/laser/scan _base_frame:=amazon_warehouse_robot/base _maxRange:=11.0 _maxUrange:=9.0  _linearUpdate:=0.0 _angularUpdate:=0.0
-
-rosrun tf view_frames
-
-http://www.theconstructsim.com/ros-projects-exploring-ros-using-2-wheeled-robot-part-1/
-
-
-rosrun gmapping slam_gmapping scan:=/amazon_warehouse_robot/laser/scan _base_frame:=amazon_warehouse_robot/base _odom_frame:=amazon_warehouse_robot/odom _angularUpdate:=0.1 _linearUpdate:=0.1 _maxRange:=11.0 _maxUrange:=9.0 _lskip:=10
- _odom_frame:=amazon_warehouse_robot/odom 
-
-
-rosrun map_server map_server map.yaml
-
-rosrun amcl amcl scan:=scan_filtered _odom_frame:=amazon_warehouse_robot/odom use_map_topic:=true
-rosrun amcl amcl scan:=/amazon_warehouse_robot/laser/scan _odom_frame:=/amazon_warehouse_robot/odom
-rosrun map_server map_server map.yaml
-rosnode info amcl
-
-rosrun rqt_graph rqt_graph
-rosrun tf view_frames
-
+4. Run ```python2 amazonWarehouse.py amazonMap.conf```
