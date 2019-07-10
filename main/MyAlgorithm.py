@@ -40,7 +40,7 @@ class MyAlgorithm(threading.Thread):
         self.vel = vel
         self.path = pathListener
         self.goal = goalListener
-        sensor.getPathSig.connect(self.generatePath)
+        sensor.getPathSig.connect(self.sendGoal)
         self.palettesList = yaml.load(open('./palettes_coords.yaml'))["coords"]
         self.jointForce = 0
         self.pub = rospy.Publisher('amazon_warehouse_robot/joint_cmd', Float32, queue_size=10)
@@ -87,23 +87,20 @@ class MyAlgorithm(threading.Thread):
     """ Write in this method the code necessary for looking for the shorter
         path to the desired destiny.
         The destiny is chosen in the GUI, making double click in the map.
-        This method will be call when you press the Generate Path button.
+        This method will be call when you press the Send Goal button.
         Call to grid.setPath(path) method for setting the path. """
-    def generatePath(self, list):
+    def sendGoal(self, list):
         print("LOOKING FOR SHORTER PATH")
         dest = self.grid.getDestiny()
-        validDest = self.destToValidLoc(dest[0], dest[1])
+        # validDest = self.destToValidLoc(dest[0], dest[1])
+        validDest = [24, 151]
         pose = self.grid.getPose() 
 
         if ((pose[0] == validDest[0])) and ((pose[1] == validDest[1])):
             print("Not valid dest, remaining at rest")
         else:
-            # destInWorld = self.grid.gridToWorld(dest[0], dest[1])
             destInWorld = self.grid.gridToWorld(validDest[0], validDest[1])
-    
-            # self.goal.setPose(destInWorld[0], destInWorld[1])
             self.client.send_goal_to_client(destInWorld[0], destInWorld[1])
-
             self.drawPath()
 
     def drawPath(self):
@@ -167,16 +164,19 @@ class MyAlgorithm(threading.Thread):
         This method will be periodically called after you press the GO! button. """
     def execute(self):
         # print("Starting")
-        dest = self.grid.getDestiny()
+        # dest = self.grid.getDestiny()
         pose = self.grid.getPose()
-        validDest = self.destToValidLoc(dest[0], dest[1])
+        # validDest = self.destToValidLoc(dest[0], dest[1])
+        validDest = [24, 151]
+
+        # STANDARD PROCEDURE. IT IS EXPLICITLY DEFINED IN BLOG
 
         if ((self.client.get_result_from_client() != None) and (self.isDelivered == False) and (self.isFinished == False)):
         
             if ((pose[0] - validDest[0]) < 2) and ((pose[1] - validDest[1]) < 2):
                 print("Reached palette, lifting it, and going to drop point")
                 self.liftDropExecute()
-                destInWorld = self.grid.gridToWorld(355, 150)
+                destInWorld = self.grid.gridToWorld(364, 175)
                 self.client.send_goal_to_client(destInWorld[0], destInWorld[1])
                 self.drawPath()
                 self.isDelivered = True
@@ -194,9 +194,13 @@ class MyAlgorithm(threading.Thread):
 
             self.isFinished = True
 
+
+            # rosrun dynamic_reconfigure dynparam set /move_base/local_costmap/inflation_layer inflation_radius 3
+
+
+
+    # REACH PALETTE AND SEND IT TO THE PARKING PLACE
     # if ((self.client.get_result_from_client() != None) and (self.isDelivered == True) and (self.isFinished == False)):
-
-
     # def destToValidLoc(self, x, y):
     #     gridPos = self.grid.getPose()
 
