@@ -11,7 +11,7 @@ import yaml
 import rospy
 from std_msgs.msg import Float32
 
-from interfaces.move_base_client import MoveBaseClient
+# from interfaces.moveBaseClient import MoveBaseClient
 
 time_cycle = 80
 
@@ -34,17 +34,16 @@ def clearscreen(numlines=10):
 
 class MyAlgorithm(threading.Thread):
 
-    def __init__(self, grid, sensor, vel, pathListener, goalListener):
+    def __init__(self, grid, sensor, vel, pathListener, moveBaseClient):
         self.sensor = sensor
         self.grid = grid
         self.vel = vel
         self.path = pathListener
-        self.goal = goalListener
         sensor.getPathSig.connect(self.sendGoal)
         self.palettesList = yaml.load(open('./palettes_coords.yaml'))["coords"]
         self.jointForce = 0
         self.pub = rospy.Publisher('amazon_warehouse_robot/joint_cmd', Float32, queue_size=10)
-        self.client = MoveBaseClient()
+        self.client = moveBaseClient
 
         self.isDelivered = False
         self.isFinished = False
@@ -100,7 +99,7 @@ class MyAlgorithm(threading.Thread):
             print("Not valid dest, remaining at rest")
         else:
             destInWorld = self.grid.gridToWorld(validDest[0], validDest[1])
-            self.client.send_goal_to_client(destInWorld[0], destInWorld[1])
+            self.client.sendGoalToClient(destInWorld[0], destInWorld[1])
             self.drawPath()
 
     def drawPath(self):
@@ -171,25 +170,25 @@ class MyAlgorithm(threading.Thread):
 
         # STANDARD PROCEDURE. IT IS EXPLICITLY DEFINED IN BLOG
 
-        if ((self.client.get_result_from_client() != None) and (self.isDelivered == False) and (self.isFinished == False)):
+        if ((self.client.getResultFromClient() != None) and (self.isDelivered == False) and (self.isFinished == False)):
         
             if ((pose[0] - validDest[0]) < 2) and ((pose[1] - validDest[1]) < 2):
                 print("Reached palette, lifting it, and going to drop point")
                 self.liftDropExecute()
                 destInWorld = self.grid.gridToWorld(364, 175)
-                self.client.send_goal_to_client(destInWorld[0], destInWorld[1])
+                self.client.sendGoalToClient(destInWorld[0], destInWorld[1])
                 self.drawPath()
                 self.isDelivered = True
             else:
                 print ("Reached given point")
 
-        if ((self.client.get_result_from_client() != None) and (self.isDelivered == True) and (self.isFinished == False)):
+        if ((self.client.getResultFromClient() != None) and (self.isDelivered == True) and (self.isFinished == False)):
             print("Reached drop point, leaving palette, and going to charging point")
 
             self.liftDropExecute()
 
             destInWorld = self.grid.gridToWorld(230, 265)
-            self.client.send_goal_to_client(destInWorld[0], destInWorld[1])
+            self.client.sendGoalToClient(destInWorld[0], destInWorld[1])
             self.drawPath()
 
             self.isFinished = True
@@ -200,7 +199,7 @@ class MyAlgorithm(threading.Thread):
 
 
     # REACH PALETTE AND SEND IT TO THE PARKING PLACE
-    # if ((self.client.get_result_from_client() != None) and (self.isDelivered == True) and (self.isFinished == False)):
+    # if ((self.client.getResultFromClient() != None) and (self.isDelivered == True) and (self.isFinished == False)):
     # def destToValidLoc(self, x, y):
     #     gridPos = self.grid.getPose()
 
@@ -236,31 +235,31 @@ class MyAlgorithm(threading.Thread):
     #             validDest = self.destToValidLoc(dest[0], dest[1])
     #             destInWorld = self.grid.gridToWorld(validDest[0], validDest[1])
     #             # self.goal.setPose(destInWorld[0], destInWorld[1])
-    #             self.client.send_goal_to_client(destInWorld[0], destInWorld[1])
+    #             self.client.sendGoalToClient(destInWorld[0], destInWorld[1])
     #             self.drawPath()
 
     #         if ((self.isDelivered) and (self.isFinished)):
     #             self.grid.resetPath()
     #             print("Task finished")
 
-    #         elif ((self.client.get_result_from_client() != None) and (self.isDelivered == False) and (self.isFinished == False)):
+    #         elif ((self.client.getResultFromClient() != None) and (self.isDelivered == False) and (self.isFinished == False)):
     #             print("Reached palette, lifting it, and going to drop point")
 
     #             self.liftDropExecute()
 
     #             destInWorld = self.grid.gridToWorld(355, 150)
-    #             self.client.send_goal_to_client(destInWorld[0], destInWorld[1])
+    #             self.client.sendGoalToClient(destInWorld[0], destInWorld[1])
     #             self.drawPath()
 
     #             self.isDelivered = True
 
-    #         elif ((self.client.get_result_from_client() != None) and (self.isDelivered == True) and (self.isFinished == False)):
+    #         elif ((self.client.getResultFromClient() != None) and (self.isDelivered == True) and (self.isFinished == False)):
     #             print("Reached drop point, leaving palette, and going to charging point")
 
     #             self.liftDropExecute()
 
     #             destInWorld = self.grid.gridToWorld(230, 260)
-    #             self.client.send_goal_to_client(destInWorld[0], destInWorld[1])
+    #             self.client.sendGoalToClient(destInWorld[0], destInWorld[1])
     #             self.drawPath()
 
     #             self.isFinished = True

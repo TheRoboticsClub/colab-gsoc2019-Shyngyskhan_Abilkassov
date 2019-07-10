@@ -36,7 +36,9 @@ from sensors.grid import Grid
 from interfaces.motors import PublisherMotors		
 from interfaces.pose3d import ListenerPose3d
 from interfaces.path import ListenerPath
-from interfaces.goal import PublisherGoal
+# from interfaces.goal import PublisherGoal
+from interfaces.moveBaseClient import MoveBaseClient
+from interfaces.threadGoalSender import ThreadGoalSender
 
 import signal
 
@@ -66,7 +68,8 @@ if __name__ == '__main__':
     pose = ListenerPose3d("/amazon_warehouse_robot/odom")
 
     pathListener = ListenerPath("/move_base/NavfnROS/plan")
-    goalPublisher = PublisherGoal("/move_base/current_goal")
+    # goalPublisher = PublisherGoal("/move_base/current_goal")
+    moveBaseClient = MoveBaseClient()
 
     vel = Velocity(0, 0, motors.getMaxV(), motors.getMaxW())
     sensor = Sensor(grid, pose, True)
@@ -75,7 +78,7 @@ if __name__ == '__main__':
     myGUI.setVelocity(vel)
     myGUI.setGrid(grid)
     myGUI.setSensor(sensor)
-    algorithm = MyAlgorithm(grid, sensor, vel, pathListener, goalPublisher)
+    algorithm = MyAlgorithm(grid, sensor, vel, pathListener, moveBaseClient)
     myGUI.setAlgorithm(algorithm)
     myGUI.show()
 
@@ -87,5 +90,6 @@ if __name__ == '__main__':
     t2 = ThreadGUI(myGUI)  
     t2.daemon = True
     t2.start()
+    t3 = ThreadGoalSender(moveBaseClient)
     
     sys.exit(app.exec_()) 

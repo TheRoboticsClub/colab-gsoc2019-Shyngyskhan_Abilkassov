@@ -4,8 +4,6 @@ import threading
 from math import pi as PI
 from .threadPublisher import ThreadPublisher
 
-
-
 def cmdvel2Twist(vel):
 
     tw = Twist()
@@ -49,7 +47,7 @@ class PublisherMotors:
         self.topic = topic
         self.data = CMDVel()
         self.pub = self.pub = rospy.Publisher(self.topic, Twist, queue_size=1)
-        rospy.init_node("GlobalNavigation")
+        rospy.init_node("AmazonWarehouse")
         self.lock = threading.Lock()
 
         self.kill_event = threading.Event()
