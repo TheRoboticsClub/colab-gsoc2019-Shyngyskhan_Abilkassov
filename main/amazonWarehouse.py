@@ -27,8 +27,8 @@ from PyQt5.QtWidgets import QApplication
 from MyAlgorithm import MyAlgorithm
 from gui.threadGUI import ThreadGUI
 from gui.GUI import MainWindow
-from threadMotors import ThreadMotors
-from threadMotors import Velocity
+from sensors.threadMotors import ThreadMotors
+from sensors.threadMotors import Velocity
 
 from sensors.sensor import Sensor
 from sensors.grid import Grid
