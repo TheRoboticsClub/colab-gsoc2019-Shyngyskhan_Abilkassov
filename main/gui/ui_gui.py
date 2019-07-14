@@ -151,6 +151,6 @@ class Ui_MainWindow(object):
         self.Plannerlabel.setText(_translate("MainWindow", "planner"))
         self.RunTimeLabel.setText(_translate("MainWindow", "runtime"))
         self.liftDropButton.setText(_translate("MainWindow", "Lift/Drop"))
-        self.gotoPointButton.setText(_translate("MainWindow", "GoToPoint"))
+        self.gotoPointButton.setText(_translate("MainWindow", "Store new pallet"))
 
 import resources_rc

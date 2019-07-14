@@ -47,6 +47,8 @@ class MyAlgorithm(threading.Thread):
 
         self.isDelivered = False
         self.isFinished = False
+        self.pickNewPalletPressed = False
+        self.storeNewPalletExecuted = False
 
         self.stop_event = threading.Event()
         self.kill_event = threading.Event()
@@ -89,7 +91,8 @@ class MyAlgorithm(threading.Thread):
         This method will be call when you press the Send Goal button.
         Call to grid.setPath(path) method for setting the path. """
     def sendGoal(self, list):
-        print("LOOKING FOR SHORTER PATH")
+        print("EXECUTING GOAL")
+        self.isSendGoalPressed = True
         dest = self.grid.getDestiny()
         # validDest = self.destToValidLoc(dest[0], dest[1])
         # validDest = [24, 151] for new palete
@@ -105,6 +108,15 @@ class MyAlgorithm(threading.Thread):
 
     def drawPath(self):
         pathArray = self.path.getPath()
+        # while not pathArray:
+        #     # print pathArray
+        #     pathArray = self.path.getPath()
+
+        while (len(pathArray) < 4):
+            # print (len(pathArray))
+            pathArray = self.path.getPath()
+
+        # print pathArray
 
         pathlist = [[] for i in range(2)]
         num = 0
@@ -159,19 +171,32 @@ class MyAlgorithm(threading.Thread):
                         return coordinate['x'], coordinate['y']
             return gridPos[0], gridPos[1]
 
+    def setNewPalletFlag(self, isPressed):
+        self.pickNewPalletPressed = isPressed
+    
+    def storeNewPallet(self):
+        pose = self.grid.getPose()
+        # dest = self.grid.getDestiny()
+        # validDest = self.destToValidLoc(dest[0], dest[1])
+        validDest = [22, 151]
+        destInWorld = self.grid.gridToWorld(validDest[0], validDest[1])
+        self.client.sendGoalToClient(destInWorld[0], destInWorld[1])
+        self.drawPath()    
+        self.pickNewPalletPressed = False 
+
     """ Write in this method the code necessary for going to the desired place,
         once you have generated the shorter path.
         This method will be periodically called after you press the GO! button. """
     def execute(self):
-        # print("Starting")
-        # dest = self.grid.getDestiny()
-        pose = self.grid.getPose()
-        # validDest = self.destToValidLoc(dest[0], dest[1])
-        validDest = [24, 151]
+        if self.pickNewPalletPressed:
+            if not self.storeNewPalletExecuted:
+                self.storeNewPallet()
+            if self.storeNewPalletExecuted and self.client.isFinished:
+                # self.liftDropExecute()
+                print "Hello"
 
-        # STANDARD PROCEDURE. IT IS EXPLICITLY DEFINED IN BLOG
-
-        print(self.client.isFinished)
+        # print self.pickNewPalletPressed
+        # print(self.client.isFinished)
 
         # if ((self.client.getResultFromClient() != None) and (self.isDelivered == False) and (self.isFinished == False)):
         
