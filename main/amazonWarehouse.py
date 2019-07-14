@@ -86,8 +86,8 @@ if __name__ == '__main__':
     t2 = ThreadGUI(myGUI)  
     t2.daemon = True
     t2.start()
-    t3 = ThreadGoalSender(moveBaseClient)
-    t3.daemon = True
-    t3.start()
+    # t3 = ThreadGoalSender(moveBaseClient)
+    # t3.daemon = True
+    # t3.start()
     
     sys.exit(app.exec_()) 

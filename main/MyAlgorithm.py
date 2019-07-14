@@ -176,8 +176,6 @@ class MyAlgorithm(threading.Thread):
     
     def storeNewPallet(self):
         pose = self.grid.getPose()
-        # dest = self.grid.getDestiny()
-        # validDest = self.destToValidLoc(dest[0], dest[1])
         validDest = [22, 151]
         destInWorld = self.grid.gridToWorld(validDest[0], validDest[1])
         self.client.sendGoalToClient(destInWorld[0], destInWorld[1])
@@ -190,6 +188,7 @@ class MyAlgorithm(threading.Thread):
     def execute(self):
         if self.pickNewPalletPressed:
             if not self.storeNewPalletExecuted:
+                print("Executing")
                 self.storeNewPallet()
             if self.storeNewPalletExecuted and self.client.isFinished:
                 # self.liftDropExecute()
