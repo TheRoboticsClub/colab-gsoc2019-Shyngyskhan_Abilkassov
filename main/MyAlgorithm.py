@@ -92,7 +92,8 @@ class MyAlgorithm(threading.Thread):
         print("LOOKING FOR SHORTER PATH")
         dest = self.grid.getDestiny()
         # validDest = self.destToValidLoc(dest[0], dest[1])
-        validDest = [24, 151]
+        # validDest = [24, 151] for new palete
+        validDest = [200, 155]
         pose = self.grid.getPose() 
 
         if ((pose[0] == validDest[0])) and ((pose[1] == validDest[1])):
@@ -170,28 +171,30 @@ class MyAlgorithm(threading.Thread):
 
         # STANDARD PROCEDURE. IT IS EXPLICITLY DEFINED IN BLOG
 
-        if ((self.client.getResultFromClient() != None) and (self.isDelivered == False) and (self.isFinished == False)):
+        print(self.client.isFinished)
+
+        # if ((self.client.getResultFromClient() != None) and (self.isDelivered == False) and (self.isFinished == False)):
         
-            if ((pose[0] - validDest[0]) < 2) and ((pose[1] - validDest[1]) < 2):
-                print("Reached palette, lifting it, and going to drop point")
-                self.liftDropExecute()
-                destInWorld = self.grid.gridToWorld(364, 175)
-                self.client.sendGoalToClient(destInWorld[0], destInWorld[1])
-                self.drawPath()
-                self.isDelivered = True
-            else:
-                print ("Reached given point")
+        #     if ((pose[0] - validDest[0]) < 2) and ((pose[1] - validDest[1]) < 2):
+        #         print("Reached palette, lifting it, and going to drop point")
+        #         self.liftDropExecute()
+        #         destInWorld = self.grid.gridToWorld(364, 175)
+        #         self.client.sendGoalToClient(destInWorld[0], destInWorld[1])
+        #         self.drawPath()
+        #         self.isDelivered = True
+        #     else:
+        #         print ("Reached given point")
 
-        if ((self.client.getResultFromClient() != None) and (self.isDelivered == True) and (self.isFinished == False)):
-            print("Reached drop point, leaving palette, and going to charging point")
+        # if ((self.client.getResultFromClient() != None) and (self.isDelivered == True) and (self.isFinished == False)):
+        #     print("Reached drop point, leaving palette, and going to charging point")
 
-            self.liftDropExecute()
+        #     self.liftDropExecute()
 
-            destInWorld = self.grid.gridToWorld(230, 265)
-            self.client.sendGoalToClient(destInWorld[0], destInWorld[1])
-            self.drawPath()
+        #     destInWorld = self.grid.gridToWorld(230, 265)
+        #     self.client.sendGoalToClient(destInWorld[0], destInWorld[1])
+        #     self.drawPath()
 
-            self.isFinished = True
+        #     self.isFinished = True
 
 
             # rosrun dynamic_reconfigure dynparam set /move_base/local_costmap/inflation_layer inflation_radius 3

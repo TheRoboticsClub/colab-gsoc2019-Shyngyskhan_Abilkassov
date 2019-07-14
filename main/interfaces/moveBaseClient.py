@@ -31,7 +31,7 @@ class MoveBaseClient():
         self.client.wait_for_server()
         self.data = [0, 0] # 
         self.goal = None
-        self.isFinished = False
+        self.isFinished = True
         self.lock = threading.Lock()
 
         self.kill_event = threading.Event()
@@ -51,13 +51,15 @@ class MoveBaseClient():
     def publishGoalToClient(self):
         self.lock.acquire()
 
+        # self.isFinished = False
+
         self.goal = MoveBaseGoal()
         self.goal.target_pose.header.frame_id = "map"
         self.goal.target_pose.header.stamp = rospy.Time.now()
         self.goal.target_pose.pose.position.x = self.data[0]
         self.goal.target_pose.pose.position.y = self.data[1]
 
-        orientation_q = quaternion_from_euler(0, 0, 1.57)
+        orientation_q = quaternion_from_euler(0, 0, 0)
 
         self.goal.target_pose.pose.orientation.x = orientation_q[0]
         self.goal.target_pose.pose.orientation.y = orientation_q[1]
@@ -66,12 +68,13 @@ class MoveBaseClient():
 
         self.client.send_goal(self.goal)
         # print("Goal Sent")
-        self.isFinished = self.client.wait_for_result(rospy.Duration(1))
+        # self.isFinished = self.client.wait_for_result(rospy.Duration(1))
         self.lock.release()
 
     def sendGoalToClient(self, posX, posY):
         self.lock.acquire()
         self.data = [posX, posY]
+        self.isFinished = self.client.wait_for_result(rospy.Duration(0.5))
         self.lock.release()
 
     def getResultFromClient(self):

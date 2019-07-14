@@ -49,7 +49,6 @@ def removeMapFromArgs():
         if (arg.split(".")[1] == "conf"):
             sys.argv.remove(arg)
 
-
 if __name__ == '__main__':
 
     if len(sys.argv) < 2:
@@ -61,10 +60,7 @@ if __name__ == '__main__':
 
     grid = Grid(myGUI)
     
-    # Had to send commands to fake topic as for some reason GUI sends empty messages on this publisher
     motors = PublisherMotors("/amazon_warehouse_robot/teleop", 0.5, 0.25)
-    # I have tried to comment out different sendV setV commands but unsuccessfully
-    # Will solve it later
     pose = ListenerPose3d("/amazon_warehouse_robot/odom")
 
     pathListener = ListenerPath("/move_base/NavfnROS/plan")
@@ -91,5 +87,7 @@ if __name__ == '__main__':
     t2.daemon = True
     t2.start()
     t3 = ThreadGoalSender(moveBaseClient)
+    t3.daemon = True
+    t3.start()
     
     sys.exit(app.exec_()) 
