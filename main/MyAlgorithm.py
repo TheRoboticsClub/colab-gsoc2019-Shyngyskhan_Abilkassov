@@ -11,10 +11,7 @@ import yaml
 import rospy
 from std_msgs.msg import Float32
 
-# from interfaces.moveBaseClient import MoveBaseClient
-
 time_cycle = 80
-
 
 def clearscreen(numlines=10):
     """Clear the console.
@@ -45,8 +42,6 @@ class MyAlgorithm(threading.Thread):
         self.pub = rospy.Publisher('amazon_warehouse_robot/joint_cmd', Float32, queue_size=10)
         self.client = moveBaseClient
 
-        self.isDelivered = False
-        self.isFinished = False
         self.pickNewPalletPressed = False
         self.storeNewPalletExecuted = False
 
@@ -188,28 +183,37 @@ class MyAlgorithm(threading.Thread):
         print ('Pose: ' + str(pose))
 
         if not self.executingTask:
-            validDest = [200, 265]
-            if ((pose[0] - validDest[0]) < 2) and ((pose[1] - validDest[1]) < 2):
-                print("Reached point")
-            else:
-                destInWorld = self.grid.gridToWorld(validDest[0], validDest[1])
-                self.client.sendGoalToClient(destInWorld[0], destInWorld[1])
-                self.drawPath()
+            if self.storeNewPalletExecuted:
+                validDest = [248, 91]
                 self.executingTask = True
-
-        if (not self.executingTask) and (self.pickNewPalletPressed):
-            validDest =  [24, 151]
-            if ((pose[0] - validDest[0]) < 2) and ((pose[1] - validDest[1]) < 2):
-                print("Reached new pallet")
-            else:
                 destInWorld = self.grid.gridToWorld(validDest[0], validDest[1])
                 self.client.sendGoalToClient(destInWorld[0], destInWorld[1])
                 self.drawPath()    
-                self.executingTask = True
-                self.pickNewPalletPressed = False
-
-        if goalAchieved:
-            self.executingTask = False
+                self.storeNewPalletExecuted = False
+            elif (self.pickNewPalletPressed):
+                validDest =  [24, 151]
+                if (abs(pose[0] - validDest[0]) < 2) and (abs(pose[1] - validDest[1]) < 2):
+                    print("Reached new pallet")
+                else:
+                    self.executingTask = True
+                    destInWorld = self.grid.gridToWorld(validDest[0], validDest[1])
+                    self.client.sendGoalToClient(destInWorld[0], destInWorld[1])
+                    self.drawPath()    
+                    self.pickNewPalletPressed = False
+                    self.storeNewPalletExecuted = True
+            else:
+                validDest = [200, 265]
+                if (abs(pose[0] - validDest[0]) < 2) and (abs(pose[1] - validDest[1]) < 2):
+                    print("Reached point")
+                    self.executingTask = False
+                else:
+                    self.executingTask = True
+                    destInWorld = self.grid.gridToWorld(validDest[0], validDest[1])
+                    self.client.sendGoalToClient(destInWorld[0], destInWorld[1])
+                    self.drawPath()
+                    
+        # if goalAchieved:
+        #     self.executingTask = False
 
         # print self.pickNewPalletPressed
         # print(self.client.isFinished)
