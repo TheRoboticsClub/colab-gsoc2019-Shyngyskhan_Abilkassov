@@ -174,13 +174,16 @@ class MyAlgorithm(threading.Thread):
         once you have generated the shorter path.
         This method will be periodically called after you press the GO! button. """
     def execute(self):
-        goalAchieved = self.client.client.wait_for_result(rospy.Duration(0.5))
+        goalAchieved = self.client.client.wait_for_result(rospy.Duration(0.8))
         pose = self.grid.getPose()
     
         print ('Isexecuting: ' + str(self.executingTask))
         print ('Button: ' + str(self.pickNewPalletPressed))
-
         print ('Pose: ' + str(pose))
+        print ('goalAchieved: ' + str(goalAchieved))
+
+        if goalAchieved:
+            self.executingTask = False
 
         if not self.executingTask:
             if self.storeNewPalletExecuted:
@@ -211,9 +214,8 @@ class MyAlgorithm(threading.Thread):
                     destInWorld = self.grid.gridToWorld(validDest[0], validDest[1])
                     self.client.sendGoalToClient(destInWorld[0], destInWorld[1])
                     self.drawPath()
-                    
-        # if goalAchieved:
-        #     self.executingTask = False
+
+        
 
         # print self.pickNewPalletPressed
         # print(self.client.isFinished)
