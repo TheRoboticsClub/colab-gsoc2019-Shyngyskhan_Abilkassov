@@ -31,7 +31,7 @@ class MoveBaseClient():
         self.client.wait_for_server()
         self.data = [0, 0] # 
         self.goal = None
-        self.isFinished = True
+        # self.isFinished = True
         # self.lock = threading.Lock()
 
         # self.kill_event = threading.Event()
@@ -91,7 +91,7 @@ class MoveBaseClient():
 
         # self.lock.acquire()
         # self.data = [posX, posY]
-        self.isFinished = self.client.wait_for_result(rospy.Duration(0.5))
+        # self.isFinished = self.client.wait_for_result(rospy.Duration(0.5))
         # self.lock.release()
 
     def getResultFromClient(self):

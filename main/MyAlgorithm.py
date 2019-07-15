@@ -50,6 +50,8 @@ class MyAlgorithm(threading.Thread):
         self.pickNewPalletPressed = False
         self.storeNewPalletExecuted = False
 
+        self.executingTask = False
+
         self.stop_event = threading.Event()
         self.kill_event = threading.Event()
         self.lock = threading.Lock()
@@ -95,7 +97,6 @@ class MyAlgorithm(threading.Thread):
         self.isSendGoalPressed = True
         dest = self.grid.getDestiny()
         # validDest = self.destToValidLoc(dest[0], dest[1])
-        # validDest = [24, 151] for new palete
         validDest = [200, 155]
         pose = self.grid.getPose() 
 
@@ -173,26 +174,42 @@ class MyAlgorithm(threading.Thread):
 
     def setNewPalletFlag(self, isPressed):
         self.pickNewPalletPressed = isPressed
-    
-    def storeNewPallet(self):
-        pose = self.grid.getPose()
-        validDest = [22, 151]
-        destInWorld = self.grid.gridToWorld(validDest[0], validDest[1])
-        self.client.sendGoalToClient(destInWorld[0], destInWorld[1])
-        self.drawPath()    
-        self.pickNewPalletPressed = False 
 
     """ Write in this method the code necessary for going to the desired place,
         once you have generated the shorter path.
         This method will be periodically called after you press the GO! button. """
     def execute(self):
-        if self.pickNewPalletPressed:
-            if not self.storeNewPalletExecuted:
-                print("Executing")
-                self.storeNewPallet()
-            if self.storeNewPalletExecuted and self.client.isFinished:
-                # self.liftDropExecute()
-                print "Hello"
+        goalAchieved = self.client.client.wait_for_result(rospy.Duration(0.5))
+        pose = self.grid.getPose()
+    
+        print ('Isexecuting: ' + str(self.executingTask))
+        print ('Button: ' + str(self.pickNewPalletPressed))
+
+        print ('Pose: ' + str(pose))
+
+        if not self.executingTask:
+            validDest = [200, 265]
+            if ((pose[0] - validDest[0]) < 2) and ((pose[1] - validDest[1]) < 2):
+                print("Reached point")
+            else:
+                destInWorld = self.grid.gridToWorld(validDest[0], validDest[1])
+                self.client.sendGoalToClient(destInWorld[0], destInWorld[1])
+                self.drawPath()
+                self.executingTask = True
+
+        if (not self.executingTask) and (self.pickNewPalletPressed):
+            validDest =  [24, 151]
+            if ((pose[0] - validDest[0]) < 2) and ((pose[1] - validDest[1]) < 2):
+                print("Reached new pallet")
+            else:
+                destInWorld = self.grid.gridToWorld(validDest[0], validDest[1])
+                self.client.sendGoalToClient(destInWorld[0], destInWorld[1])
+                self.drawPath()    
+                self.executingTask = True
+                self.pickNewPalletPressed = False
+
+        if goalAchieved:
+            self.executingTask = False
 
         # print self.pickNewPalletPressed
         # print(self.client.isFinished)
