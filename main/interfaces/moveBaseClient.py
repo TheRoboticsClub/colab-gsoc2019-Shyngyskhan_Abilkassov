@@ -29,7 +29,7 @@ import rospy
 from std_srvs.srv import Empty
 
 ## Use this if after moving pallet, there are obstacles left on costmaps, which prevent proper movement after moving and dropping pallet
-def clearCostmaps(self):
+def clearCostmaps():
     rospy.wait_for_service('/move_base/clear_costmaps')
     clear_costmaps = rospy.ServiceProxy('/move_base/clear_costmaps', Empty)
 
