@@ -34,6 +34,7 @@ def clearCostmaps():
     clear_costmaps = rospy.ServiceProxy('/move_base/clear_costmaps', Empty)
 
     try:
+        print("Clearing costmap")
         clear_costmaps()
     except rospy.ServiceException as exc:
         print("Service did not process request: " + str(exc))
@@ -42,47 +43,8 @@ class MoveBaseClient():
     def __init__(self):
         self.client = actionlib.SimpleActionClient('move_base', MoveBaseAction)
         self.client.wait_for_server()
-        self.data = [0, 0] # 
+        self.data = [0, 0]
         self.goal = None
-        # self.isFinished = True
-        # self.lock = threading.Lock()
-
-        # self.kill_event = threading.Event()
-        # self.thread = ThreadGoalSender(self)
-
-        # self.thread.daemon = True
-        # self.start()
-
-    # def stop(self):
-    #     self.kill_event.set()
-    #     self.client.cancel_all_goals()
-
-    # def start(self):
-    #     self.kill_event.clear()
-    #     self.thread.start()
-
-    def publishGoalToClient(self):
-        # self.lock.acquire()
-
-        print("salam")
-
-        # self.goal = MoveBaseGoal()
-        # self.goal.target_pose.header.frame_id = "map"
-        # self.goal.target_pose.header.stamp = rospy.Time.now()
-        # self.goal.target_pose.pose.position.x = self.data[0]
-        # self.goal.target_pose.pose.position.y = self.data[1]
-
-        # orientation_q = quaternion_from_euler(0, 0, 0)
-
-        # self.goal.target_pose.pose.orientation.x = orientation_q[0]
-        # self.goal.target_pose.pose.orientation.y = orientation_q[1]
-        # self.goal.target_pose.pose.orientation.z = orientation_q[2]
-        # self.goal.target_pose.pose.orientation.w = orientation_q[3]
-
-        # self.client.send_goal(self.goal)
-        
-        # print("Goal Sent")
-        # self.lock.release()
 
     def sendGoalToClient(self, posX, posY, yaw = 0):
 
@@ -101,12 +63,8 @@ class MoveBaseClient():
 
         self.client.send_goal(self.goal)
 
-
-        # self.lock.acquire()
-        # self.data = [posX, posY]
         self.isFinished = self.client.wait_for_result(rospy.Duration(0.5))
-        # self.lock.release()
-
+        
     def getResultFromClient(self):
         if (self.goal):
             return self.client.get_result()

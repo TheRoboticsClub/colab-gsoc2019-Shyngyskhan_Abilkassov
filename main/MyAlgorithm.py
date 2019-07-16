@@ -48,11 +48,12 @@ class MyAlgorithm(threading.Thread):
         self.pickNewPalletPressed = False
         self.pickOldPalletPressed = False
         self.storeNewPalletExecuted = False
+        self.storeOldPalletExecuted = False
 
         self.executingTask = False
         self.taskCompleted = False
 
-        self.pickOldPalletExecuted = False
+        # self.pickOldPalletExecuted = False
         self.isFinished = False
 
         self.pickedPallet = False
@@ -99,6 +100,7 @@ class MyAlgorithm(threading.Thread):
         Call to grid.setPath(path) method for setting the path. """
     def sendGoal(self, list):
         print("EXECUTING GOAL")
+        self.pickOldPalletPressed = True
         # self.isSendGoalPressed = True
         # dest = self.grid.getDestiny()
         # # validDest = self.destToValidLoc(dest[0], dest[1])
@@ -116,10 +118,7 @@ class MyAlgorithm(threading.Thread):
         pathArray = self.path.getPath()
 
         while (len(pathArray) < 10):
-            # print (len(pathArray))
             pathArray = self.path.getPath()
-
-        # print pathArray
 
         pathlist = [[] for i in range(2)]
         num = 0
@@ -199,67 +198,69 @@ class MyAlgorithm(threading.Thread):
             self.executingTask = False
 
         if not self.executingTask:
-            ## Picking a pallet
-            if (self.palletInGuiChosen and self.storeOldPalletExecuted):
-                dest = self.grid.getDestiny()
-                validDest = self.destToValidLoc(dest[0], dest[1])
+            # ## Picking a pallet
+            # if (self.palletInGuiChosen and self.storeOldPalletExecuted):
+            #     dest = self.grid.getDestiny()
+            #     validDest = self.destToValidLoc(dest[0], dest[1])
                 
-                self.palletInGuiChosen = False
-                if (not self.pickedPallet) and (abs(pose[0] - validDest[0]) < 2) and (abs(pose[1] - validDest[1]) < 2):
-                    print("Reached old pallet")
-                    self.liftDropExecute()
-                    destInWorld = self.grid.gridToWorld(380, 175)
-                    self.client.sendGoalToClient(destInWorld[0], destInWorld[1], yaw = 3.14)
-                    self.drawPath()
-                    self.executingTask = True
-                    self.storeOldPalletExecuted = True
-                    self.pickedPallet = True
-                elif (self.pickedPallet) and (abs(pose[0] - 380) < 2) and (abs(pose[1] - 175) < 2):
-                    print("Dropped old pallet")
-                    self.liftDropExecute()
-                    clearCostmaps()
-                    self.executingTask = False
-                    self.taskCompleted = True
-                    self.pickedPallet = False
-                    self.pickOldPalletExecuted = True
+            #     self.palletInGuiChosen = False
+            #     if (not self.pickedPallet) and (abs(pose[0] - validDest[0]) < 2) and (abs(pose[1] - validDest[1]) < 2):
+            #         ## Reached old pallet. Going from old pallet to dest
+            #         print("Reached old pallet")
+            #         self.liftDropExecute()
+            #         destInWorld = self.grid.gridToWorld(380, 175)
+            #         self.client.sendGoalToClient(destInWorld[0], destInWorld[1], yaw = 3.14)
+            #         self.drawPath()
+            #         self.executingTask = True
+            #         self.storeOldPalletExecuted = True
+            #         self.pickedPallet = True
+            #     elif (self.pickedPallet) and (abs(pose[0] - 380) < 2) and (abs(pose[1] - 175) < 2):
+            #         ## Dropping old pallet at dest
+            #         print("Dropped old pallet")
+            #         self.liftDropExecute()
+            #         clearCostmaps()
+            #         self.executingTask = False
+            #         self.taskCompleted = True
+            #         self.pickedPallet = False
+            #         self.pickOldPalletExecuted = True
 
-            if (not self.pickOldPalletExecuted and self.grid.getDestiny()):
-                print("got destiny")
-                dest = self.grid.getDestiny()
-                validDest = self.destToValidLoc(dest[0], dest[1])
-                destInWorld = self.grid.gridToWorld(validDest[0], validDest[1])
+            # if (not self.pickOldPalletExecuted and self.grid.getDestiny()):
+            #     print("got destiny")
+            #     dest = self.grid.getDestiny()
+            #     validDest = self.destToValidLoc(dest[0], dest[1])
+            #     destInWorld = self.grid.gridToWorld(validDest[0], validDest[1])
 
-                if (not self.palletInGuiChosen):
-                    ## Simply going to location marked
-                    self.executingTask = True
-                    self.client.sendGoalToClient(destInWorld[0], destInWorld[1])
-                    self.drawPath()
-                else:
-                    ## Going to pick old pallet
-                    self.executingTask = True
-                    self.storeOldPalletExecuted = True
-                    self.client.sendGoalToClient(destInWorld[0], destInWorld[1])
-                    self.drawPath()
+            #     if (not self.palletInGuiChosen):
+            #         ## Simply going to location marked
+            #         self.executingTask = True
+            #         self.client.sendGoalToClient(destInWorld[0], destInWorld[1])
+            #         self.drawPath()
+            #     else:
+            #         ## Going to pick old pallet
+            #         self.executingTask = True
+            #         self.storeOldPalletExecuted = True
+            #         self.client.sendGoalToClient(destInWorld[0], destInWorld[1])
+            #         self.drawPath()
 
             ## New pallet pick behavior
             if self.storeNewPalletExecuted:
                 if (abs(pose[0] - 24) < 2) and (abs(pose[1] - 151) < 2):
-                    ## Going from new pallet to dest
+                    ## Reached new pallet. Going from new pallet to dest
                     self.liftDropExecute()
                     validDest = [200, 41]
                     self.executingTask = True
                     destInWorld = self.grid.gridToWorld(validDest[0], validDest[1])
                     self.client.sendGoalToClient(destInWorld[0], destInWorld[1])
                     self.drawPath()    
-                    # self.storeNewPalletExecuted = False
                 elif (abs(pose[0] - 200) < 2) and (abs(pose[1] - 41) < 2):
                     ## Dropping new pallet at dest
                     self.liftDropExecute()
                     ## Important
-                    clearCostmaps()       
-
+                    clearCostmaps()
+                    self.storeNewPalletExecuted = False
                     self.executingTask = False
                     self.taskCompleted = True
+
             elif (self.pickNewPalletPressed):
                 ## Going to new pallet
                 validDest =  [24, 151] 
@@ -270,6 +271,41 @@ class MyAlgorithm(threading.Thread):
                 self.pickNewPalletPressed = False
                 self.storeNewPalletExecuted = True
 
+            ## Old pallet pick behavior
+            if self.storeOldPalletExecuted:
+                dest = self.grid.getDestiny()
+                validDest = self.destToValidLoc(dest[0], dest[1])
+                if (abs(pose[0] - validDest[0]) < 2) and (abs(pose[1] - validDest[1]) < 2):
+                    ## Reached old pallet. Going from old pallet to dest
+                    self.liftDropExecute()
+                    
+                    # clearCostmaps()
+
+                    validDest = [380, 175]
+                    self.executingTask = True
+                    destInWorld = self.grid.gridToWorld(validDest[0], validDest[1])
+                    self.client.sendGoalToClient(destInWorld[0], destInWorld[1], yaw = 3.14)
+                    self.drawPath()    
+                elif (abs(pose[0] - 380) < 2) and (abs(pose[1] - 175) < 2):
+                    ## Dropping old pallet at dest
+                    self.liftDropExecute()
+                    
+                    self.executingTask = False
+                    self.taskCompleted = True
+                    self.storeOldPalletExecuted = False
+
+            elif (self.pickOldPalletPressed):
+                ## Going to old pallet
+                dest = self.grid.getDestiny()
+                validDest = self.destToValidLoc(dest[0], dest[1])
+                
+                self.executingTask = True
+                destInWorld = self.grid.gridToWorld(validDest[0], validDest[1])
+                self.client.sendGoalToClient(destInWorld[0], destInWorld[1])
+                self.drawPath()    
+                self.pickOldPalletPressed = False
+                self.storeOldPalletExecuted = True
+
             if (self.taskCompleted):
                 ## going to chraging point
                 validDest = [200, 265]
@@ -277,9 +313,15 @@ class MyAlgorithm(threading.Thread):
                     print("Reached point")
                     self.executingTask = False
                     self.taskCompleted = True
+                    ## Reset path
+                    self.grid.resetPath()
                 else:
+                    print("Going to charging point")
                     self.executingTask = True
                     destInWorld = self.grid.gridToWorld(validDest[0], validDest[1])
-                    self.client.sendGoalToClient(destInWorld[0], destInWorld[1])
+                    self.client.sendGoalToClient(destInWorld[0], destInWorld[1], yaw = 3.14)
                     self.drawPath()
+                    ## Important
+                    # 
+                    clearCostmaps()
                     self.taskCompleted = False
