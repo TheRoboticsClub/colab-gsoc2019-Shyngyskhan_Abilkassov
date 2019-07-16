@@ -1,8 +1,10 @@
 # amazonwarehouse
 
-Running current implementation steps:
+To replicate current implementation follow these steps:
 
-1. It is currently needed to create your own package in your catkin workspace called "amazon_navigation". Copy the contents of catkin_files there. You should have config, launch, and maps folders.
+1. Replace ```amazonrobot_1_warehouse.world``` in your root folder of JdeRobot with the file in amazon_warehouse_robot folder in /main.
+
+2. It is currently needed to create your own package in your catkin workspace called "amazon_navigation". Copy the contents of catkin_files there. You should have config, launch, and maps folders.
 
 2. Source that workspace.
 Additionally, do following if required. 
