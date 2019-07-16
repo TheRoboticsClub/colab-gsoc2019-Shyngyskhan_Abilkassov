@@ -25,6 +25,19 @@ from move_base_msgs.msg import MoveBaseAction, MoveBaseGoal
 import threading
 from .threadGoalSender import ThreadGoalSender
 
+import rospy
+from std_srvs.srv import Empty
+
+## Use this if after moving pallet, there are obstacles left on costmaps, which prevent proper movement after moving and dropping pallet
+def clearCostmaps(self):
+    rospy.wait_for_service('/move_base/clear_costmaps')
+    clear_costmaps = rospy.ServiceProxy('/move_base/clear_costmaps', Empty)
+
+    try:
+        clear_costmaps()
+    except rospy.ServiceException as exc:
+        print("Service did not process request: " + str(exc))
+
 class MoveBaseClient():
     def __init__(self):
         self.client = actionlib.SimpleActionClient('move_base', MoveBaseAction)
@@ -71,7 +84,7 @@ class MoveBaseClient():
         # print("Goal Sent")
         # self.lock.release()
 
-    def sendGoalToClient(self, posX, posY):
+    def sendGoalToClient(self, posX, posY, yaw = 0):
 
         self.goal = MoveBaseGoal()
         self.goal.target_pose.header.frame_id = "map"
@@ -79,7 +92,7 @@ class MoveBaseClient():
         self.goal.target_pose.pose.position.x = posX
         self.goal.target_pose.pose.position.y = posY
 
-        orientation_q = quaternion_from_euler(0, 0, 0)
+        orientation_q = quaternion_from_euler(0, 0, yaw)
 
         self.goal.target_pose.pose.orientation.x = orientation_q[0]
         self.goal.target_pose.pose.orientation.y = orientation_q[1]
@@ -91,7 +104,7 @@ class MoveBaseClient():
 
         # self.lock.acquire()
         # self.data = [posX, posY]
-        # self.isFinished = self.client.wait_for_result(rospy.Duration(0.5))
+        self.isFinished = self.client.wait_for_result(rospy.Duration(0.5))
         # self.lock.release()
 
     def getResultFromClient(self):
