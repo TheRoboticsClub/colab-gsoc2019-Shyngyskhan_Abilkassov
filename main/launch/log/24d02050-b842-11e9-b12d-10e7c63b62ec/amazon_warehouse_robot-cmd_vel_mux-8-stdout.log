@@ -1,5 +1,0 @@
-[0m[ INFO] [1565092984.848330989]: Loading nodelet /amazon_warehouse_robot/cmd_vel_mux of type yocs_cmd_vel_mux/CmdVelMuxNodelet to manager nodelet_manager with the following remappings:[0m
-[0m[ INFO] [1565092984.848456062]: /cmd_vel_mux/output/cmd_vel -> /amazon_warehouse_robot/cmd_vel[0m
-[0m[ INFO] [1565092984.857251128]: waitForService: Service [/amazon_warehouse_robot/nodelet_manager/load_nodelet] has not been advertised, waiting...[0m
-[0m[ INFO] [1565092988.016972284, 0.022000000]: waitForService: Service [/amazon_warehouse_robot/nodelet_manager/load_nodelet] is now available.[0m
-[0m[ INFO] [1565093028.259604244, 37.939000000]: Unloading nodelet /amazon_warehouse_robot/cmd_vel_mux from manager nodelet_manager[0m
