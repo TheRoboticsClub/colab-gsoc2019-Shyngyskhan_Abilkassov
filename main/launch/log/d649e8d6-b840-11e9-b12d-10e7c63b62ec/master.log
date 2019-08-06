@@ -1,0 +1,1343 @@
+[rosmaster.main][INFO] 2019-08-06 17:53:43,167: initialization complete, waiting for shutdown
+[rosmaster.main][INFO] 2019-08-06 17:53:43,167: Starting ROS Master Node
+[xmlrpc][INFO] 2019-08-06 17:53:43,169: XML-RPC server binding to 0.0.0.0:11311
+[xmlrpc][INFO] 2019-08-06 17:53:43,169: Started XML-RPC server [http://10.1.199.229:11311/]
+[rosmaster.master][INFO] 2019-08-06 17:53:43,169: Master initialized: port[11311], uri[http://10.1.199.229:11311/]
+[xmlrpc][INFO] 2019-08-06 17:53:43,170: xml rpc node: starting XML-RPC server
+[rosmaster.master][INFO] 2019-08-06 17:53:43,228: +PARAM [/run_id] by /roslaunch
+[rosmaster.master][INFO] 2019-08-06 17:53:43,230: +PARAM [/roslaunch/uris/host_10_1_199_229__46157] by /roslaunch
+[rosmaster.master][INFO] 2019-08-06 17:53:43,452: +PARAM [/use_sim_time] by /roslaunch
+[rosmaster.master][INFO] 2019-08-06 17:53:43,453: +PARAM [/move_base/local_costmap/laser_scan_sensor/sensor_frame] by /roslaunch
+[rosmaster.master][INFO] 2019-08-06 17:53:43,454: +PARAM [/amazon_warehouse_robot/amcl/gui_publish_rate] by /roslaunch
+[rosmaster.master][INFO] 2019-08-06 17:53:43,454: +PARAM [/move_base/local_costmap/footprint] by /roslaunch
+[rosmaster.master][INFO] 2019-08-06 17:53:43,454: +PARAM [/amazon_warehouse_robot_patrol/move_base/TrajectoryPlannerROS/max_vel_x] by /roslaunch
+[rosmaster.master][INFO] 2019-08-06 17:53:43,454: +PARAM [/amazon_warehouse_robot_patrol/move_base/global_costmap/cost_scaling_factor] by /roslaunch
+[rosmaster.master][INFO] 2019-08-06 17:53:43,454: +PARAM [/amazon_warehouse_robot_patrol/amcl_patrol/odom_frame_id] by /roslaunch
+[rosmaster.master][INFO] 2019-08-06 17:53:43,454: +PARAM [/move_base/global_costmap/laser_scan_sensor/marking] by /roslaunch
+[rosmaster.master][INFO] 2019-08-06 17:53:43,455: +PARAM [/move_base/TrajectoryPlannerROS/acc_lim_y] by /roslaunch
+[rosmaster.master][INFO] 2019-08-06 17:53:43,455: +PARAM [/move_base/TrajectoryPlannerROS/acc_lim_x] by /roslaunch
+[rosmaster.master][INFO] 2019-08-06 17:53:43,455: +SERVICE [/rosout/get_loggers] /rosout http://10.1.199.229:36631/
+[rosmaster.master][INFO] 2019-08-06 17:53:43,456: +PARAM [/move_base/local_costmap/cost_scaling_factor] by /roslaunch
+[rosmaster.master][INFO] 2019-08-06 17:53:43,456: +PARAM [/move_base/local_costmap/transform_tolerance] by /roslaunch
+[rosmaster.master][INFO] 2019-08-06 17:53:43,456: +PARAM [/move_base/TrajectoryPlannerROS/min_vel_x] by /roslaunch
+[rosmaster.master][INFO] 2019-08-06 17:53:43,457: +SERVICE [/rosout/set_logger_level] /rosout http://10.1.199.229:36631/
+[rosmaster.master][INFO] 2019-08-06 17:53:43,457: +PARAM [/move_base/local_costmap/height] by /roslaunch
+[rosmaster.master][INFO] 2019-08-06 17:53:43,458: +PARAM [/move_base/global_costmap/laser_scan_sensor/sensor_frame] by /roslaunch
+[rosmaster.master][INFO] 2019-08-06 17:53:43,458: +PARAM [/move_base/global_costmap/obstacle_range] by /roslaunch
+[rosmaster.master][INFO] 2019-08-06 17:53:43,458: +PARAM [/move_base/local_costmap/inflation_radius] by /roslaunch
+[rosmaster.master][INFO] 2019-08-06 17:53:43,459: +PARAM [/amazon_warehouse_robot_patrol/move_base/local_costmap/obstacle_range] by /roslaunch
+[rosmaster.master][INFO] 2019-08-06 17:53:43,459: +PARAM [/amazon_warehouse_robot_patrol/move_base/TrajectoryPlannerROS/acc_lim_th] by /roslaunch
+[rosmaster.master][INFO] 2019-08-06 17:53:43,459: +PARAM [/amazon_warehouse_robot_patrol/amcl_patrol/laser_max_beams] by /roslaunch
+[rosmaster.master][INFO] 2019-08-06 17:53:43,459: +PARAM [/move_base/global_costmap/footprint] by /roslaunch
+[rosmaster.master][INFO] 2019-08-06 17:53:43,460: +PARAM [/move_base/global_costmap/laser_scan_sensor/topic] by /roslaunch
+[rosmaster.master][INFO] 2019-08-06 17:53:43,460: +PARAM [/amazon_warehouse_robot_patrol/move_base/global_costmap/robot_base_frame] by /roslaunch
+[rosmaster.master][INFO] 2019-08-06 17:53:43,461: +PARAM [/move_base/local_costmap/static_map] by /roslaunch
+[rosmaster.master][INFO] 2019-08-06 17:53:43,461: +PARAM [/move_base/local_costmap/resolution] by /roslaunch
+[rosmaster.master][INFO] 2019-08-06 17:53:43,462: +PARAM [/amazon_warehouse_robot/amcl/base_frame_id] by /roslaunch
+[rosmaster.master][INFO] 2019-08-06 17:53:43,462: +PARAM [/move_base/global_costmap/laser_scan_sensor/data_type] by /roslaunch
+[rosmaster.master][INFO] 2019-08-06 17:53:43,463: +PARAM [/move_base/local_costmap/observation_sources] by /roslaunch
+[rosmaster.master][INFO] 2019-08-06 17:53:43,463: +PARAM [/amazon_warehouse_robot_patrol/amcl_patrol/base_frame_id] by /roslaunch
+[rosmaster.master][INFO] 2019-08-06 17:53:43,463: +PARAM [/amazon_warehouse_robot_patrol/move_base/local_costmap/static_map] by /roslaunch
+[rosmaster.master][INFO] 2019-08-06 17:53:43,463: +PARAM [/move_base/local_costmap/width] by /roslaunch
+[rosmaster.master][INFO] 2019-08-06 17:53:43,464: +PARAM [/move_base/TrajectoryPlannerROS/max_vel_x] by /roslaunch
+[rosmaster.master][INFO] 2019-08-06 17:53:43,464: +PARAM [/move_base/local_costmap/rolling_window] by /roslaunch
+[rosmaster.master][INFO] 2019-08-06 17:53:43,464: +PARAM [/amazon_warehouse_robot_patrol/move_base/local_costmap/height] by /roslaunch
+[rosmaster.master][INFO] 2019-08-06 17:53:43,464: +PARAM [/amazon_warehouse_robot_patrol/move_base/local_costmap/inflation_radius] by /roslaunch
+[rosmaster.master][INFO] 2019-08-06 17:53:43,465: +PARAM [/amazon_warehouse_robot_patrol/move_base/global_costmap/observation_sources] by /roslaunch
+[rosmaster.master][INFO] 2019-08-06 17:53:43,465: +PARAM [/amazon_warehouse_robot_patrol/move_base/local_costmap/update_frequency] by /roslaunch
+[rosmaster.master][INFO] 2019-08-06 17:53:43,466: +PARAM [/move_base/TrajectoryPlannerROS/min_vel_theta] by /roslaunch
+[rosmaster.master][INFO] 2019-08-06 17:53:43,467: +PARAM [/amazon_warehouse_robot_patrol/move_base/global_costmap/update_frequency] by /roslaunch
+[rosmaster.master][INFO] 2019-08-06 17:53:43,467: +PARAM [/move_base/TrajectoryPlannerROS/max_vel_theta] by /roslaunch
+[rosmaster.master][INFO] 2019-08-06 17:53:43,467: +SUB [/clock] /rosout http://10.1.199.229:36631/
+[rosmaster.master][INFO] 2019-08-06 17:53:43,468: +PARAM [/amazon_warehouse_robot_patrol/move_base/TrajectoryPlannerROS/holomonic_robot] by /roslaunch
+[rosmaster.master][INFO] 2019-08-06 17:53:43,468: +PARAM [/amazon_warehouse_robot_patrol/move_base/local_costmap/laser_scan_sensor/data_type] by /roslaunch
+[rosmaster.master][INFO] 2019-08-06 17:53:43,468: +PARAM [/amazon_warehouse_robot_patrol/move_base/local_costmap/publish_frequency] by /roslaunch
+[rosmaster.master][INFO] 2019-08-06 17:53:43,468: +PARAM [/amazon_warehouse_robot_patrol/move_base/global_costmap/laser_scan_sensor/data_type] by /roslaunch
+[rosmaster.master][INFO] 2019-08-06 17:53:43,469: +PARAM [/amazon_warehouse_robot_patrol/move_base/global_costmap/inflation_radius] by /roslaunch
+[rosmaster.master][INFO] 2019-08-06 17:53:43,469: +PUB [/rosout_agg] /rosout http://10.1.199.229:36631/
+[rosmaster.master][INFO] 2019-08-06 17:53:43,470: +PARAM [/move_base/global_costmap/cost_scaling_factor] by /roslaunch
+[rosmaster.master][INFO] 2019-08-06 17:53:43,470: +PARAM [/move_base/global_costmap/inflation_radius] by /roslaunch
+[rosmaster.master][INFO] 2019-08-06 17:53:43,470: +PARAM [/amazon_warehouse_robot_patrol/move_base/TrajectoryPlannerROS/min_vel_theta] by /roslaunch
+[rosmaster.master][INFO] 2019-08-06 17:53:43,471: +PARAM [/amazon_warehouse_robot_patrol/move_base/TrajectoryPlannerROS/acc_lim_x] by /roslaunch
+[rosmaster.master][INFO] 2019-08-06 17:53:43,472: +PARAM [/amazon_warehouse_robot_patrol/move_base/TrajectoryPlannerROS/acc_lim_y] by /roslaunch
+[rosmaster.master][INFO] 2019-08-06 17:53:43,473: +PARAM [/amazon_warehouse_robot_patrol/move_base/TrajectoryPlannerROS/max_rotational_vel] by /roslaunch
+[rosmaster.master][INFO] 2019-08-06 17:53:43,473: +PARAM [/amazon_warehouse_robot_patrol/move_base/local_costmap/raytrace_range] by /roslaunch
+[rosmaster.master][INFO] 2019-08-06 17:53:43,474: +PARAM [/rosdistro] by /roslaunch
+[rosmaster.master][INFO] 2019-08-06 17:53:43,474: +PARAM [/amazon_warehouse_robot_patrol/move_base/global_costmap/laser_scan_sensor/marking] by /roslaunch
+[rosmaster.master][INFO] 2019-08-06 17:53:43,475: +PARAM [/map_server/frame_id] by /roslaunch
+[rosmaster.master][INFO] 2019-08-06 17:53:43,476: +PARAM [/amazon_warehouse_robot/amcl/odom_frame_id] by /roslaunch
+[rosmaster.master][INFO] 2019-08-06 17:53:43,476: +PARAM [/move_base/local_costmap/planner_patiente] by /roslaunch
+[rosmaster.master][INFO] 2019-08-06 17:53:43,477: +SUB [/rosout] /rosout http://10.1.199.229:36631/
+[rosmaster.master][INFO] 2019-08-06 17:53:43,477: +PARAM [/move_base/TrajectoryPlannerROS/max_rotational_vel] by /roslaunch
+[rosmaster.master][INFO] 2019-08-06 17:53:43,477: +PARAM [/amazon_warehouse_robot_patrol/move_base/local_costmap/laser_scan_sensor/sensor_frame] by /roslaunch
+[rosmaster.master][INFO] 2019-08-06 17:53:43,478: +PARAM [/amazon_warehouse_robot_patrol/amcl_patrol/use_map_topic] by /roslaunch
+[rosmaster.master][INFO] 2019-08-06 17:53:43,478: +PARAM [/amazon_warehouse_robot_patrol/amcl_patrol/global_frame_id] by /roslaunch
+[rosmaster.master][INFO] 2019-08-06 17:53:43,478: +PARAM [/amazon_warehouse_robot_patrol/move_base/local_costmap/global_frame] by /roslaunch
+[rosmaster.master][INFO] 2019-08-06 17:53:43,478: +PARAM [/amazon_warehouse_robot_patrol/move_base/local_costmap/width] by /roslaunch
+[rosmaster.master][INFO] 2019-08-06 17:53:43,478: +PARAM [/amazon_warehouse_robot_patrol/move_base/local_costmap/robot_base_frame] by /roslaunch
+[rosmaster.master][INFO] 2019-08-06 17:53:43,478: +PARAM [/amazon_warehouse_robot_patrol/move_base/local_costmap/transform_tolerance] by /roslaunch
+[rosmaster.master][INFO] 2019-08-06 17:53:43,478: +PARAM [/amazon_warehouse_robot_patrol/move_base/local_costmap/laser_scan_sensor/topic] by /roslaunch
+[rosmaster.master][INFO] 2019-08-06 17:53:43,479: +PARAM [/amazon_warehouse_robot_patrol/move_base/global_costmap/raytrace_range] by /roslaunch
+[rosmaster.master][INFO] 2019-08-06 17:53:43,479: +PARAM [/move_base/global_costmap/static_map] by /roslaunch
+[rosmaster.master][INFO] 2019-08-06 17:53:43,479: +PARAM [/amazon_warehouse_robot_patrol/move_base/global_costmap/laser_scan_sensor/sensor_frame] by /roslaunch
+[rosmaster.master][INFO] 2019-08-06 17:53:43,479: +PARAM [/amazon_warehouse_robot_patrol/move_base/global_costmap/footprint] by /roslaunch
+[rosmaster.master][INFO] 2019-08-06 17:53:43,479: +PARAM [/move_base/global_costmap/laser_scan_sensor/observation_persistence] by /roslaunch
+[rosmaster.master][INFO] 2019-08-06 17:53:43,479: +PARAM [/move_base/local_costmap/planner_freqency] by /roslaunch
+[rosmaster.master][INFO] 2019-08-06 17:53:43,479: +PARAM [/move_base/local_costmap/footprint_padding] by /roslaunch
+[rosmaster.master][INFO] 2019-08-06 17:53:43,479: +PARAM [/move_base/global_costmap/robot_base_frame] by /roslaunch
+[rosmaster.master][INFO] 2019-08-06 17:53:43,480: +PARAM [/amazon_warehouse_robot/amcl/laser_max_beams] by /roslaunch
+[rosmaster.master][INFO] 2019-08-06 17:53:43,480: +PARAM [/amazon_warehouse_robot_patrol/move_base/global_costmap/global_frame] by /roslaunch
+[rosmaster.master][INFO] 2019-08-06 17:53:43,480: +PARAM [/move_base/global_costmap/footprint_padding] by /roslaunch
+[rosmaster.master][INFO] 2019-08-06 17:53:43,480: +PARAM [/amazon_warehouse_robot_patrol/move_base/local_costmap/footprint_padding] by /roslaunch
+[rosmaster.master][INFO] 2019-08-06 17:53:43,480: +PARAM [/amazon_warehouse_robot_patrol/move_base/global_costmap/laser_scan_sensor/clearing] by /roslaunch
+[rosmaster.master][INFO] 2019-08-06 17:53:43,480: +PARAM [/amazon_warehouse_robot_patrol/amcl_patrol/laser_max_range] by /roslaunch
+[rosmaster.master][INFO] 2019-08-06 17:53:43,480: +PARAM [/move_base/TrajectoryPlannerROS/holomonic_robot] by /roslaunch
+[rosmaster.master][INFO] 2019-08-06 17:53:43,480: +PARAM [/amazon_warehouse_robot_patrol/move_base/TrajectoryPlannerROS/min_in_place_vel_theta] by /roslaunch
+[rosmaster.master][INFO] 2019-08-06 17:53:43,481: +PARAM [/amazon_warehouse_robot_patrol/move_base/global_costmap/laser_scan_sensor/topic] by /roslaunch
+[rosmaster.master][INFO] 2019-08-06 17:53:43,481: +PARAM [/amazon_warehouse_robot_patrol/move_base/local_costmap/planner_freqency] by /roslaunch
+[rosmaster.master][INFO] 2019-08-06 17:53:43,481: +PARAM [/move_base/local_costmap/update_frequency] by /roslaunch
+[rosmaster.master][INFO] 2019-08-06 17:53:43,481: +PARAM [/move_base/local_costmap/raytrace_range] by /roslaunch
+[rosmaster.master][INFO] 2019-08-06 17:53:43,481: +PARAM [/move_base/local_costmap/publish_frequency] by /roslaunch
+[rosmaster.master][INFO] 2019-08-06 17:53:43,481: +PARAM [/move_base/global_costmap/observation_sources] by /roslaunch
+[rosmaster.master][INFO] 2019-08-06 17:53:43,481: +PARAM [/amazon_warehouse_robot_patrol/move_base/TrajectoryPlannerROS/min_vel_x] by /roslaunch
+[rosmaster.master][INFO] 2019-08-06 17:53:43,481: +PARAM [/amazon_warehouse_robot_patrol/move_base/local_costmap/cost_scaling_factor] by /roslaunch
+[rosmaster.master][INFO] 2019-08-06 17:53:43,482: +PARAM [/amazon_warehouse_robot_patrol/move_base/TrajectoryPlannerROS/min_in_place_rotational_vel] by /roslaunch
+[rosmaster.master][INFO] 2019-08-06 17:53:43,482: +PARAM [/move_base/global_costmap/update_frequency] by /roslaunch
+[rosmaster.master][INFO] 2019-08-06 17:53:43,482: +PARAM [/move_base/TrajectoryPlannerROS/acc_lim_th] by /roslaunch
+[rosmaster.master][INFO] 2019-08-06 17:53:43,482: +PARAM [/amazon_warehouse_robot_patrol/move_base/global_costmap/obstacle_range] by /roslaunch
+[rosmaster.master][INFO] 2019-08-06 17:53:43,482: +PARAM [/amazon_warehouse_robot_patrol/move_base/local_costmap/planner_patiente] by /roslaunch
+[rosmaster.master][INFO] 2019-08-06 17:53:43,482: +PARAM [/move_base/local_costmap/laser_scan_sensor/data_type] by /roslaunch
+[rosmaster.master][INFO] 2019-08-06 17:53:43,482: +PARAM [/move_base/TrajectoryPlannerROS/min_in_place_rotational_vel] by /roslaunch
+[rosmaster.master][INFO] 2019-08-06 17:53:43,482: +PARAM [/amazon_warehouse_robot_patrol/move_base/local_costmap/resolution] by /roslaunch
+[rosmaster.master][INFO] 2019-08-06 17:53:43,483: +PARAM [/move_base/local_costmap/laser_scan_sensor/topic] by /roslaunch
+[rosmaster.master][INFO] 2019-08-06 17:53:43,483: +PARAM [/amazon_warehouse_robot/amcl/odom_model_type] by /roslaunch
+[rosmaster.master][INFO] 2019-08-06 17:53:43,483: +PARAM [/move_base/local_costmap/robot_base_frame] by /roslaunch
+[rosmaster.master][INFO] 2019-08-06 17:53:43,483: +PARAM [/amazon_warehouse_robot_patrol/move_base/local_costmap/laser_scan_sensor/observation_persistence] by /roslaunch
+[rosmaster.master][INFO] 2019-08-06 17:53:43,483: +PARAM [/amazon_warehouse_robot_patrol/move_base/local_costmap/observation_sources] by /roslaunch
+[rosmaster.master][INFO] 2019-08-06 17:53:43,483: +PARAM [/amazon_warehouse_robot_patrol/move_base/global_costmap/static_map] by /roslaunch
+[rosmaster.master][INFO] 2019-08-06 17:53:43,483: +PARAM [/amazon_warehouse_robot_patrol/move_base/local_costmap/laser_scan_sensor/clearing] by /roslaunch
+[rosmaster.master][INFO] 2019-08-06 17:53:43,483: +PARAM [/move_base/local_costmap/laser_scan_sensor/observation_persistence] by /roslaunch
+[rosmaster.master][INFO] 2019-08-06 17:53:43,484: +PARAM [/amazon_warehouse_robot_patrol/move_base/TrajectoryPlannerROS/max_vel_theta] by /roslaunch
+[rosmaster.master][INFO] 2019-08-06 17:53:43,484: +PARAM [/move_base/local_costmap/obstacle_range] by /roslaunch
+[rosmaster.master][INFO] 2019-08-06 17:53:43,484: +PARAM [/move_base/global_costmap/raytrace_range] by /roslaunch
+[rosmaster.master][INFO] 2019-08-06 17:53:43,484: +PARAM [/amazon_warehouse_robot/amcl/laser_max_range] by /roslaunch
+[rosmaster.master][INFO] 2019-08-06 17:53:43,484: +PARAM [/amazon_warehouse_robot_patrol/move_base/global_costmap/laser_scan_sensor/observation_persistence] by /roslaunch
+[rosmaster.master][INFO] 2019-08-06 17:53:43,484: +PARAM [/move_base/local_costmap/laser_scan_sensor/clearing] by /roslaunch
+[rosmaster.master][INFO] 2019-08-06 17:53:43,484: +PARAM [/amazon_warehouse_robot_patrol/move_base/global_costmap/footprint_padding] by /roslaunch
+[rosmaster.master][INFO] 2019-08-06 17:53:43,484: +PARAM [/amazon_warehouse_robot_patrol/amcl_patrol/odom_model_type] by /roslaunch
+[rosmaster.master][INFO] 2019-08-06 17:53:43,485: +PARAM [/rosversion] by /roslaunch
+[rosmaster.master][INFO] 2019-08-06 17:53:43,485: +PARAM [/move_base/local_costmap/global_frame] by /roslaunch
+[rosmaster.master][INFO] 2019-08-06 17:53:43,485: +PARAM [/move_base/global_costmap/global_frame] by /roslaunch
+[rosmaster.master][INFO] 2019-08-06 17:53:43,485: +PARAM [/amazon_warehouse_robot_patrol/move_base/local_costmap/rolling_window] by /roslaunch
+[rosmaster.master][INFO] 2019-08-06 17:53:43,485: +PARAM [/amazon_warehouse_robot/cmd_vel_mux/yaml_cfg_file] by /roslaunch
+[rosmaster.master][INFO] 2019-08-06 17:53:43,485: +PARAM [/amazon_warehouse_robot_patrol/move_base/local_costmap/laser_scan_sensor/marking] by /roslaunch
+[rosmaster.master][INFO] 2019-08-06 17:53:43,485: +PARAM [/move_base/local_costmap/laser_scan_sensor/marking] by /roslaunch
+[rosmaster.master][INFO] 2019-08-06 17:53:43,485: +PARAM [/amazon_warehouse_robot/amcl/global_frame_id] by /roslaunch
+[rosmaster.master][INFO] 2019-08-06 17:53:43,486: +PARAM [/move_base/TrajectoryPlannerROS/min_in_place_vel_theta] by /roslaunch
+[rosmaster.master][INFO] 2019-08-06 17:53:43,486: +PARAM [/amazon_warehouse_robot_patrol/amcl_patrol/gui_publish_rate] by /roslaunch
+[rosmaster.master][INFO] 2019-08-06 17:53:43,486: +PARAM [/amazon_warehouse_robot_patrol/move_base/local_costmap/footprint] by /roslaunch
+[rosmaster.master][INFO] 2019-08-06 17:53:43,486: +PARAM [/amazon_warehouse_robot/amcl/use_map_topic] by /roslaunch
+[rosmaster.master][INFO] 2019-08-06 17:53:43,486: +PARAM [/move_base/global_costmap/laser_scan_sensor/clearing] by /roslaunch
+[rosmaster.master][INFO] 2019-08-06 17:53:43,558: +PUB [/rosout] /map_server http://10.1.199.229:45817/
+[rosmaster.master][INFO] 2019-08-06 17:53:43,559: +SERVICE [/map_server/get_loggers] /map_server http://10.1.199.229:45817/
+[rosmaster.master][INFO] 2019-08-06 17:53:43,559: +SERVICE [/map_server/set_logger_level] /map_server http://10.1.199.229:45817/
+[rosmaster.master][INFO] 2019-08-06 17:53:43,565: +PUB [/rosout] /amazon_warehouse_robot/base_to_laser_main http://10.1.199.229:36807/
+[rosmaster.master][INFO] 2019-08-06 17:53:43,568: +SERVICE [/amazon_warehouse_robot/base_to_laser_main/get_loggers] /amazon_warehouse_robot/base_to_laser_main http://10.1.199.229:36807/
+[rosmaster.master][INFO] 2019-08-06 17:53:43,568: publisherUpdate[/rosout] -> http://10.1.199.229:36631/ ['http://10.1.199.229:45817/']
+[rosmaster.master][INFO] 2019-08-06 17:53:43,572: publisherUpdate[/rosout] -> http://10.1.199.229:36631/ ['http://10.1.199.229:45817/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2019-08-06 17:53:43,572: publisherUpdate[/rosout] -> http://10.1.199.229:36631/ ['http://10.1.199.229:45817/', 'http://10.1.199.229:36807/']
+[rosmaster.master][INFO] 2019-08-06 17:53:43,574: +SERVICE [/amazon_warehouse_robot/base_to_laser_main/set_logger_level] /amazon_warehouse_robot/base_to_laser_main http://10.1.199.229:36807/
+[rosmaster.master][INFO] 2019-08-06 17:53:43,575: publisherUpdate[/rosout] -> http://10.1.199.229:36631/ ['http://10.1.199.229:45817/', 'http://10.1.199.229:36807/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2019-08-06 17:53:43,575: +SUB [/clock] /map_server http://10.1.199.229:45817/
+[rosmaster.master][INFO] 2019-08-06 17:53:43,579: +PUB [/rosout] /amazon_warehouse_robot/amcl http://10.1.199.229:33711/
+[rosmaster.master][INFO] 2019-08-06 17:53:43,583: +SERVICE [/amazon_warehouse_robot/amcl/get_loggers] /amazon_warehouse_robot/amcl http://10.1.199.229:33711/
+[rosmaster.master][INFO] 2019-08-06 17:53:43,585: +SERVICE [/amazon_warehouse_robot/amcl/set_logger_level] /amazon_warehouse_robot/amcl http://10.1.199.229:33711/
+[rosmaster.master][INFO] 2019-08-06 17:53:43,592: +SUB [/clock] /amazon_warehouse_robot/base_to_laser_main http://10.1.199.229:36807/
+[rosmaster.master][INFO] 2019-08-06 17:53:43,594: +PUB [/tf] /amazon_warehouse_robot/base_to_laser_main http://10.1.199.229:36807/
+[rosmaster.master][INFO] 2019-08-06 17:53:43,597: +SUB [/clock] /amazon_warehouse_robot/amcl http://10.1.199.229:33711/
+[rosmaster.master][INFO] 2019-08-06 17:53:43,600: +PUB [/rosout] /amazon_warehouse_robot/cmd_vel_mux http://10.1.199.229:38953/
+[rosmaster.master][INFO] 2019-08-06 17:53:43,601: +SERVICE [/amazon_warehouse_robot/cmd_vel_mux/get_loggers] /amazon_warehouse_robot/cmd_vel_mux http://10.1.199.229:38953/
+[rosmaster.master][INFO] 2019-08-06 17:53:43,603: +SERVICE [/amazon_warehouse_robot/cmd_vel_mux/set_logger_level] /amazon_warehouse_robot/cmd_vel_mux http://10.1.199.229:38953/
+[rosmaster.master][INFO] 2019-08-06 17:53:43,617: +SUB [/clock] /amazon_warehouse_robot/cmd_vel_mux http://10.1.199.229:38953/
+[rosmaster.master][INFO] 2019-08-06 17:53:43,622: +PARAM [/amazon_warehouse_robot/cmd_vel_mux] by /amazon_warehouse_robot/cmd_vel_mux
+[rosmaster.master][INFO] 2019-08-06 17:53:43,623: +PUB [/rosout] /move_base http://10.1.199.229:32867/
+[rosmaster.master][INFO] 2019-08-06 17:53:43,627: +SERVICE [/move_base/get_loggers] /move_base http://10.1.199.229:32867/
+[rosmaster.master][INFO] 2019-08-06 17:53:43,630: +PUB [/rosout] /amazon_warehouse_robot_patrol/base_to_laser_patrol http://10.1.199.229:35931/
+[rosmaster.master][INFO] 2019-08-06 17:53:43,632: +SERVICE [/move_base/set_logger_level] /move_base http://10.1.199.229:32867/
+[rosmaster.master][INFO] 2019-08-06 17:53:43,634: +SERVICE [/amazon_warehouse_robot_patrol/base_to_laser_patrol/get_loggers] /amazon_warehouse_robot_patrol/base_to_laser_patrol http://10.1.199.229:35931/
+[rosmaster.master][INFO] 2019-08-06 17:53:43,635: +PUB [/rosout] /amazon_warehouse_robot_patrol/amcl_patrol http://10.1.199.229:34199/
+[rosmaster.master][INFO] 2019-08-06 17:53:43,638: +SERVICE [/amazon_warehouse_robot_patrol/base_to_laser_patrol/set_logger_level] /amazon_warehouse_robot_patrol/base_to_laser_patrol http://10.1.199.229:35931/
+[rosmaster.master][INFO] 2019-08-06 17:53:43,641: +SERVICE [/amazon_warehouse_robot_patrol/amcl_patrol/get_loggers] /amazon_warehouse_robot_patrol/amcl_patrol http://10.1.199.229:34199/
+[rosmaster.master][INFO] 2019-08-06 17:53:43,645: +PUB [/rosout] /amazon_warehouse_robot/nodelet_manager http://10.1.199.229:36933/
+[rosmaster.master][INFO] 2019-08-06 17:53:43,646: +SERVICE [/amazon_warehouse_robot_patrol/amcl_patrol/set_logger_level] /amazon_warehouse_robot_patrol/amcl_patrol http://10.1.199.229:34199/
+[rosmaster.master][INFO] 2019-08-06 17:53:43,648: +PUB [/rosout] /amazon_warehouse_robot_patrol/move_base http://10.1.199.229:46287/
+[rosmaster.master][INFO] 2019-08-06 17:53:43,651: +SERVICE [/amazon_warehouse_robot/nodelet_manager/get_loggers] /amazon_warehouse_robot/nodelet_manager http://10.1.199.229:36933/
+[rosmaster.master][INFO] 2019-08-06 17:53:43,653: +SERVICE [/amazon_warehouse_robot_patrol/move_base/get_loggers] /amazon_warehouse_robot_patrol/move_base http://10.1.199.229:46287/
+[rosmaster.master][INFO] 2019-08-06 17:53:43,656: +SERVICE [/amazon_warehouse_robot/nodelet_manager/set_logger_level] /amazon_warehouse_robot/nodelet_manager http://10.1.199.229:36933/
+[rosmaster.master][INFO] 2019-08-06 17:53:43,659: +SERVICE [/amazon_warehouse_robot_patrol/move_base/set_logger_level] /amazon_warehouse_robot_patrol/move_base http://10.1.199.229:46287/
+[rosmaster.master][INFO] 2019-08-06 17:53:43,668: +SUB [/clock] /move_base http://10.1.199.229:32867/
+[rosmaster.master][INFO] 2019-08-06 17:53:43,669: publisherUpdate[/rosout] -> http://10.1.199.229:36631/ ['http://10.1.199.229:45817/', 'http://10.1.199.229:36807/', 'http://10.1.199.229:33711/']
+[rosmaster.master][INFO] 2019-08-06 17:53:43,670: publisherUpdate[/rosout] -> http://10.1.199.229:36631/ ['http://10.1.199.229:45817/', 'http://10.1.199.229:36807/', 'http://10.1.199.229:33711/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2019-08-06 17:53:43,672: publisherUpdate[/rosout] -> http://10.1.199.229:36631/ ['http://10.1.199.229:45817/', 'http://10.1.199.229:36807/', 'http://10.1.199.229:33711/', 'http://10.1.199.229:38953/']
+[rosmaster.master][INFO] 2019-08-06 17:53:43,673: publisherUpdate[/rosout] -> http://10.1.199.229:36631/ ['http://10.1.199.229:45817/', 'http://10.1.199.229:36807/', 'http://10.1.199.229:33711/', 'http://10.1.199.229:38953/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2019-08-06 17:53:43,673: publisherUpdate[/rosout] -> http://10.1.199.229:36631/ ['http://10.1.199.229:45817/', 'http://10.1.199.229:36807/', 'http://10.1.199.229:33711/', 'http://10.1.199.229:38953/', 'http://10.1.199.229:32867/']
+[rosmaster.master][INFO] 2019-08-06 17:53:43,674: publisherUpdate[/rosout] -> http://10.1.199.229:36631/ ['http://10.1.199.229:45817/', 'http://10.1.199.229:36807/', 'http://10.1.199.229:33711/', 'http://10.1.199.229:38953/', 'http://10.1.199.229:32867/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2019-08-06 17:53:43,675: publisherUpdate[/rosout] -> http://10.1.199.229:36631/ ['http://10.1.199.229:45817/', 'http://10.1.199.229:36807/', 'http://10.1.199.229:33711/', 'http://10.1.199.229:38953/', 'http://10.1.199.229:32867/', 'http://10.1.199.229:35931/']
+[rosmaster.master][INFO] 2019-08-06 17:53:43,676: publisherUpdate[/rosout] -> http://10.1.199.229:36631/ ['http://10.1.199.229:45817/', 'http://10.1.199.229:36807/', 'http://10.1.199.229:33711/', 'http://10.1.199.229:38953/', 'http://10.1.199.229:32867/', 'http://10.1.199.229:35931/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2019-08-06 17:53:43,677: publisherUpdate[/rosout] -> http://10.1.199.229:36631/ ['http://10.1.199.229:45817/', 'http://10.1.199.229:36807/', 'http://10.1.199.229:33711/', 'http://10.1.199.229:38953/', 'http://10.1.199.229:32867/', 'http://10.1.199.229:35931/', 'http://10.1.199.229:34199/']
+[rosmaster.master][INFO] 2019-08-06 17:53:43,678: publisherUpdate[/rosout] -> http://10.1.199.229:36631/ ['http://10.1.199.229:45817/', 'http://10.1.199.229:36807/', 'http://10.1.199.229:33711/', 'http://10.1.199.229:38953/', 'http://10.1.199.229:32867/', 'http://10.1.199.229:35931/', 'http://10.1.199.229:34199/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2019-08-06 17:53:43,679: publisherUpdate[/rosout] -> http://10.1.199.229:36631/ ['http://10.1.199.229:45817/', 'http://10.1.199.229:36807/', 'http://10.1.199.229:33711/', 'http://10.1.199.229:38953/', 'http://10.1.199.229:32867/', 'http://10.1.199.229:35931/', 'http://10.1.199.229:34199/', 'http://10.1.199.229:36933/']
+[rosmaster.master][INFO] 2019-08-06 17:53:43,680: publisherUpdate[/rosout] -> http://10.1.199.229:36631/ ['http://10.1.199.229:45817/', 'http://10.1.199.229:36807/', 'http://10.1.199.229:33711/', 'http://10.1.199.229:38953/', 'http://10.1.199.229:32867/', 'http://10.1.199.229:35931/', 'http://10.1.199.229:34199/', 'http://10.1.199.229:36933/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2019-08-06 17:53:43,681: +SUB [/clock] /amazon_warehouse_robot_patrol/base_to_laser_patrol http://10.1.199.229:35931/
+[rosmaster.master][INFO] 2019-08-06 17:53:43,682: publisherUpdate[/rosout] -> http://10.1.199.229:36631/ ['http://10.1.199.229:45817/', 'http://10.1.199.229:36807/', 'http://10.1.199.229:33711/', 'http://10.1.199.229:38953/', 'http://10.1.199.229:32867/', 'http://10.1.199.229:35931/', 'http://10.1.199.229:34199/', 'http://10.1.199.229:36933/', 'http://10.1.199.229:46287/']
+[rosmaster.master][INFO] 2019-08-06 17:53:43,683: publisherUpdate[/rosout] -> http://10.1.199.229:36631/ ['http://10.1.199.229:45817/', 'http://10.1.199.229:36807/', 'http://10.1.199.229:33711/', 'http://10.1.199.229:38953/', 'http://10.1.199.229:32867/', 'http://10.1.199.229:35931/', 'http://10.1.199.229:34199/', 'http://10.1.199.229:36933/', 'http://10.1.199.229:46287/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2019-08-06 17:53:43,687: +PUB [/tf] /amazon_warehouse_robot_patrol/base_to_laser_patrol http://10.1.199.229:35931/
+[rosmaster.master][INFO] 2019-08-06 17:53:43,691: +SUB [/clock] /amazon_warehouse_robot_patrol/amcl_patrol http://10.1.199.229:34199/
+[rosmaster.master][INFO] 2019-08-06 17:53:43,698: +SUB [/clock] /amazon_warehouse_robot/nodelet_manager http://10.1.199.229:36933/
+[rosmaster.master][INFO] 2019-08-06 17:53:43,699: +SUB [/clock] /amazon_warehouse_robot_patrol/move_base http://10.1.199.229:46287/
+[rosmaster.master][INFO] 2019-08-06 17:53:43,700: +SUB [/tf] /move_base http://10.1.199.229:32867/
+[rosmaster.master][INFO] 2019-08-06 17:53:43,709: +SERVICE [/amazon_warehouse_robot/nodelet_manager/load_nodelet] /amazon_warehouse_robot/nodelet_manager http://10.1.199.229:36933/
+[rosmaster.master][INFO] 2019-08-06 17:53:43,714: +SERVICE [/amazon_warehouse_robot/nodelet_manager/unload_nodelet] /amazon_warehouse_robot/nodelet_manager http://10.1.199.229:36933/
+[rosmaster.master][INFO] 2019-08-06 17:53:43,719: +SERVICE [/amazon_warehouse_robot/nodelet_manager/list] /amazon_warehouse_robot/nodelet_manager http://10.1.199.229:36933/
+[rosmaster.master][INFO] 2019-08-06 17:53:43,727: +SUB [/tf] /amazon_warehouse_robot_patrol/move_base http://10.1.199.229:46287/
+[rosmaster.master][INFO] 2019-08-06 17:53:43,729: +SUB [/tf_static] /move_base http://10.1.199.229:32867/
+[rosmaster.master][INFO] 2019-08-06 17:53:43,745: +SUB [/tf_static] /amazon_warehouse_robot_patrol/move_base http://10.1.199.229:46287/
+[rosmaster.master][INFO] 2019-08-06 17:53:43,768: +PUB [/rosout] /gazebo http://10.1.199.229:38669/
+[rosmaster.master][INFO] 2019-08-06 17:53:43,770: publisherUpdate[/rosout] -> http://10.1.199.229:36631/ ['http://10.1.199.229:45817/', 'http://10.1.199.229:36807/', 'http://10.1.199.229:33711/', 'http://10.1.199.229:38953/', 'http://10.1.199.229:32867/', 'http://10.1.199.229:35931/', 'http://10.1.199.229:34199/', 'http://10.1.199.229:36933/', 'http://10.1.199.229:46287/', 'http://10.1.199.229:38669/']
+[rosmaster.master][INFO] 2019-08-06 17:53:43,771: +SERVICE [/gazebo/get_loggers] /gazebo http://10.1.199.229:38669/
+[rosmaster.master][INFO] 2019-08-06 17:53:43,771: publisherUpdate[/rosout] -> http://10.1.199.229:36631/ ['http://10.1.199.229:45817/', 'http://10.1.199.229:36807/', 'http://10.1.199.229:33711/', 'http://10.1.199.229:38953/', 'http://10.1.199.229:32867/', 'http://10.1.199.229:35931/', 'http://10.1.199.229:34199/', 'http://10.1.199.229:36933/', 'http://10.1.199.229:46287/', 'http://10.1.199.229:38669/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2019-08-06 17:53:43,772: +PUB [/tf] /amazon_warehouse_robot/amcl http://10.1.199.229:33711/
+[rosmaster.master][INFO] 2019-08-06 17:53:43,774: +SERVICE [/gazebo/set_logger_level] /gazebo http://10.1.199.229:38669/
+[rosmaster.master][INFO] 2019-08-06 17:53:43,777: publisherUpdate[/tf] -> http://10.1.199.229:32867/ ['http://10.1.199.229:36807/', 'http://10.1.199.229:35931/', 'http://10.1.199.229:33711/']
+[rosmaster.master][INFO] 2019-08-06 17:53:43,780: publisherUpdate[/tf] -> http://10.1.199.229:32867/ ['http://10.1.199.229:36807/', 'http://10.1.199.229:35931/', 'http://10.1.199.229:33711/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2019-08-06 17:53:43,780: publisherUpdate[/tf] -> http://10.1.199.229:46287/ ['http://10.1.199.229:36807/', 'http://10.1.199.229:35931/', 'http://10.1.199.229:33711/']
+[rosmaster.master][INFO] 2019-08-06 17:53:43,783: publisherUpdate[/tf] -> http://10.1.199.229:46287/ ['http://10.1.199.229:36807/', 'http://10.1.199.229:35931/', 'http://10.1.199.229:33711/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2019-08-06 17:53:43,793: +SUB [/tf] /amazon_warehouse_robot/amcl http://10.1.199.229:33711/
+[rosmaster.master][INFO] 2019-08-06 17:53:43,803: +SUB [/clock] /gazebo http://10.1.199.229:38669/
+[rosmaster.master][INFO] 2019-08-06 17:53:43,812: +SUB [/tf_static] /amazon_warehouse_robot/amcl http://10.1.199.229:33711/
+[rosmaster.master][INFO] 2019-08-06 17:53:43,814: +PUB [/amazon_warehouse_robot/amcl_pose] /amazon_warehouse_robot/amcl http://10.1.199.229:33711/
+[rosmaster.master][INFO] 2019-08-06 17:53:43,817: +PUB [/amazon_warehouse_robot/particlecloud] /amazon_warehouse_robot/amcl http://10.1.199.229:33711/
+[rosmaster.master][INFO] 2019-08-06 17:53:43,820: +SERVICE [/amazon_warehouse_robot/global_localization] /amazon_warehouse_robot/amcl http://10.1.199.229:33711/
+[rosmaster.master][INFO] 2019-08-06 17:53:43,821: +PUB [/amazon_warehouse_robot/move_base/cmd_vel] /move_base http://10.1.199.229:32867/
+[rosmaster.master][INFO] 2019-08-06 17:53:43,823: +SERVICE [/amazon_warehouse_robot/request_nomotion_update] /amazon_warehouse_robot/amcl http://10.1.199.229:33711/
+[rosmaster.master][INFO] 2019-08-06 17:53:43,824: +PUB [/amazon_warehouse_robot/move_base/current_goal] /move_base http://10.1.199.229:32867/
+[rosmaster.master][INFO] 2019-08-06 17:53:43,826: +SERVICE [/amazon_warehouse_robot/set_map] /amazon_warehouse_robot/amcl http://10.1.199.229:33711/
+[rosmaster.master][INFO] 2019-08-06 17:53:43,827: +PUB [/amazon_warehouse_robot/move_base/goal] /move_base http://10.1.199.229:32867/
+[rosmaster.master][INFO] 2019-08-06 17:53:43,846: +SUB [/amazon_warehouse_robot/amazon_warehouse_robot/laser/scan] /amazon_warehouse_robot/amcl http://10.1.199.229:33711/
+[rosmaster.master][INFO] 2019-08-06 17:53:43,848: +SUB [/amazon_warehouse_robot/move_base_simple/goal] /move_base http://10.1.199.229:32867/
+[rosmaster.master][INFO] 2019-08-06 17:53:43,849: +PUB [/move_base/cmd_vel] /amazon_warehouse_robot_patrol/move_base http://10.1.199.229:46287/
+[rosmaster.master][INFO] 2019-08-06 17:53:43,853: +PUB [/amazon_warehouse_robot_patrol/move_base/current_goal] /amazon_warehouse_robot_patrol/move_base http://10.1.199.229:46287/
+[rosmaster.master][INFO] 2019-08-06 17:53:43,857: +PUB [/amazon_warehouse_robot_patrol/move_base/goal] /amazon_warehouse_robot_patrol/move_base http://10.1.199.229:46287/
+[rosmaster.master][INFO] 2019-08-06 17:53:43,863: +PUB [/tf] /amazon_warehouse_robot_patrol/amcl_patrol http://10.1.199.229:34199/
+[rosmaster.master][INFO] 2019-08-06 17:53:43,870: +SUB [/amazon_warehouse_robot/initialpose] /amazon_warehouse_robot/amcl http://10.1.199.229:33711/
+[rosmaster.master][INFO] 2019-08-06 17:53:43,872: publisherUpdate[/tf] -> http://10.1.199.229:32867/ ['http://10.1.199.229:36807/', 'http://10.1.199.229:35931/', 'http://10.1.199.229:33711/', 'http://10.1.199.229:34199/']
+[rosmaster.master][INFO] 2019-08-06 17:53:43,874: publisherUpdate[/tf] -> http://10.1.199.229:32867/ ['http://10.1.199.229:36807/', 'http://10.1.199.229:35931/', 'http://10.1.199.229:33711/', 'http://10.1.199.229:34199/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2019-08-06 17:53:43,875: publisherUpdate[/tf] -> http://10.1.199.229:46287/ ['http://10.1.199.229:36807/', 'http://10.1.199.229:35931/', 'http://10.1.199.229:33711/', 'http://10.1.199.229:34199/']
+[rosmaster.master][INFO] 2019-08-06 17:53:43,881: +SUB [/amazon_warehouse_robot_patrol/move_base_simple/goal] /amazon_warehouse_robot_patrol/move_base http://10.1.199.229:46287/
+[rosmaster.master][INFO] 2019-08-06 17:53:43,883: publisherUpdate[/tf] -> http://10.1.199.229:46287/ ['http://10.1.199.229:36807/', 'http://10.1.199.229:35931/', 'http://10.1.199.229:33711/', 'http://10.1.199.229:34199/']: sec=0.01, result=[1, '', 0]
+[rosmaster.master][INFO] 2019-08-06 17:53:43,884: publisherUpdate[/tf] -> http://10.1.199.229:33711/ ['http://10.1.199.229:36807/', 'http://10.1.199.229:35931/', 'http://10.1.199.229:33711/', 'http://10.1.199.229:34199/']
+[rosmaster.master][INFO] 2019-08-06 17:53:43,890: +SUB [/tf] /amazon_warehouse_robot_patrol/amcl_patrol http://10.1.199.229:34199/
+[rosmaster.master][INFO] 2019-08-06 17:53:43,896: +SUB [/amazon_warehouse_robot/map] /amazon_warehouse_robot/amcl http://10.1.199.229:33711/
+[rosmaster.master][INFO] 2019-08-06 17:53:43,897: publisherUpdate[/tf] -> http://10.1.199.229:33711/ ['http://10.1.199.229:36807/', 'http://10.1.199.229:35931/', 'http://10.1.199.229:33711/', 'http://10.1.199.229:34199/']: sec=0.01, result=[1, '', 0]
+[rosmaster.master][INFO] 2019-08-06 17:53:43,901: +SERVICE [/amazon_warehouse_robot/amcl/set_parameters] /amazon_warehouse_robot/amcl http://10.1.199.229:33711/
+[rosmaster.master][INFO] 2019-08-06 17:53:43,904: +PUB [/amazon_warehouse_robot/amcl/parameter_descriptions] /amazon_warehouse_robot/amcl http://10.1.199.229:33711/
+[rosmaster.master][INFO] 2019-08-06 17:53:43,908: +PUB [/amazon_warehouse_robot/amcl/parameter_updates] /amazon_warehouse_robot/amcl http://10.1.199.229:33711/
+[rosmaster.master][INFO] 2019-08-06 17:53:43,910: +SUB [/tf_static] /amazon_warehouse_robot_patrol/amcl_patrol http://10.1.199.229:34199/
+[rosmaster.master][INFO] 2019-08-06 17:53:43,914: +PUB [/amazon_warehouse_robot_patrol/amcl_pose] /amazon_warehouse_robot_patrol/amcl_patrol http://10.1.199.229:34199/
+[rosmaster.master][INFO] 2019-08-06 17:53:43,917: +PUB [/amazon_warehouse_robot_patrol/particlecloud] /amazon_warehouse_robot_patrol/amcl_patrol http://10.1.199.229:34199/
+[rosmaster.master][INFO] 2019-08-06 17:53:43,921: +SERVICE [/amazon_warehouse_robot_patrol/global_localization] /amazon_warehouse_robot_patrol/amcl_patrol http://10.1.199.229:34199/
+[rosmaster.master][INFO] 2019-08-06 17:53:43,924: +SERVICE [/amazon_warehouse_robot_patrol/request_nomotion_update] /amazon_warehouse_robot_patrol/amcl_patrol http://10.1.199.229:34199/
+[rosmaster.master][INFO] 2019-08-06 17:53:43,927: +SERVICE [/amazon_warehouse_robot_patrol/set_map] /amazon_warehouse_robot_patrol/amcl_patrol http://10.1.199.229:34199/
+[rosmaster.master][INFO] 2019-08-06 17:53:43,937: +SUB [/amazon_warehouse_robot_patrol/amazon_warehouse_robot_patrol/laser/scan] /amazon_warehouse_robot_patrol/amcl_patrol http://10.1.199.229:34199/
+[rosmaster.master][INFO] 2019-08-06 17:53:43,949: +SUB [/amazon_warehouse_robot_patrol/initialpose] /amazon_warehouse_robot_patrol/amcl_patrol http://10.1.199.229:34199/
+[rosmaster.master][INFO] 2019-08-06 17:53:43,960: +SUB [/amazon_warehouse_robot_patrol/map] /amazon_warehouse_robot_patrol/amcl_patrol http://10.1.199.229:34199/
+[rosmaster.master][INFO] 2019-08-06 17:53:43,963: +SERVICE [/amazon_warehouse_robot_patrol/amcl_patrol/set_parameters] /amazon_warehouse_robot_patrol/amcl_patrol http://10.1.199.229:34199/
+[rosmaster.master][INFO] 2019-08-06 17:53:43,965: +PUB [/amazon_warehouse_robot_patrol/amcl_patrol/parameter_descriptions] /amazon_warehouse_robot_patrol/amcl_patrol http://10.1.199.229:34199/
+[rosmaster.master][INFO] 2019-08-06 17:53:43,967: +PUB [/amazon_warehouse_robot_patrol/amcl_patrol/parameter_updates] /amazon_warehouse_robot_patrol/amcl_patrol http://10.1.199.229:34199/
+[rosmaster.master][INFO] 2019-08-06 17:53:43,990: +PARAM [/amazon_warehouse_robot/amcl/min_particles] by /amazon_warehouse_robot/amcl
+[rosmaster.master][INFO] 2019-08-06 17:53:43,993: +PARAM [/amazon_warehouse_robot/amcl/max_particles] by /amazon_warehouse_robot/amcl
+[rosmaster.master][INFO] 2019-08-06 17:53:43,996: +PARAM [/amazon_warehouse_robot/amcl/kld_err] by /amazon_warehouse_robot/amcl
+[rosmaster.master][INFO] 2019-08-06 17:53:43,999: +PARAM [/amazon_warehouse_robot/amcl/kld_z] by /amazon_warehouse_robot/amcl
+[rosmaster.master][INFO] 2019-08-06 17:53:44,001: +PARAM [/amazon_warehouse_robot/amcl/update_min_d] by /amazon_warehouse_robot/amcl
+[rosmaster.master][INFO] 2019-08-06 17:53:44,003: +PARAM [/amazon_warehouse_robot/amcl/update_min_a] by /amazon_warehouse_robot/amcl
+[rosmaster.master][INFO] 2019-08-06 17:53:44,005: +PARAM [/amazon_warehouse_robot/amcl/resample_interval] by /amazon_warehouse_robot/amcl
+[rosmaster.master][INFO] 2019-08-06 17:53:44,007: +PARAM [/amazon_warehouse_robot/amcl/transform_tolerance] by /amazon_warehouse_robot/amcl
+[rosmaster.master][INFO] 2019-08-06 17:53:44,009: +PARAM [/amazon_warehouse_robot/amcl/recovery_alpha_slow] by /amazon_warehouse_robot/amcl
+[rosmaster.master][INFO] 2019-08-06 17:53:44,012: +PARAM [/amazon_warehouse_robot/amcl/recovery_alpha_fast] by /amazon_warehouse_robot/amcl
+[rosmaster.master][INFO] 2019-08-06 17:53:44,014: +PARAM [/amazon_warehouse_robot/amcl/do_beamskip] by /amazon_warehouse_robot/amcl
+[rosmaster.master][INFO] 2019-08-06 17:53:44,016: +PARAM [/amazon_warehouse_robot/amcl/beam_skip_distance] by /amazon_warehouse_robot/amcl
+[rosmaster.master][INFO] 2019-08-06 17:53:44,018: +PARAM [/amazon_warehouse_robot/amcl/beam_skip_threshold] by /amazon_warehouse_robot/amcl
+[rosmaster.master][INFO] 2019-08-06 17:53:44,021: +PARAM [/amazon_warehouse_robot/amcl/tf_broadcast] by /amazon_warehouse_robot/amcl
+[rosmaster.master][INFO] 2019-08-06 17:53:44,023: +PARAM [/amazon_warehouse_robot/amcl/gui_publish_rate] by /amazon_warehouse_robot/amcl
+[rosmaster.master][INFO] 2019-08-06 17:53:44,026: +PARAM [/amazon_warehouse_robot/amcl/save_pose_rate] by /amazon_warehouse_robot/amcl
+[rosmaster.master][INFO] 2019-08-06 17:53:44,029: +PARAM [/amazon_warehouse_robot/amcl/use_map_topic] by /amazon_warehouse_robot/amcl
+[rosmaster.master][INFO] 2019-08-06 17:53:44,031: +PARAM [/amazon_warehouse_robot/amcl/first_map_only] by /amazon_warehouse_robot/amcl
+[rosmaster.master][INFO] 2019-08-06 17:53:44,033: +PARAM [/amazon_warehouse_robot/amcl/laser_min_range] by /amazon_warehouse_robot/amcl
+[rosmaster.master][INFO] 2019-08-06 17:53:44,036: +PARAM [/amazon_warehouse_robot/amcl/laser_max_range] by /amazon_warehouse_robot/amcl
+[rosmaster.master][INFO] 2019-08-06 17:53:44,038: +PARAM [/amazon_warehouse_robot/amcl/laser_max_beams] by /amazon_warehouse_robot/amcl
+[rosmaster.master][INFO] 2019-08-06 17:53:44,040: +PARAM [/amazon_warehouse_robot/amcl/laser_z_hit] by /amazon_warehouse_robot/amcl
+[rosmaster.master][INFO] 2019-08-06 17:53:44,042: +PARAM [/amazon_warehouse_robot_patrol/amcl_patrol/min_particles] by /amazon_warehouse_robot_patrol/amcl_patrol
+[rosmaster.master][INFO] 2019-08-06 17:53:44,043: +PARAM [/amazon_warehouse_robot/amcl/laser_z_short] by /amazon_warehouse_robot/amcl
+[rosmaster.master][INFO] 2019-08-06 17:53:44,044: +PARAM [/amazon_warehouse_robot_patrol/amcl_patrol/max_particles] by /amazon_warehouse_robot_patrol/amcl_patrol
+[rosmaster.master][INFO] 2019-08-06 17:53:44,046: +PARAM [/amazon_warehouse_robot/amcl/laser_z_max] by /amazon_warehouse_robot/amcl
+[rosmaster.master][INFO] 2019-08-06 17:53:44,046: +PARAM [/amazon_warehouse_robot_patrol/amcl_patrol/kld_err] by /amazon_warehouse_robot_patrol/amcl_patrol
+[rosmaster.master][INFO] 2019-08-06 17:53:44,048: +PARAM [/amazon_warehouse_robot/amcl/laser_z_rand] by /amazon_warehouse_robot/amcl
+[rosmaster.master][INFO] 2019-08-06 17:53:44,049: +PARAM [/amazon_warehouse_robot_patrol/amcl_patrol/kld_z] by /amazon_warehouse_robot_patrol/amcl_patrol
+[rosmaster.master][INFO] 2019-08-06 17:53:44,050: +PARAM [/amazon_warehouse_robot/amcl/laser_sigma_hit] by /amazon_warehouse_robot/amcl
+[rosmaster.master][INFO] 2019-08-06 17:53:44,051: +PARAM [/amazon_warehouse_robot_patrol/amcl_patrol/update_min_d] by /amazon_warehouse_robot_patrol/amcl_patrol
+[rosmaster.master][INFO] 2019-08-06 17:53:44,053: +PARAM [/amazon_warehouse_robot/amcl/laser_lambda_short] by /amazon_warehouse_robot/amcl
+[rosmaster.master][INFO] 2019-08-06 17:53:44,053: +PARAM [/amazon_warehouse_robot_patrol/amcl_patrol/update_min_a] by /amazon_warehouse_robot_patrol/amcl_patrol
+[rosmaster.master][INFO] 2019-08-06 17:53:44,055: +PARAM [/amazon_warehouse_robot/amcl/laser_likelihood_max_dist] by /amazon_warehouse_robot/amcl
+[rosmaster.master][INFO] 2019-08-06 17:53:44,056: +PARAM [/amazon_warehouse_robot_patrol/amcl_patrol/resample_interval] by /amazon_warehouse_robot_patrol/amcl_patrol
+[rosmaster.master][INFO] 2019-08-06 17:53:44,057: +PARAM [/amazon_warehouse_robot/amcl/laser_model_type] by /amazon_warehouse_robot/amcl
+[rosmaster.master][INFO] 2019-08-06 17:53:44,058: +PARAM [/amazon_warehouse_robot_patrol/amcl_patrol/transform_tolerance] by /amazon_warehouse_robot_patrol/amcl_patrol
+[rosmaster.master][INFO] 2019-08-06 17:53:44,059: +PARAM [/amazon_warehouse_robot/amcl/odom_model_type] by /amazon_warehouse_robot/amcl
+[rosmaster.master][INFO] 2019-08-06 17:53:44,060: +PARAM [/amazon_warehouse_robot_patrol/amcl_patrol/recovery_alpha_slow] by /amazon_warehouse_robot_patrol/amcl_patrol
+[rosmaster.master][INFO] 2019-08-06 17:53:44,062: +PARAM [/amazon_warehouse_robot/amcl/odom_alpha1] by /amazon_warehouse_robot/amcl
+[rosmaster.master][INFO] 2019-08-06 17:53:44,062: +PARAM [/amazon_warehouse_robot_patrol/amcl_patrol/recovery_alpha_fast] by /amazon_warehouse_robot_patrol/amcl_patrol
+[rosmaster.master][INFO] 2019-08-06 17:53:44,064: +PARAM [/amazon_warehouse_robot/amcl/odom_alpha2] by /amazon_warehouse_robot/amcl
+[rosmaster.master][INFO] 2019-08-06 17:53:44,065: +PARAM [/amazon_warehouse_robot_patrol/amcl_patrol/do_beamskip] by /amazon_warehouse_robot_patrol/amcl_patrol
+[rosmaster.master][INFO] 2019-08-06 17:53:44,066: +PARAM [/amazon_warehouse_robot/amcl/odom_alpha3] by /amazon_warehouse_robot/amcl
+[rosmaster.master][INFO] 2019-08-06 17:53:44,067: +PARAM [/amazon_warehouse_robot_patrol/amcl_patrol/beam_skip_distance] by /amazon_warehouse_robot_patrol/amcl_patrol
+[rosmaster.master][INFO] 2019-08-06 17:53:44,069: +PARAM [/amazon_warehouse_robot/amcl/odom_alpha4] by /amazon_warehouse_robot/amcl
+[rosmaster.master][INFO] 2019-08-06 17:53:44,070: +PARAM [/amazon_warehouse_robot_patrol/amcl_patrol/beam_skip_threshold] by /amazon_warehouse_robot_patrol/amcl_patrol
+[rosmaster.master][INFO] 2019-08-06 17:53:44,071: +PARAM [/amazon_warehouse_robot/amcl/odom_alpha5] by /amazon_warehouse_robot/amcl
+[rosmaster.master][INFO] 2019-08-06 17:53:44,072: +PARAM [/amazon_warehouse_robot_patrol/amcl_patrol/tf_broadcast] by /amazon_warehouse_robot_patrol/amcl_patrol
+[rosmaster.master][INFO] 2019-08-06 17:53:44,073: +PARAM [/amazon_warehouse_robot/amcl/odom_frame_id] by /amazon_warehouse_robot/amcl
+[rosmaster.master][INFO] 2019-08-06 17:53:44,075: +PARAM [/amazon_warehouse_robot_patrol/amcl_patrol/gui_publish_rate] by /amazon_warehouse_robot_patrol/amcl_patrol
+[rosmaster.master][INFO] 2019-08-06 17:53:44,076: +PARAM [/amazon_warehouse_robot/amcl/base_frame_id] by /amazon_warehouse_robot/amcl
+[rosmaster.master][INFO] 2019-08-06 17:53:44,077: +PARAM [/amazon_warehouse_robot_patrol/amcl_patrol/save_pose_rate] by /amazon_warehouse_robot_patrol/amcl_patrol
+[rosmaster.master][INFO] 2019-08-06 17:53:44,078: +PARAM [/amazon_warehouse_robot/amcl/global_frame_id] by /amazon_warehouse_robot/amcl
+[rosmaster.master][INFO] 2019-08-06 17:53:44,079: +PARAM [/amazon_warehouse_robot_patrol/amcl_patrol/use_map_topic] by /amazon_warehouse_robot_patrol/amcl_patrol
+[rosmaster.master][INFO] 2019-08-06 17:53:44,080: +PARAM [/amazon_warehouse_robot/amcl/restore_defaults] by /amazon_warehouse_robot/amcl
+[rosmaster.master][INFO] 2019-08-06 17:53:44,081: +PARAM [/amazon_warehouse_robot_patrol/amcl_patrol/first_map_only] by /amazon_warehouse_robot_patrol/amcl_patrol
+[rosmaster.master][INFO] 2019-08-06 17:53:44,083: +PARAM [/amazon_warehouse_robot/amcl/min_particles] by /amazon_warehouse_robot/amcl
+[rosmaster.master][INFO] 2019-08-06 17:53:44,084: +PARAM [/amazon_warehouse_robot_patrol/amcl_patrol/laser_min_range] by /amazon_warehouse_robot_patrol/amcl_patrol
+[rosmaster.master][INFO] 2019-08-06 17:53:44,085: +PARAM [/amazon_warehouse_robot/amcl/max_particles] by /amazon_warehouse_robot/amcl
+[rosmaster.master][INFO] 2019-08-06 17:53:44,086: +PARAM [/amazon_warehouse_robot_patrol/amcl_patrol/laser_max_range] by /amazon_warehouse_robot_patrol/amcl_patrol
+[rosmaster.master][INFO] 2019-08-06 17:53:44,088: +PARAM [/amazon_warehouse_robot/amcl/kld_err] by /amazon_warehouse_robot/amcl
+[rosmaster.master][INFO] 2019-08-06 17:53:44,089: +PARAM [/amazon_warehouse_robot_patrol/amcl_patrol/laser_max_beams] by /amazon_warehouse_robot_patrol/amcl_patrol
+[rosmaster.master][INFO] 2019-08-06 17:53:44,090: +PARAM [/amazon_warehouse_robot/amcl/kld_z] by /amazon_warehouse_robot/amcl
+[rosmaster.master][INFO] 2019-08-06 17:53:44,091: +PARAM [/amazon_warehouse_robot_patrol/amcl_patrol/laser_z_hit] by /amazon_warehouse_robot_patrol/amcl_patrol
+[rosmaster.master][INFO] 2019-08-06 17:53:44,093: +PARAM [/amazon_warehouse_robot/amcl/update_min_d] by /amazon_warehouse_robot/amcl
+[rosmaster.master][INFO] 2019-08-06 17:53:44,093: +PARAM [/amazon_warehouse_robot_patrol/amcl_patrol/laser_z_short] by /amazon_warehouse_robot_patrol/amcl_patrol
+[rosmaster.master][INFO] 2019-08-06 17:53:44,095: +PARAM [/amazon_warehouse_robot/amcl/update_min_a] by /amazon_warehouse_robot/amcl
+[rosmaster.master][INFO] 2019-08-06 17:53:44,096: +PARAM [/amazon_warehouse_robot_patrol/amcl_patrol/laser_z_max] by /amazon_warehouse_robot_patrol/amcl_patrol
+[rosmaster.master][INFO] 2019-08-06 17:53:44,097: +PARAM [/amazon_warehouse_robot/amcl/resample_interval] by /amazon_warehouse_robot/amcl
+[rosmaster.master][INFO] 2019-08-06 17:53:44,098: +PARAM [/amazon_warehouse_robot_patrol/amcl_patrol/laser_z_rand] by /amazon_warehouse_robot_patrol/amcl_patrol
+[rosmaster.master][INFO] 2019-08-06 17:53:44,099: +PARAM [/amazon_warehouse_robot/amcl/transform_tolerance] by /amazon_warehouse_robot/amcl
+[rosmaster.master][INFO] 2019-08-06 17:53:44,100: +PARAM [/amazon_warehouse_robot_patrol/amcl_patrol/laser_sigma_hit] by /amazon_warehouse_robot_patrol/amcl_patrol
+[rosmaster.master][INFO] 2019-08-06 17:53:44,101: +PARAM [/amazon_warehouse_robot/amcl/recovery_alpha_slow] by /amazon_warehouse_robot/amcl
+[rosmaster.master][INFO] 2019-08-06 17:53:44,103: +PARAM [/amazon_warehouse_robot_patrol/amcl_patrol/laser_lambda_short] by /amazon_warehouse_robot_patrol/amcl_patrol
+[rosmaster.master][INFO] 2019-08-06 17:53:44,104: +PARAM [/amazon_warehouse_robot/amcl/recovery_alpha_fast] by /amazon_warehouse_robot/amcl
+[rosmaster.master][INFO] 2019-08-06 17:53:44,105: +PARAM [/amazon_warehouse_robot_patrol/amcl_patrol/laser_likelihood_max_dist] by /amazon_warehouse_robot_patrol/amcl_patrol
+[rosmaster.master][INFO] 2019-08-06 17:53:44,106: +PARAM [/amazon_warehouse_robot/amcl/do_beamskip] by /amazon_warehouse_robot/amcl
+[rosmaster.master][INFO] 2019-08-06 17:53:44,107: +PARAM [/amazon_warehouse_robot_patrol/amcl_patrol/laser_model_type] by /amazon_warehouse_robot_patrol/amcl_patrol
+[rosmaster.master][INFO] 2019-08-06 17:53:44,108: +PARAM [/amazon_warehouse_robot/amcl/beam_skip_distance] by /amazon_warehouse_robot/amcl
+[rosmaster.master][INFO] 2019-08-06 17:53:44,109: +PARAM [/amazon_warehouse_robot_patrol/amcl_patrol/odom_model_type] by /amazon_warehouse_robot_patrol/amcl_patrol
+[rosmaster.master][INFO] 2019-08-06 17:53:44,110: +PARAM [/amazon_warehouse_robot/amcl/beam_skip_threshold] by /amazon_warehouse_robot/amcl
+[rosmaster.master][INFO] 2019-08-06 17:53:44,112: +PARAM [/amazon_warehouse_robot_patrol/amcl_patrol/odom_alpha1] by /amazon_warehouse_robot_patrol/amcl_patrol
+[rosmaster.master][INFO] 2019-08-06 17:53:44,112: +PARAM [/amazon_warehouse_robot/amcl/tf_broadcast] by /amazon_warehouse_robot/amcl
+[rosmaster.master][INFO] 2019-08-06 17:53:44,114: +PARAM [/amazon_warehouse_robot_patrol/amcl_patrol/odom_alpha2] by /amazon_warehouse_robot_patrol/amcl_patrol
+[rosmaster.master][INFO] 2019-08-06 17:53:44,115: +PARAM [/amazon_warehouse_robot/amcl/gui_publish_rate] by /amazon_warehouse_robot/amcl
+[rosmaster.master][INFO] 2019-08-06 17:53:44,116: +PARAM [/amazon_warehouse_robot_patrol/amcl_patrol/odom_alpha3] by /amazon_warehouse_robot_patrol/amcl_patrol
+[rosmaster.master][INFO] 2019-08-06 17:53:44,117: +PARAM [/amazon_warehouse_robot/amcl/save_pose_rate] by /amazon_warehouse_robot/amcl
+[rosmaster.master][INFO] 2019-08-06 17:53:44,118: +PARAM [/amazon_warehouse_robot_patrol/amcl_patrol/odom_alpha4] by /amazon_warehouse_robot_patrol/amcl_patrol
+[rosmaster.master][INFO] 2019-08-06 17:53:44,119: +PARAM [/amazon_warehouse_robot/amcl/use_map_topic] by /amazon_warehouse_robot/amcl
+[rosmaster.master][INFO] 2019-08-06 17:53:44,120: +PARAM [/amazon_warehouse_robot_patrol/amcl_patrol/odom_alpha5] by /amazon_warehouse_robot_patrol/amcl_patrol
+[rosmaster.master][INFO] 2019-08-06 17:53:44,122: +PARAM [/amazon_warehouse_robot/amcl/first_map_only] by /amazon_warehouse_robot/amcl
+[rosmaster.master][INFO] 2019-08-06 17:53:44,123: +PARAM [/amazon_warehouse_robot_patrol/amcl_patrol/odom_frame_id] by /amazon_warehouse_robot_patrol/amcl_patrol
+[rosmaster.master][INFO] 2019-08-06 17:53:44,124: +PARAM [/amazon_warehouse_robot/amcl/laser_min_range] by /amazon_warehouse_robot/amcl
+[rosmaster.master][INFO] 2019-08-06 17:53:44,125: +PARAM [/amazon_warehouse_robot_patrol/amcl_patrol/base_frame_id] by /amazon_warehouse_robot_patrol/amcl_patrol
+[rosmaster.master][INFO] 2019-08-06 17:53:44,126: +PARAM [/amazon_warehouse_robot/amcl/laser_max_range] by /amazon_warehouse_robot/amcl
+[rosmaster.master][INFO] 2019-08-06 17:53:44,128: +PARAM [/amazon_warehouse_robot_patrol/amcl_patrol/global_frame_id] by /amazon_warehouse_robot_patrol/amcl_patrol
+[rosmaster.master][INFO] 2019-08-06 17:53:44,129: +PARAM [/amazon_warehouse_robot/amcl/laser_max_beams] by /amazon_warehouse_robot/amcl
+[rosmaster.master][INFO] 2019-08-06 17:53:44,130: +PARAM [/amazon_warehouse_robot_patrol/amcl_patrol/restore_defaults] by /amazon_warehouse_robot_patrol/amcl_patrol
+[rosmaster.master][INFO] 2019-08-06 17:53:44,131: +PARAM [/amazon_warehouse_robot/amcl/laser_z_hit] by /amazon_warehouse_robot/amcl
+[rosmaster.master][INFO] 2019-08-06 17:53:44,132: +PARAM [/amazon_warehouse_robot_patrol/amcl_patrol/min_particles] by /amazon_warehouse_robot_patrol/amcl_patrol
+[rosmaster.master][INFO] 2019-08-06 17:53:44,133: +PARAM [/amazon_warehouse_robot/amcl/laser_z_short] by /amazon_warehouse_robot/amcl
+[rosmaster.master][INFO] 2019-08-06 17:53:44,135: +PARAM [/amazon_warehouse_robot_patrol/amcl_patrol/max_particles] by /amazon_warehouse_robot_patrol/amcl_patrol
+[rosmaster.master][INFO] 2019-08-06 17:53:44,136: +PARAM [/amazon_warehouse_robot/amcl/laser_z_max] by /amazon_warehouse_robot/amcl
+[rosmaster.master][INFO] 2019-08-06 17:53:44,137: +PARAM [/amazon_warehouse_robot_patrol/amcl_patrol/kld_err] by /amazon_warehouse_robot_patrol/amcl_patrol
+[rosmaster.master][INFO] 2019-08-06 17:53:44,138: +PARAM [/amazon_warehouse_robot/amcl/laser_z_rand] by /amazon_warehouse_robot/amcl
+[rosmaster.master][INFO] 2019-08-06 17:53:44,139: +PARAM [/amazon_warehouse_robot_patrol/amcl_patrol/kld_z] by /amazon_warehouse_robot_patrol/amcl_patrol
+[rosmaster.master][INFO] 2019-08-06 17:53:44,140: +PARAM [/amazon_warehouse_robot/amcl/laser_sigma_hit] by /amazon_warehouse_robot/amcl
+[rosmaster.master][INFO] 2019-08-06 17:53:44,141: +PARAM [/amazon_warehouse_robot_patrol/amcl_patrol/update_min_d] by /amazon_warehouse_robot_patrol/amcl_patrol
+[rosmaster.master][INFO] 2019-08-06 17:53:44,142: +PARAM [/amazon_warehouse_robot/amcl/laser_lambda_short] by /amazon_warehouse_robot/amcl
+[rosmaster.master][INFO] 2019-08-06 17:53:44,143: +PARAM [/amazon_warehouse_robot_patrol/amcl_patrol/update_min_a] by /amazon_warehouse_robot_patrol/amcl_patrol
+[rosmaster.master][INFO] 2019-08-06 17:53:44,145: +PARAM [/amazon_warehouse_robot/amcl/laser_likelihood_max_dist] by /amazon_warehouse_robot/amcl
+[rosmaster.master][INFO] 2019-08-06 17:53:44,146: +PARAM [/amazon_warehouse_robot_patrol/amcl_patrol/resample_interval] by /amazon_warehouse_robot_patrol/amcl_patrol
+[rosmaster.master][INFO] 2019-08-06 17:53:44,147: +PARAM [/amazon_warehouse_robot/amcl/laser_model_type] by /amazon_warehouse_robot/amcl
+[rosmaster.master][INFO] 2019-08-06 17:53:44,148: +PARAM [/amazon_warehouse_robot_patrol/amcl_patrol/transform_tolerance] by /amazon_warehouse_robot_patrol/amcl_patrol
+[rosmaster.master][INFO] 2019-08-06 17:53:44,149: +PARAM [/amazon_warehouse_robot/amcl/odom_model_type] by /amazon_warehouse_robot/amcl
+[rosmaster.master][INFO] 2019-08-06 17:53:44,150: +PARAM [/amazon_warehouse_robot_patrol/amcl_patrol/recovery_alpha_slow] by /amazon_warehouse_robot_patrol/amcl_patrol
+[rosmaster.master][INFO] 2019-08-06 17:53:44,151: +PARAM [/amazon_warehouse_robot/amcl/odom_alpha1] by /amazon_warehouse_robot/amcl
+[rosmaster.master][INFO] 2019-08-06 17:53:44,152: +PARAM [/amazon_warehouse_robot_patrol/amcl_patrol/recovery_alpha_fast] by /amazon_warehouse_robot_patrol/amcl_patrol
+[rosmaster.master][INFO] 2019-08-06 17:53:44,154: +PARAM [/amazon_warehouse_robot/amcl/odom_alpha2] by /amazon_warehouse_robot/amcl
+[rosmaster.master][INFO] 2019-08-06 17:53:44,155: +PARAM [/amazon_warehouse_robot_patrol/amcl_patrol/do_beamskip] by /amazon_warehouse_robot_patrol/amcl_patrol
+[rosmaster.master][INFO] 2019-08-06 17:53:44,156: +PARAM [/amazon_warehouse_robot/amcl/odom_alpha3] by /amazon_warehouse_robot/amcl
+[rosmaster.master][INFO] 2019-08-06 17:53:44,157: +PARAM [/amazon_warehouse_robot_patrol/amcl_patrol/beam_skip_distance] by /amazon_warehouse_robot_patrol/amcl_patrol
+[rosmaster.master][INFO] 2019-08-06 17:53:44,158: +PARAM [/amazon_warehouse_robot/amcl/odom_alpha4] by /amazon_warehouse_robot/amcl
+[rosmaster.master][INFO] 2019-08-06 17:53:44,159: +PARAM [/amazon_warehouse_robot_patrol/amcl_patrol/beam_skip_threshold] by /amazon_warehouse_robot_patrol/amcl_patrol
+[rosmaster.master][INFO] 2019-08-06 17:53:44,160: +PARAM [/amazon_warehouse_robot/amcl/odom_alpha5] by /amazon_warehouse_robot/amcl
+[rosmaster.master][INFO] 2019-08-06 17:53:44,161: +PARAM [/amazon_warehouse_robot_patrol/amcl_patrol/tf_broadcast] by /amazon_warehouse_robot_patrol/amcl_patrol
+[rosmaster.master][INFO] 2019-08-06 17:53:44,163: +PARAM [/amazon_warehouse_robot/amcl/odom_frame_id] by /amazon_warehouse_robot/amcl
+[rosmaster.master][INFO] 2019-08-06 17:53:44,164: +PARAM [/amazon_warehouse_robot_patrol/amcl_patrol/gui_publish_rate] by /amazon_warehouse_robot_patrol/amcl_patrol
+[rosmaster.master][INFO] 2019-08-06 17:53:44,165: +PARAM [/amazon_warehouse_robot/amcl/base_frame_id] by /amazon_warehouse_robot/amcl
+[rosmaster.master][INFO] 2019-08-06 17:53:44,166: +PARAM [/amazon_warehouse_robot_patrol/amcl_patrol/save_pose_rate] by /amazon_warehouse_robot_patrol/amcl_patrol
+[rosmaster.master][INFO] 2019-08-06 17:53:44,167: +PARAM [/amazon_warehouse_robot/amcl/global_frame_id] by /amazon_warehouse_robot/amcl
+[rosmaster.master][INFO] 2019-08-06 17:53:44,168: +PARAM [/amazon_warehouse_robot_patrol/amcl_patrol/use_map_topic] by /amazon_warehouse_robot_patrol/amcl_patrol
+[rosmaster.master][INFO] 2019-08-06 17:53:44,169: +PARAM [/amazon_warehouse_robot/amcl/restore_defaults] by /amazon_warehouse_robot/amcl
+[rosmaster.master][INFO] 2019-08-06 17:53:44,170: +PARAM [/amazon_warehouse_robot_patrol/amcl_patrol/first_map_only] by /amazon_warehouse_robot_patrol/amcl_patrol
+[rosmaster.master][INFO] 2019-08-06 17:53:44,172: +PARAM [/amazon_warehouse_robot_patrol/amcl_patrol/laser_min_range] by /amazon_warehouse_robot_patrol/amcl_patrol
+[rosmaster.master][INFO] 2019-08-06 17:53:44,173: +PARAM [/amazon_warehouse_robot_patrol/amcl_patrol/laser_max_range] by /amazon_warehouse_robot_patrol/amcl_patrol
+[rosmaster.master][INFO] 2019-08-06 17:53:44,174: +PARAM [/amazon_warehouse_robot_patrol/amcl_patrol/laser_max_beams] by /amazon_warehouse_robot_patrol/amcl_patrol
+[rosmaster.master][INFO] 2019-08-06 17:53:44,175: +PARAM [/amazon_warehouse_robot_patrol/amcl_patrol/laser_z_hit] by /amazon_warehouse_robot_patrol/amcl_patrol
+[rosmaster.master][INFO] 2019-08-06 17:53:44,175: +PARAM [/amazon_warehouse_robot_patrol/amcl_patrol/laser_z_short] by /amazon_warehouse_robot_patrol/amcl_patrol
+[rosmaster.master][INFO] 2019-08-06 17:53:44,177: +PARAM [/amazon_warehouse_robot_patrol/amcl_patrol/laser_z_max] by /amazon_warehouse_robot_patrol/amcl_patrol
+[rosmaster.master][INFO] 2019-08-06 17:53:44,178: +PARAM [/amazon_warehouse_robot_patrol/amcl_patrol/laser_z_rand] by /amazon_warehouse_robot_patrol/amcl_patrol
+[rosmaster.master][INFO] 2019-08-06 17:53:44,178: +PARAM [/amazon_warehouse_robot_patrol/amcl_patrol/laser_sigma_hit] by /amazon_warehouse_robot_patrol/amcl_patrol
+[rosmaster.master][INFO] 2019-08-06 17:53:44,179: +PARAM [/amazon_warehouse_robot_patrol/amcl_patrol/laser_lambda_short] by /amazon_warehouse_robot_patrol/amcl_patrol
+[rosmaster.master][INFO] 2019-08-06 17:53:44,180: +PARAM [/amazon_warehouse_robot_patrol/amcl_patrol/laser_likelihood_max_dist] by /amazon_warehouse_robot_patrol/amcl_patrol
+[rosmaster.master][INFO] 2019-08-06 17:53:44,181: +PARAM [/amazon_warehouse_robot_patrol/amcl_patrol/laser_model_type] by /amazon_warehouse_robot_patrol/amcl_patrol
+[rosmaster.master][INFO] 2019-08-06 17:53:44,182: +PARAM [/amazon_warehouse_robot_patrol/amcl_patrol/odom_model_type] by /amazon_warehouse_robot_patrol/amcl_patrol
+[rosmaster.master][INFO] 2019-08-06 17:53:44,183: +PARAM [/amazon_warehouse_robot_patrol/amcl_patrol/odom_alpha1] by /amazon_warehouse_robot_patrol/amcl_patrol
+[rosmaster.master][INFO] 2019-08-06 17:53:44,184: +PARAM [/amazon_warehouse_robot_patrol/amcl_patrol/odom_alpha2] by /amazon_warehouse_robot_patrol/amcl_patrol
+[rosmaster.master][INFO] 2019-08-06 17:53:44,185: +PARAM [/amazon_warehouse_robot_patrol/amcl_patrol/odom_alpha3] by /amazon_warehouse_robot_patrol/amcl_patrol
+[rosmaster.master][INFO] 2019-08-06 17:53:44,186: +PARAM [/amazon_warehouse_robot_patrol/amcl_patrol/odom_alpha4] by /amazon_warehouse_robot_patrol/amcl_patrol
+[rosmaster.master][INFO] 2019-08-06 17:53:44,188: +PARAM [/amazon_warehouse_robot_patrol/amcl_patrol/odom_alpha5] by /amazon_warehouse_robot_patrol/amcl_patrol
+[rosmaster.master][INFO] 2019-08-06 17:53:44,189: +PARAM [/amazon_warehouse_robot_patrol/amcl_patrol/odom_frame_id] by /amazon_warehouse_robot_patrol/amcl_patrol
+[rosmaster.master][INFO] 2019-08-06 17:53:44,190: +PARAM [/amazon_warehouse_robot_patrol/amcl_patrol/base_frame_id] by /amazon_warehouse_robot_patrol/amcl_patrol
+[rosmaster.master][INFO] 2019-08-06 17:53:44,191: +PARAM [/amazon_warehouse_robot_patrol/amcl_patrol/global_frame_id] by /amazon_warehouse_robot_patrol/amcl_patrol
+[rosmaster.master][INFO] 2019-08-06 17:53:44,191: +PARAM [/amazon_warehouse_robot_patrol/amcl_patrol/restore_defaults] by /amazon_warehouse_robot_patrol/amcl_patrol
+[rosmaster.master][INFO] 2019-08-06 17:53:44,912: +PUB [/clock] /gazebo http://10.1.199.229:38669/
+[rosmaster.master][INFO] 2019-08-06 17:53:44,914: +SERVICE [/gazebo/spawn_sdf_model] /gazebo http://10.1.199.229:38669/
+[rosmaster.master][INFO] 2019-08-06 17:53:44,915: +SERVICE [/gazebo/spawn_urdf_model] /gazebo http://10.1.199.229:38669/
+[rosmaster.master][INFO] 2019-08-06 17:53:44,916: +SERVICE [/gazebo/delete_model] /gazebo http://10.1.199.229:38669/
+[rosmaster.master][INFO] 2019-08-06 17:53:44,918: +SERVICE [/gazebo/delete_light] /gazebo http://10.1.199.229:38669/
+[rosmaster.master][INFO] 2019-08-06 17:53:44,919: +SERVICE [/gazebo/get_model_properties] /gazebo http://10.1.199.229:38669/
+[rosmaster.master][INFO] 2019-08-06 17:53:44,920: +SERVICE [/gazebo/get_model_state] /gazebo http://10.1.199.229:38669/
+[rosmaster.master][INFO] 2019-08-06 17:53:44,921: +SERVICE [/gazebo/get_world_properties] /gazebo http://10.1.199.229:38669/
+[rosmaster.master][INFO] 2019-08-06 17:53:44,922: +SERVICE [/gazebo/get_joint_properties] /gazebo http://10.1.199.229:38669/
+[rosmaster.master][INFO] 2019-08-06 17:53:44,924: +SERVICE [/gazebo/get_link_properties] /gazebo http://10.1.199.229:38669/
+[rosmaster.master][INFO] 2019-08-06 17:53:44,925: +SERVICE [/gazebo/get_link_state] /gazebo http://10.1.199.229:38669/
+[rosmaster.master][INFO] 2019-08-06 17:53:44,926: +SERVICE [/gazebo/get_light_properties] /gazebo http://10.1.199.229:38669/
+[rosmaster.master][INFO] 2019-08-06 17:53:44,927: +SERVICE [/gazebo/set_light_properties] /gazebo http://10.1.199.229:38669/
+[rosmaster.master][INFO] 2019-08-06 17:53:44,928: +SERVICE [/gazebo/get_physics_properties] /gazebo http://10.1.199.229:38669/
+[rosmaster.master][INFO] 2019-08-06 17:53:44,929: +PUB [/gazebo/link_states] /gazebo http://10.1.199.229:38669/
+[rosmaster.master][INFO] 2019-08-06 17:53:44,930: +PUB [/gazebo/model_states] /gazebo http://10.1.199.229:38669/
+[rosmaster.master][INFO] 2019-08-06 17:53:44,931: +SERVICE [/gazebo/set_link_properties] /gazebo http://10.1.199.229:38669/
+[rosmaster.master][INFO] 2019-08-06 17:53:44,932: +SERVICE [/gazebo/set_physics_properties] /gazebo http://10.1.199.229:38669/
+[rosmaster.master][INFO] 2019-08-06 17:53:44,934: +SERVICE [/gazebo/set_model_state] /gazebo http://10.1.199.229:38669/
+[rosmaster.master][INFO] 2019-08-06 17:53:44,935: +SERVICE [/gazebo/set_model_configuration] /gazebo http://10.1.199.229:38669/
+[rosmaster.master][INFO] 2019-08-06 17:53:44,936: +SERVICE [/gazebo/set_joint_properties] /gazebo http://10.1.199.229:38669/
+[rosmaster.master][INFO] 2019-08-06 17:53:44,937: +SERVICE [/gazebo/set_link_state] /gazebo http://10.1.199.229:38669/
+[rosmaster.master][INFO] 2019-08-06 17:53:44,941: +SUB [/gazebo/set_link_state] /gazebo http://10.1.199.229:38669/
+[rosmaster.master][INFO] 2019-08-06 17:53:44,948: +SUB [/gazebo/set_model_state] /gazebo http://10.1.199.229:38669/
+[rosmaster.master][INFO] 2019-08-06 17:53:44,949: +SERVICE [/gazebo/pause_physics] /gazebo http://10.1.199.229:38669/
+[rosmaster.master][INFO] 2019-08-06 17:53:44,950: +SERVICE [/gazebo/unpause_physics] /gazebo http://10.1.199.229:38669/
+[rosmaster.master][INFO] 2019-08-06 17:53:44,951: +SERVICE [/gazebo/apply_body_wrench] /gazebo http://10.1.199.229:38669/
+[rosmaster.master][INFO] 2019-08-06 17:53:44,953: +SERVICE [/gazebo/apply_joint_effort] /gazebo http://10.1.199.229:38669/
+[rosmaster.master][INFO] 2019-08-06 17:53:44,954: +SERVICE [/gazebo/clear_joint_forces] /gazebo http://10.1.199.229:38669/
+[rosmaster.master][INFO] 2019-08-06 17:53:44,955: +SERVICE [/gazebo/clear_body_wrenches] /gazebo http://10.1.199.229:38669/
+[rosmaster.master][INFO] 2019-08-06 17:53:44,955: +SERVICE [/gazebo/reset_simulation] /gazebo http://10.1.199.229:38669/
+[rosmaster.master][INFO] 2019-08-06 17:53:44,956: +SERVICE [/gazebo/reset_world] /gazebo http://10.1.199.229:38669/
+[rosmaster.master][INFO] 2019-08-06 17:53:44,986: publisherUpdate[/clock] -> http://10.1.199.229:36631/ ['http://10.1.199.229:38669/']
+[rosmaster.master][INFO] 2019-08-06 17:53:44,987: publisherUpdate[/clock] -> http://10.1.199.229:36631/ ['http://10.1.199.229:38669/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2019-08-06 17:53:44,987: publisherUpdate[/clock] -> http://10.1.199.229:45817/ ['http://10.1.199.229:38669/']
+[rosmaster.master][INFO] 2019-08-06 17:53:44,987: publisherUpdate[/clock] -> http://10.1.199.229:36807/ ['http://10.1.199.229:38669/']
+[rosmaster.master][INFO] 2019-08-06 17:53:44,989: publisherUpdate[/clock] -> http://10.1.199.229:45817/ ['http://10.1.199.229:38669/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2019-08-06 17:53:44,990: publisherUpdate[/clock] -> http://10.1.199.229:36807/ ['http://10.1.199.229:38669/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2019-08-06 17:53:44,990: publisherUpdate[/clock] -> http://10.1.199.229:33711/ ['http://10.1.199.229:38669/']
+[rosmaster.master][INFO] 2019-08-06 17:53:44,990: publisherUpdate[/clock] -> http://10.1.199.229:38953/ ['http://10.1.199.229:38669/']
+[rosmaster.master][INFO] 2019-08-06 17:53:44,991: publisherUpdate[/clock] -> http://10.1.199.229:33711/ ['http://10.1.199.229:38669/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2019-08-06 17:53:44,991: publisherUpdate[/clock] -> http://10.1.199.229:32867/ ['http://10.1.199.229:38669/']
+[rosmaster.master][INFO] 2019-08-06 17:53:44,992: publisherUpdate[/clock] -> http://10.1.199.229:38953/ ['http://10.1.199.229:38669/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2019-08-06 17:53:44,993: publisherUpdate[/clock] -> http://10.1.199.229:32867/ ['http://10.1.199.229:38669/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2019-08-06 17:53:44,993: publisherUpdate[/clock] -> http://10.1.199.229:35931/ ['http://10.1.199.229:38669/']
+[rosmaster.master][INFO] 2019-08-06 17:53:44,993: publisherUpdate[/clock] -> http://10.1.199.229:34199/ ['http://10.1.199.229:38669/']
+[rosmaster.master][INFO] 2019-08-06 17:53:44,995: publisherUpdate[/clock] -> http://10.1.199.229:35931/ ['http://10.1.199.229:38669/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2019-08-06 17:53:44,995: publisherUpdate[/clock] -> http://10.1.199.229:34199/ ['http://10.1.199.229:38669/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2019-08-06 17:53:44,996: publisherUpdate[/clock] -> http://10.1.199.229:36933/ ['http://10.1.199.229:38669/']
+[rosmaster.master][INFO] 2019-08-06 17:53:44,996: publisherUpdate[/clock] -> http://10.1.199.229:46287/ ['http://10.1.199.229:38669/']
+[rosmaster.master][INFO] 2019-08-06 17:53:44,997: publisherUpdate[/clock] -> http://10.1.199.229:46287/ ['http://10.1.199.229:38669/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2019-08-06 17:53:44,998: publisherUpdate[/clock] -> http://10.1.199.229:36933/ ['http://10.1.199.229:38669/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2019-08-06 17:53:44,998: publisherUpdate[/clock] -> http://10.1.199.229:38669/ ['http://10.1.199.229:38669/']
+[rosmaster.master][INFO] 2019-08-06 17:53:44,999: publisherUpdate[/clock] -> http://10.1.199.229:38669/ ['http://10.1.199.229:38669/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2019-08-06 17:53:45,337: +PUB [/amazon_warehouse_robot_patrol/laser/scan] /gazebo http://10.1.199.229:38669/
+[rosmaster.master][INFO] 2019-08-06 17:53:45,337: +PUB [/amazon_warehouse_robot/laser/scan] /gazebo http://10.1.199.229:38669/
+[rosmaster.master][INFO] 2019-08-06 17:53:45,344: +SUB [/amazon_warehouse_robot/joint_cmd] /gazebo http://10.1.199.229:38669/
+[rosmaster.master][INFO] 2019-08-06 17:53:45,358: +PUB [/amazon_warehouse_robot/joint_states] /gazebo http://10.1.199.229:38669/
+[rosmaster.master][INFO] 2019-08-06 17:53:45,359: +PUB [/tf] /gazebo http://10.1.199.229:38669/
+[rosmaster.master][INFO] 2019-08-06 17:53:45,365: +SUB [/amazon_warehouse_robot/cmd_vel] /gazebo http://10.1.199.229:38669/
+[rosmaster.master][INFO] 2019-08-06 17:53:45,366: +PUB [/amazon_warehouse_robot/odom] /gazebo http://10.1.199.229:38669/
+[rosmaster.master][INFO] 2019-08-06 17:53:45,373: +SUB [/amazon_warehouse_robot_patrol/joint_cmd] /gazebo http://10.1.199.229:38669/
+[rosmaster.master][INFO] 2019-08-06 17:53:45,375: +PUB [/amazon_warehouse_robot_patrol/joint_states] /gazebo http://10.1.199.229:38669/
+[rosmaster.master][INFO] 2019-08-06 17:53:45,382: +SUB [/amazon_warehouse_robot_patrol/cmd_vel] /gazebo http://10.1.199.229:38669/
+[rosmaster.master][INFO] 2019-08-06 17:53:45,383: +PUB [/amazon_warehouse_robot_patrol/odom] /gazebo http://10.1.199.229:38669/
+[rosmaster.master][INFO] 2019-08-06 17:53:45,391: +SERVICE [/static_map] /map_server http://10.1.199.229:45817/
+[rosmaster.master][INFO] 2019-08-06 17:53:45,392: +PUB [/map_metadata] /map_server http://10.1.199.229:45817/
+[rosmaster.master][INFO] 2019-08-06 17:53:45,393: +PUB [/map] /map_server http://10.1.199.229:45817/
+[rosmaster.master][INFO] 2019-08-06 17:53:45,399: publisherUpdate[/tf] -> http://10.1.199.229:32867/ ['http://10.1.199.229:36807/', 'http://10.1.199.229:35931/', 'http://10.1.199.229:33711/', 'http://10.1.199.229:34199/', 'http://10.1.199.229:38669/']
+[rosmaster.master][INFO] 2019-08-06 17:53:45,400: publisherUpdate[/tf] -> http://10.1.199.229:32867/ ['http://10.1.199.229:36807/', 'http://10.1.199.229:35931/', 'http://10.1.199.229:33711/', 'http://10.1.199.229:34199/', 'http://10.1.199.229:38669/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2019-08-06 17:53:45,400: publisherUpdate[/tf] -> http://10.1.199.229:46287/ ['http://10.1.199.229:36807/', 'http://10.1.199.229:35931/', 'http://10.1.199.229:33711/', 'http://10.1.199.229:34199/', 'http://10.1.199.229:38669/']
+[rosmaster.master][INFO] 2019-08-06 17:53:45,400: publisherUpdate[/tf] -> http://10.1.199.229:33711/ ['http://10.1.199.229:36807/', 'http://10.1.199.229:35931/', 'http://10.1.199.229:33711/', 'http://10.1.199.229:34199/', 'http://10.1.199.229:38669/']
+[rosmaster.master][INFO] 2019-08-06 17:53:45,401: publisherUpdate[/tf] -> http://10.1.199.229:34199/ ['http://10.1.199.229:36807/', 'http://10.1.199.229:35931/', 'http://10.1.199.229:33711/', 'http://10.1.199.229:34199/', 'http://10.1.199.229:38669/']
+[rosmaster.master][INFO] 2019-08-06 17:53:45,402: publisherUpdate[/tf] -> http://10.1.199.229:46287/ ['http://10.1.199.229:36807/', 'http://10.1.199.229:35931/', 'http://10.1.199.229:33711/', 'http://10.1.199.229:34199/', 'http://10.1.199.229:38669/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2019-08-06 17:53:45,402: publisherUpdate[/tf] -> http://10.1.199.229:33711/ ['http://10.1.199.229:36807/', 'http://10.1.199.229:35931/', 'http://10.1.199.229:33711/', 'http://10.1.199.229:34199/', 'http://10.1.199.229:38669/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2019-08-06 17:53:45,403: publisherUpdate[/tf] -> http://10.1.199.229:34199/ ['http://10.1.199.229:36807/', 'http://10.1.199.229:35931/', 'http://10.1.199.229:33711/', 'http://10.1.199.229:34199/', 'http://10.1.199.229:38669/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2019-08-06 17:53:46,859: +SERVICE [/amazon_warehouse_robot/cmd_vel_mux/set_parameters] /amazon_warehouse_robot/nodelet_manager http://10.1.199.229:36933/
+[rosmaster.master][INFO] 2019-08-06 17:53:46,861: +PUB [/amazon_warehouse_robot/cmd_vel_mux/parameter_descriptions] /amazon_warehouse_robot/nodelet_manager http://10.1.199.229:36933/
+[rosmaster.master][INFO] 2019-08-06 17:53:46,862: +PUB [/amazon_warehouse_robot/cmd_vel_mux/parameter_updates] /amazon_warehouse_robot/nodelet_manager http://10.1.199.229:36933/
+[rosmaster.master][INFO] 2019-08-06 17:53:46,864: +PARAM [/amazon_warehouse_robot/cmd_vel_mux/yaml_cfg_file] by /amazon_warehouse_robot/nodelet_manager
+[rosmaster.master][INFO] 2019-08-06 17:53:46,865: +SERVICE [/gazebo/set_parameters] /gazebo http://10.1.199.229:38669/
+[rosmaster.master][INFO] 2019-08-06 17:53:46,867: +PARAM [/amazon_warehouse_robot/cmd_vel_mux/yaml_cfg_data] by /amazon_warehouse_robot/nodelet_manager
+[rosmaster.master][INFO] 2019-08-06 17:53:46,868: +PUB [/gazebo/parameter_descriptions] /gazebo http://10.1.199.229:38669/
+[rosmaster.master][INFO] 2019-08-06 17:53:46,869: +PUB [/amazon_warehouse_robot/cmd_vel] /amazon_warehouse_robot/nodelet_manager http://10.1.199.229:36933/
+[rosmaster.master][INFO] 2019-08-06 17:53:46,872: +PUB [/gazebo/parameter_updates] /gazebo http://10.1.199.229:38669/
+[rosmaster.master][INFO] 2019-08-06 17:53:46,878: +SUB [/move_base/cmd_vel] /amazon_warehouse_robot/nodelet_manager http://10.1.199.229:36933/
+[rosmaster.master][INFO] 2019-08-06 17:53:46,889: +SUB [/amazon_warehouse_robot/teleop] /amazon_warehouse_robot/nodelet_manager http://10.1.199.229:36933/
+[rosmaster.master][INFO] 2019-08-06 17:53:46,893: +PARAM [/amazon_warehouse_robot/cmd_vel_mux/yaml_cfg_file] by /amazon_warehouse_robot/nodelet_manager
+[rosmaster.master][INFO] 2019-08-06 17:53:46,896: +PARAM [/amazon_warehouse_robot/cmd_vel_mux/yaml_cfg_data] by /amazon_warehouse_robot/nodelet_manager
+[rosmaster.master][INFO] 2019-08-06 17:53:46,898: +PUB [/amazon_warehouse_robot/cmd_vel_mux/active] /amazon_warehouse_robot/nodelet_manager http://10.1.199.229:36933/
+[rosmaster.master][INFO] 2019-08-06 17:53:46,900: +PUB [/amazon_warehouse_robot/nodelet_manager/bond] /amazon_warehouse_robot/nodelet_manager http://10.1.199.229:36933/
+[rosmaster.master][INFO] 2019-08-06 17:53:46,901: +PARAM [/gazebo/time_step] by /gazebo
+[rosmaster.master][INFO] 2019-08-06 17:53:46,904: +PARAM [/gazebo/max_update_rate] by /gazebo
+[rosmaster.master][INFO] 2019-08-06 17:53:46,905: publisherUpdate[/amazon_warehouse_robot/cmd_vel] -> http://10.1.199.229:38669/ ['http://10.1.199.229:36933/']
+[rosmaster.master][INFO] 2019-08-06 17:53:46,907: +PARAM [/gazebo/gravity_x] by /gazebo
+[rosmaster.master][INFO] 2019-08-06 17:53:46,907: publisherUpdate[/amazon_warehouse_robot/cmd_vel] -> http://10.1.199.229:38669/ ['http://10.1.199.229:36933/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2019-08-06 17:53:46,910: +PARAM [/gazebo/gravity_y] by /gazebo
+[rosmaster.master][INFO] 2019-08-06 17:53:46,912: +SUB [/amazon_warehouse_robot/nodelet_manager/bond] /amazon_warehouse_robot/nodelet_manager http://10.1.199.229:36933/
+[rosmaster.master][INFO] 2019-08-06 17:53:46,913: +PARAM [/gazebo/gravity_z] by /gazebo
+[rosmaster.master][INFO] 2019-08-06 17:53:46,915: +PARAM [/gazebo/auto_disable_bodies] by /gazebo
+[rosmaster.master][INFO] 2019-08-06 17:53:46,916: +PARAM [/gazebo/sor_pgs_precon_iters] by /gazebo
+[rosmaster.master][INFO] 2019-08-06 17:53:46,917: +PARAM [/gazebo/sor_pgs_iters] by /gazebo
+[rosmaster.master][INFO] 2019-08-06 17:53:46,918: +PARAM [/gazebo/sor_pgs_w] by /gazebo
+[rosmaster.master][INFO] 2019-08-06 17:53:46,919: +PARAM [/gazebo/sor_pgs_rms_error_tol] by /gazebo
+[rosmaster.master][INFO] 2019-08-06 17:53:46,920: +PARAM [/gazebo/cfm] by /gazebo
+[rosmaster.master][INFO] 2019-08-06 17:53:46,921: +PARAM [/gazebo/erp] by /gazebo
+[rosmaster.master][INFO] 2019-08-06 17:53:46,922: +PARAM [/gazebo/contact_surface_layer] by /gazebo
+[rosmaster.master][INFO] 2019-08-06 17:53:46,923: +PARAM [/gazebo/contact_max_correcting_vel] by /gazebo
+[rosmaster.master][INFO] 2019-08-06 17:53:46,924: +PARAM [/gazebo/max_contacts] by /gazebo
+[rosmaster.master][INFO] 2019-08-06 17:53:46,930: +PARAM [/gazebo/time_step] by /gazebo
+[rosmaster.master][INFO] 2019-08-06 17:53:46,931: +PARAM [/gazebo/max_update_rate] by /gazebo
+[rosmaster.master][INFO] 2019-08-06 17:53:46,932: +PARAM [/gazebo/gravity_x] by /gazebo
+[rosmaster.master][INFO] 2019-08-06 17:53:46,933: +PARAM [/gazebo/gravity_y] by /gazebo
+[rosmaster.master][INFO] 2019-08-06 17:53:46,934: +PARAM [/gazebo/gravity_z] by /gazebo
+[rosmaster.master][INFO] 2019-08-06 17:53:46,935: +PARAM [/gazebo/auto_disable_bodies] by /gazebo
+[rosmaster.master][INFO] 2019-08-06 17:53:46,936: +PARAM [/gazebo/sor_pgs_precon_iters] by /gazebo
+[rosmaster.master][INFO] 2019-08-06 17:53:46,937: +PARAM [/gazebo/sor_pgs_iters] by /gazebo
+[rosmaster.master][INFO] 2019-08-06 17:53:46,938: +PARAM [/gazebo/sor_pgs_w] by /gazebo
+[rosmaster.master][INFO] 2019-08-06 17:53:46,939: +PARAM [/gazebo/sor_pgs_rms_error_tol] by /gazebo
+[rosmaster.master][INFO] 2019-08-06 17:53:46,940: +PARAM [/gazebo/cfm] by /gazebo
+[rosmaster.master][INFO] 2019-08-06 17:53:46,941: +PARAM [/gazebo/erp] by /gazebo
+[rosmaster.master][INFO] 2019-08-06 17:53:46,942: +PARAM [/gazebo/contact_surface_layer] by /gazebo
+[rosmaster.master][INFO] 2019-08-06 17:53:46,943: +PARAM [/gazebo/contact_max_correcting_vel] by /gazebo
+[rosmaster.master][INFO] 2019-08-06 17:53:46,945: +PARAM [/gazebo/max_contacts] by /gazebo
+[rosmaster.master][INFO] 2019-08-06 17:53:46,996: +PUB [/amazon_warehouse_robot/nodelet_manager/bond] /amazon_warehouse_robot/cmd_vel_mux http://10.1.199.229:38953/
+[rosmaster.master][INFO] 2019-08-06 17:53:47,002: +SUB [/amazon_warehouse_robot/nodelet_manager/bond] /amazon_warehouse_robot/cmd_vel_mux http://10.1.199.229:38953/
+[rosmaster.master][INFO] 2019-08-06 17:53:47,006: publisherUpdate[/amazon_warehouse_robot/nodelet_manager/bond] -> http://10.1.199.229:36933/ ['http://10.1.199.229:36933/', 'http://10.1.199.229:38953/']
+[rosmaster.master][INFO] 2019-08-06 17:53:47,007: publisherUpdate[/amazon_warehouse_robot/nodelet_manager/bond] -> http://10.1.199.229:36933/ ['http://10.1.199.229:36933/', 'http://10.1.199.229:38953/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2019-08-06 18:02:47,060: +PARAM [/amazon_warehouse_robot_patrol/amcl_patrol/initial_pose_x] by /amazon_warehouse_robot_patrol/amcl_patrol
+[rosmaster.master][INFO] 2019-08-06 18:02:47,062: +PARAM [/amazon_warehouse_robot_patrol/amcl_patrol/initial_pose_y] by /amazon_warehouse_robot_patrol/amcl_patrol
+[rosmaster.master][INFO] 2019-08-06 18:02:47,063: +PARAM [/amazon_warehouse_robot_patrol/amcl_patrol/initial_pose_a] by /amazon_warehouse_robot_patrol/amcl_patrol
+[rosmaster.master][INFO] 2019-08-06 18:02:47,066: +PARAM [/amazon_warehouse_robot/amcl/initial_pose_x] by /amazon_warehouse_robot/amcl
+[rosmaster.master][INFO] 2019-08-06 18:02:47,068: +PARAM [/amazon_warehouse_robot_patrol/amcl_patrol/initial_cov_xx] by /amazon_warehouse_robot_patrol/amcl_patrol
+[rosmaster.master][INFO] 2019-08-06 18:02:47,070: +PARAM [/amazon_warehouse_robot/amcl/initial_pose_y] by /amazon_warehouse_robot/amcl
+[rosmaster.master][INFO] 2019-08-06 18:02:47,071: +PARAM [/amazon_warehouse_robot_patrol/amcl_patrol/initial_cov_yy] by /amazon_warehouse_robot_patrol/amcl_patrol
+[rosmaster.master][INFO] 2019-08-06 18:02:47,073: +PARAM [/amazon_warehouse_robot/amcl/initial_pose_a] by /amazon_warehouse_robot/amcl
+[rosmaster.master][INFO] 2019-08-06 18:02:47,074: +PARAM [/amazon_warehouse_robot_patrol/amcl_patrol/initial_cov_aa] by /amazon_warehouse_robot_patrol/amcl_patrol
+[rosmaster.master][INFO] 2019-08-06 18:02:47,075: +PARAM [/amazon_warehouse_robot/amcl/initial_cov_xx] by /amazon_warehouse_robot/amcl
+[rosmaster.master][INFO] 2019-08-06 18:02:47,076: +PARAM [/amazon_warehouse_robot/amcl/initial_cov_yy] by /amazon_warehouse_robot/amcl
+[rosmaster.master][INFO] 2019-08-06 18:02:47,078: +PARAM [/amazon_warehouse_robot/amcl/initial_cov_aa] by /amazon_warehouse_robot/amcl
+[rosmaster.master][INFO] 2019-08-06 18:02:47,131: -PUB [/rosout] /amazon_warehouse_robot_patrol/base_to_laser_patrol http://10.1.199.229:35931/
+[rosmaster.master][INFO] 2019-08-06 18:02:47,133: -PUB [/rosout] /amazon_warehouse_robot/base_to_laser_main http://10.1.199.229:36807/
+[rosmaster.master][INFO] 2019-08-06 18:02:47,134: -PUB [/tf] /amazon_warehouse_robot_patrol/base_to_laser_patrol http://10.1.199.229:35931/
+[rosmaster.master][INFO] 2019-08-06 18:02:47,136: -PUB [/tf] /amazon_warehouse_robot/base_to_laser_main http://10.1.199.229:36807/
+[rosmaster.master][INFO] 2019-08-06 18:02:47,137: -PUB [/rosout] /map_server http://10.1.199.229:45817/
+[rosmaster.master][INFO] 2019-08-06 18:02:47,138: -SUB [/clock] /amazon_warehouse_robot_patrol/base_to_laser_patrol http://10.1.199.229:35931/
+[rosmaster.master][INFO] 2019-08-06 18:02:47,140: -PUB [/rosout] /move_base http://10.1.199.229:32867/
+[rosmaster.master][INFO] 2019-08-06 18:02:47,141: -PUB [/rosout] /amazon_warehouse_robot_patrol/move_base http://10.1.199.229:46287/
+[rosmaster.master][INFO] 2019-08-06 18:02:47,142: -SUB [/clock] /amazon_warehouse_robot/base_to_laser_main http://10.1.199.229:36807/
+[rosmaster.master][INFO] 2019-08-06 18:02:47,143: -PUB [/map_metadata] /map_server http://10.1.199.229:45817/
+[rosmaster.master][INFO] 2019-08-06 18:02:47,144: -SERVICE [/amazon_warehouse_robot_patrol/base_to_laser_patrol/get_loggers] /amazon_warehouse_robot_patrol/base_to_laser_patrol rosrpc://10.1.199.229:47569
+[rosmaster.master][INFO] 2019-08-06 18:02:47,145: -PUB [/amazon_warehouse_robot/move_base/cmd_vel] /move_base http://10.1.199.229:32867/
+[rosmaster.master][INFO] 2019-08-06 18:02:47,146: -PUB [/rosout] /amazon_warehouse_robot/nodelet_manager http://10.1.199.229:36933/
+[rosmaster.master][INFO] 2019-08-06 18:02:47,148: -PUB [/move_base/cmd_vel] /amazon_warehouse_robot_patrol/move_base http://10.1.199.229:46287/
+[rosmaster.master][INFO] 2019-08-06 18:02:47,149: -SERVICE [/amazon_warehouse_robot/base_to_laser_main/get_loggers] /amazon_warehouse_robot/base_to_laser_main rosrpc://10.1.199.229:54585
+[rosmaster.master][INFO] 2019-08-06 18:02:47,150: -PUB [/map] /map_server http://10.1.199.229:45817/
+[rosmaster.master][INFO] 2019-08-06 18:02:47,151: -SERVICE [/amazon_warehouse_robot_patrol/base_to_laser_patrol/set_logger_level] /amazon_warehouse_robot_patrol/base_to_laser_patrol rosrpc://10.1.199.229:47569
+[rosmaster.master][INFO] 2019-08-06 18:02:47,152: -PUB [/amazon_warehouse_robot/move_base/current_goal] /move_base http://10.1.199.229:32867/
+[rosmaster.master][INFO] 2019-08-06 18:02:47,154: -PUB [/amazon_warehouse_robot/cmd_vel_mux/parameter_descriptions] /amazon_warehouse_robot/nodelet_manager http://10.1.199.229:36933/
+[rosmaster.master][INFO] 2019-08-06 18:02:47,155: -PUB [/amazon_warehouse_robot_patrol/move_base/current_goal] /amazon_warehouse_robot_patrol/move_base http://10.1.199.229:46287/
+[rosmaster.master][INFO] 2019-08-06 18:02:47,156: -SERVICE [/amazon_warehouse_robot/base_to_laser_main/set_logger_level] /amazon_warehouse_robot/base_to_laser_main rosrpc://10.1.199.229:54585
+[rosmaster.master][INFO] 2019-08-06 18:02:47,157: -SUB [/clock] /map_server http://10.1.199.229:45817/
+[rosmaster.master][INFO] 2019-08-06 18:02:47,158: -PUB [/amazon_warehouse_robot/move_base/goal] /move_base http://10.1.199.229:32867/
+[rosmaster.master][INFO] 2019-08-06 18:02:47,160: -PUB [/amazon_warehouse_robot/cmd_vel_mux/parameter_updates] /amazon_warehouse_robot/nodelet_manager http://10.1.199.229:36933/
+[rosmaster.master][INFO] 2019-08-06 18:02:47,161: -PUB [/amazon_warehouse_robot_patrol/move_base/goal] /amazon_warehouse_robot_patrol/move_base http://10.1.199.229:46287/
+[rosmaster.master][INFO] 2019-08-06 18:02:47,162: -SERVICE [/map_server/get_loggers] /map_server rosrpc://10.1.199.229:54215
+[rosmaster.master][INFO] 2019-08-06 18:02:47,163: -SUB [/clock] /move_base http://10.1.199.229:32867/
+[rosmaster.master][INFO] 2019-08-06 18:02:47,164: -PUB [/amazon_warehouse_robot/cmd_vel] /amazon_warehouse_robot/nodelet_manager http://10.1.199.229:36933/
+[rosmaster.master][INFO] 2019-08-06 18:02:47,166: -SUB [/clock] /amazon_warehouse_robot_patrol/move_base http://10.1.199.229:46287/
+[rosmaster.master][INFO] 2019-08-06 18:02:47,167: -SERVICE [/map_server/set_logger_level] /map_server rosrpc://10.1.199.229:54215
+[rosmaster.master][INFO] 2019-08-06 18:02:47,167: publisherUpdate[/rosout] -> http://10.1.199.229:36631/ ['http://10.1.199.229:45817/', 'http://10.1.199.229:36807/', 'http://10.1.199.229:33711/', 'http://10.1.199.229:38953/', 'http://10.1.199.229:32867/', 'http://10.1.199.229:34199/', 'http://10.1.199.229:36933/', 'http://10.1.199.229:46287/', 'http://10.1.199.229:38669/']
+[rosmaster.master][INFO] 2019-08-06 18:02:47,167: publisherUpdate[/tf] -> http://10.1.199.229:32867/ ['http://10.1.199.229:36807/', 'http://10.1.199.229:33711/', 'http://10.1.199.229:34199/', 'http://10.1.199.229:38669/']
+[rosmaster.master][INFO] 2019-08-06 18:02:47,167: publisherUpdate[/tf] -> http://10.1.199.229:46287/ ['http://10.1.199.229:36807/', 'http://10.1.199.229:33711/', 'http://10.1.199.229:34199/', 'http://10.1.199.229:38669/']
+[rosmaster.master][INFO] 2019-08-06 18:02:47,168: -SUB [/tf] /move_base http://10.1.199.229:32867/
+[rosmaster.master][INFO] 2019-08-06 18:02:47,171: publisherUpdate[/rosout] -> http://10.1.199.229:36631/ ['http://10.1.199.229:45817/', 'http://10.1.199.229:36807/', 'http://10.1.199.229:33711/', 'http://10.1.199.229:38953/', 'http://10.1.199.229:32867/', 'http://10.1.199.229:34199/', 'http://10.1.199.229:36933/', 'http://10.1.199.229:46287/', 'http://10.1.199.229:38669/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2019-08-06 18:02:47,171: publisherUpdate[/tf] -> http://10.1.199.229:32867/ ['http://10.1.199.229:36807/', 'http://10.1.199.229:33711/', 'http://10.1.199.229:34199/', 'http://10.1.199.229:38669/']: sec=0.00, exception=<Fault -1: 'publisherUpdate: unknown method name'>
+[rosmaster.master][INFO] 2019-08-06 18:02:47,173: publisherUpdate[/tf] -> http://10.1.199.229:46287/ ['http://10.1.199.229:36807/', 'http://10.1.199.229:33711/', 'http://10.1.199.229:34199/', 'http://10.1.199.229:38669/']: sec=0.00, exception=<Fault -1: 'publisherUpdate: unknown method name'>
+[rosmaster.master][INFO] 2019-08-06 18:02:47,174: publisherUpdate[/rosout] -> http://10.1.199.229:36631/ ['http://10.1.199.229:45817/', 'http://10.1.199.229:33711/', 'http://10.1.199.229:38953/', 'http://10.1.199.229:32867/', 'http://10.1.199.229:34199/', 'http://10.1.199.229:36933/', 'http://10.1.199.229:46287/', 'http://10.1.199.229:38669/']
+[rosmaster.master][INFO] 2019-08-06 18:02:47,174: -PUB [/amazon_warehouse_robot/cmd_vel_mux/active] /amazon_warehouse_robot/nodelet_manager http://10.1.199.229:36933/
+[rosmaster.master][INFO] 2019-08-06 18:02:47,177: publisherUpdate[/rosout] -> http://10.1.199.229:36631/ ['http://10.1.199.229:45817/', 'http://10.1.199.229:33711/', 'http://10.1.199.229:38953/', 'http://10.1.199.229:32867/', 'http://10.1.199.229:34199/', 'http://10.1.199.229:36933/', 'http://10.1.199.229:46287/', 'http://10.1.199.229:38669/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2019-08-06 18:02:47,177: -SUB [/tf] /amazon_warehouse_robot_patrol/move_base http://10.1.199.229:46287/
+[rosmaster.master][INFO] 2019-08-06 18:02:47,178: publisherUpdate[/tf] -> http://10.1.199.229:33711/ ['http://10.1.199.229:36807/', 'http://10.1.199.229:33711/', 'http://10.1.199.229:34199/', 'http://10.1.199.229:38669/']
+[rosmaster.master][INFO] 2019-08-06 18:02:47,178: -SERVICE [/static_map] /map_server rosrpc://10.1.199.229:54215
+[rosmaster.master][INFO] 2019-08-06 18:02:47,181: publisherUpdate[/tf] -> http://10.1.199.229:33711/ ['http://10.1.199.229:36807/', 'http://10.1.199.229:33711/', 'http://10.1.199.229:34199/', 'http://10.1.199.229:38669/']: sec=0.00, result=[0, 'Unknown Error', 0]
+[rosmaster.threadpool][ERROR] 2019-08-06 18:02:47,182: Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rosmaster/threadpool.py", line 218, in run
+    result = cmd(*args)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rosmaster/master_api.py", line 210, in publisher_update_task
+    ret = xmlrpcapi(api).publisherUpdate('/master', topic, pub_uris)
+  File "/usr/lib/python2.7/xmlrpclib.py", line 1243, in __call__
+    return self.__send(self.__name, args)
+  File "/usr/lib/python2.7/xmlrpclib.py", line 1602, in __request
+    verbose=self.__verbose
+  File "/usr/lib/python2.7/xmlrpclib.py", line 1283, in request
+    return self.single_request(host, handler, request_body, verbose)
+  File "/usr/lib/python2.7/xmlrpclib.py", line 1316, in single_request
+    return self.parse_response(response)
+  File "/usr/lib/python2.7/xmlrpclib.py", line 1493, in parse_response
+    return u.close()
+  File "/usr/lib/python2.7/xmlrpclib.py", line 800, in close
+    raise Fault(**self._stack[0])
+Fault: <Fault -1: 'publisherUpdate: unknown method name'>
+
+[rosmaster.master][INFO] 2019-08-06 18:02:47,183: -SUB [/tf_static] /move_base http://10.1.199.229:32867/
+[rosmaster.threadpool][ERROR] 2019-08-06 18:02:47,184: Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rosmaster/threadpool.py", line 218, in run
+    result = cmd(*args)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rosmaster/master_api.py", line 210, in publisher_update_task
+    ret = xmlrpcapi(api).publisherUpdate('/master', topic, pub_uris)
+  File "/usr/lib/python2.7/xmlrpclib.py", line 1243, in __call__
+    return self.__send(self.__name, args)
+  File "/usr/lib/python2.7/xmlrpclib.py", line 1602, in __request
+    verbose=self.__verbose
+  File "/usr/lib/python2.7/xmlrpclib.py", line 1283, in request
+    return self.single_request(host, handler, request_body, verbose)
+  File "/usr/lib/python2.7/xmlrpclib.py", line 1316, in single_request
+    return self.parse_response(response)
+  File "/usr/lib/python2.7/xmlrpclib.py", line 1493, in parse_response
+    return u.close()
+  File "/usr/lib/python2.7/xmlrpclib.py", line 800, in close
+    raise Fault(**self._stack[0])
+Fault: <Fault -1: 'publisherUpdate: unknown method name'>
+
+[rosmaster.master][INFO] 2019-08-06 18:02:47,184: publisherUpdate[/tf] -> http://10.1.199.229:34199/ ['http://10.1.199.229:36807/', 'http://10.1.199.229:33711/', 'http://10.1.199.229:34199/', 'http://10.1.199.229:38669/']
+[rosmaster.master][INFO] 2019-08-06 18:02:47,184: publisherUpdate[/tf] -> http://10.1.199.229:32867/ ['http://10.1.199.229:33711/', 'http://10.1.199.229:34199/', 'http://10.1.199.229:38669/']
+[rosmaster.master][INFO] 2019-08-06 18:02:47,184: -SUB [/gazebo/set_link_state] /gazebo http://10.1.199.229:38669/
+[rosmaster.master][INFO] 2019-08-06 18:02:47,184: publisherUpdate[/tf] -> http://10.1.199.229:46287/ ['http://10.1.199.229:33711/', 'http://10.1.199.229:34199/', 'http://10.1.199.229:38669/']
+[rosmaster.master][INFO] 2019-08-06 18:02:47,186: publisherUpdate[/tf] -> http://10.1.199.229:34199/ ['http://10.1.199.229:36807/', 'http://10.1.199.229:33711/', 'http://10.1.199.229:34199/', 'http://10.1.199.229:38669/']: sec=0.00, result=[0, 'Unknown Error', 0]
+[rosmaster.master][INFO] 2019-08-06 18:02:47,187: publisherUpdate[/tf] -> http://10.1.199.229:32867/ ['http://10.1.199.229:33711/', 'http://10.1.199.229:34199/', 'http://10.1.199.229:38669/']: sec=0.00, exception=<Fault -1: 'publisherUpdate: unknown method name'>
+[rosmaster.master][INFO] 2019-08-06 18:02:47,188: -PUB [/amazon_warehouse_robot/nodelet_manager/bond] /amazon_warehouse_robot/nodelet_manager http://10.1.199.229:36933/
+[rosmaster.master][INFO] 2019-08-06 18:02:47,189: publisherUpdate[/tf] -> http://10.1.199.229:46287/ ['http://10.1.199.229:33711/', 'http://10.1.199.229:34199/', 'http://10.1.199.229:38669/']: sec=0.00, exception=<Fault -1: 'publisherUpdate: unknown method name'>
+[rosmaster.master][INFO] 2019-08-06 18:02:47,189: publisherUpdate[/tf] -> http://10.1.199.229:33711/ ['http://10.1.199.229:33711/', 'http://10.1.199.229:34199/', 'http://10.1.199.229:38669/']
+[rosmaster.master][INFO] 2019-08-06 18:02:47,190: -SUB [/tf_static] /amazon_warehouse_robot_patrol/move_base http://10.1.199.229:46287/
+[rosmaster.threadpool][ERROR] 2019-08-06 18:02:47,191: Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rosmaster/threadpool.py", line 218, in run
+    result = cmd(*args)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rosmaster/master_api.py", line 210, in publisher_update_task
+    ret = xmlrpcapi(api).publisherUpdate('/master', topic, pub_uris)
+  File "/usr/lib/python2.7/xmlrpclib.py", line 1243, in __call__
+    return self.__send(self.__name, args)
+  File "/usr/lib/python2.7/xmlrpclib.py", line 1602, in __request
+    verbose=self.__verbose
+  File "/usr/lib/python2.7/xmlrpclib.py", line 1283, in request
+    return self.single_request(host, handler, request_body, verbose)
+  File "/usr/lib/python2.7/xmlrpclib.py", line 1316, in single_request
+    return self.parse_response(response)
+  File "/usr/lib/python2.7/xmlrpclib.py", line 1493, in parse_response
+    return u.close()
+  File "/usr/lib/python2.7/xmlrpclib.py", line 800, in close
+    raise Fault(**self._stack[0])
+Fault: <Fault -1: 'publisherUpdate: unknown method name'>
+
+[rosmaster.master][INFO] 2019-08-06 18:02:47,193: publisherUpdate[/tf] -> http://10.1.199.229:33711/ ['http://10.1.199.229:33711/', 'http://10.1.199.229:34199/', 'http://10.1.199.229:38669/']: sec=0.00, result=[0, 'Unknown Error', 0]
+[rosmaster.master][INFO] 2019-08-06 18:02:47,193: -SUB [/amazon_warehouse_robot/move_base_simple/goal] /move_base http://10.1.199.229:32867/
+[rosmaster.threadpool][ERROR] 2019-08-06 18:02:47,193: Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rosmaster/threadpool.py", line 218, in run
+    result = cmd(*args)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rosmaster/master_api.py", line 210, in publisher_update_task
+    ret = xmlrpcapi(api).publisherUpdate('/master', topic, pub_uris)
+  File "/usr/lib/python2.7/xmlrpclib.py", line 1243, in __call__
+    return self.__send(self.__name, args)
+  File "/usr/lib/python2.7/xmlrpclib.py", line 1602, in __request
+    verbose=self.__verbose
+  File "/usr/lib/python2.7/xmlrpclib.py", line 1283, in request
+    return self.single_request(host, handler, request_body, verbose)
+  File "/usr/lib/python2.7/xmlrpclib.py", line 1316, in single_request
+    return self.parse_response(response)
+  File "/usr/lib/python2.7/xmlrpclib.py", line 1493, in parse_response
+    return u.close()
+  File "/usr/lib/python2.7/xmlrpclib.py", line 800, in close
+    raise Fault(**self._stack[0])
+Fault: <Fault -1: 'publisherUpdate: unknown method name'>
+
+[rosmaster.master][INFO] 2019-08-06 18:02:47,194: publisherUpdate[/tf] -> http://10.1.199.229:34199/ ['http://10.1.199.229:33711/', 'http://10.1.199.229:34199/', 'http://10.1.199.229:38669/']
+[rosmaster.master][INFO] 2019-08-06 18:02:47,195: publisherUpdate[/rosout] -> http://10.1.199.229:36631/ ['http://10.1.199.229:33711/', 'http://10.1.199.229:38953/', 'http://10.1.199.229:32867/', 'http://10.1.199.229:34199/', 'http://10.1.199.229:36933/', 'http://10.1.199.229:46287/', 'http://10.1.199.229:38669/']
+[rosmaster.master][INFO] 2019-08-06 18:02:47,195: -SUB [/gazebo/set_model_state] /gazebo http://10.1.199.229:38669/
+[rosmaster.master][INFO] 2019-08-06 18:02:47,195: publisherUpdate[/move_base/cmd_vel] -> http://10.1.199.229:36933/ []
+[rosmaster.master][INFO] 2019-08-06 18:02:47,197: publisherUpdate[/tf] -> http://10.1.199.229:34199/ ['http://10.1.199.229:33711/', 'http://10.1.199.229:34199/', 'http://10.1.199.229:38669/']: sec=0.00, result=[0, 'Unknown Error', 0]
+[rosmaster.master][INFO] 2019-08-06 18:02:47,198: publisherUpdate[/rosout] -> http://10.1.199.229:36631/ ['http://10.1.199.229:33711/', 'http://10.1.199.229:38953/', 'http://10.1.199.229:32867/', 'http://10.1.199.229:34199/', 'http://10.1.199.229:36933/', 'http://10.1.199.229:46287/', 'http://10.1.199.229:38669/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2019-08-06 18:02:47,198: -SUB [/clock] /amazon_warehouse_robot/nodelet_manager http://10.1.199.229:36933/
+[rosmaster.master][INFO] 2019-08-06 18:02:47,199: publisherUpdate[/move_base/cmd_vel] -> http://10.1.199.229:36933/ []: sec=0.00, exception=<Fault -1: 'publisherUpdate: unknown method name'>
+[rosmaster.master][INFO] 2019-08-06 18:02:47,200: publisherUpdate[/amazon_warehouse_robot/cmd_vel] -> http://10.1.199.229:38669/ []
+[rosmaster.master][INFO] 2019-08-06 18:02:47,200: publisherUpdate[/rosout] -> http://10.1.199.229:36631/ ['http://10.1.199.229:33711/', 'http://10.1.199.229:38953/', 'http://10.1.199.229:34199/', 'http://10.1.199.229:36933/', 'http://10.1.199.229:46287/', 'http://10.1.199.229:38669/']
+[rosmaster.master][INFO] 2019-08-06 18:02:47,201: -SUB [/amazon_warehouse_robot_patrol/move_base_simple/goal] /amazon_warehouse_robot_patrol/move_base http://10.1.199.229:46287/
+[rosmaster.master][INFO] 2019-08-06 18:02:47,203: publisherUpdate[/amazon_warehouse_robot/cmd_vel] -> http://10.1.199.229:38669/ []: sec=0.00, result=[1, '', 0]
+[rosmaster.threadpool][ERROR] 2019-08-06 18:02:47,203: Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rosmaster/threadpool.py", line 218, in run
+    result = cmd(*args)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rosmaster/master_api.py", line 210, in publisher_update_task
+    ret = xmlrpcapi(api).publisherUpdate('/master', topic, pub_uris)
+  File "/usr/lib/python2.7/xmlrpclib.py", line 1243, in __call__
+    return self.__send(self.__name, args)
+  File "/usr/lib/python2.7/xmlrpclib.py", line 1602, in __request
+    verbose=self.__verbose
+  File "/usr/lib/python2.7/xmlrpclib.py", line 1283, in request
+    return self.single_request(host, handler, request_body, verbose)
+  File "/usr/lib/python2.7/xmlrpclib.py", line 1316, in single_request
+    return self.parse_response(response)
+  File "/usr/lib/python2.7/xmlrpclib.py", line 1493, in parse_response
+    return u.close()
+  File "/usr/lib/python2.7/xmlrpclib.py", line 800, in close
+    raise Fault(**self._stack[0])
+Fault: <Fault -1: 'publisherUpdate: unknown method name'>
+
+[rosmaster.master][INFO] 2019-08-06 18:02:47,204: -SERVICE [/move_base/get_loggers] /move_base rosrpc://10.1.199.229:36803
+[rosmaster.master][INFO] 2019-08-06 18:02:47,205: publisherUpdate[/rosout] -> http://10.1.199.229:36631/ ['http://10.1.199.229:33711/', 'http://10.1.199.229:38953/', 'http://10.1.199.229:34199/', 'http://10.1.199.229:36933/', 'http://10.1.199.229:46287/', 'http://10.1.199.229:38669/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2019-08-06 18:02:47,205: publisherUpdate[/amazon_warehouse_robot/nodelet_manager/bond] -> http://10.1.199.229:36933/ ['http://10.1.199.229:38953/']
+[rosmaster.master][INFO] 2019-08-06 18:02:47,206: publisherUpdate[/amazon_warehouse_robot/nodelet_manager/bond] -> http://10.1.199.229:38953/ ['http://10.1.199.229:38953/']
+[rosmaster.master][INFO] 2019-08-06 18:02:47,207: publisherUpdate[/rosout] -> http://10.1.199.229:36631/ ['http://10.1.199.229:33711/', 'http://10.1.199.229:38953/', 'http://10.1.199.229:34199/', 'http://10.1.199.229:36933/', 'http://10.1.199.229:38669/']
+[rosmaster.master][INFO] 2019-08-06 18:02:47,207: -PUB [/clock] /gazebo http://10.1.199.229:38669/
+[rosmaster.master][INFO] 2019-08-06 18:02:47,208: publisherUpdate[/amazon_warehouse_robot/nodelet_manager/bond] -> http://10.1.199.229:36933/ ['http://10.1.199.229:38953/']: sec=0.00, exception=<Fault -1: 'publisherUpdate: unknown method name'>
+[rosmaster.master][INFO] 2019-08-06 18:02:47,210: publisherUpdate[/amazon_warehouse_robot/nodelet_manager/bond] -> http://10.1.199.229:38953/ ['http://10.1.199.229:38953/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2019-08-06 18:02:47,210: publisherUpdate[/rosout] -> http://10.1.199.229:36631/ ['http://10.1.199.229:33711/', 'http://10.1.199.229:38953/', 'http://10.1.199.229:34199/', 'http://10.1.199.229:36933/', 'http://10.1.199.229:38669/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2019-08-06 18:02:47,211: -SUB [/move_base/cmd_vel] /amazon_warehouse_robot/nodelet_manager http://10.1.199.229:36933/
+[rosmaster.master][INFO] 2019-08-06 18:02:47,212: publisherUpdate[/clock] -> http://10.1.199.229:33711/ []
+[rosmaster.master][INFO] 2019-08-06 18:02:47,212: publisherUpdate[/rosout] -> http://10.1.199.229:36631/ ['http://10.1.199.229:33711/', 'http://10.1.199.229:38953/', 'http://10.1.199.229:34199/', 'http://10.1.199.229:38669/']
+[rosmaster.master][INFO] 2019-08-06 18:02:47,213: -SERVICE [/amazon_warehouse_robot_patrol/move_base/get_loggers] /amazon_warehouse_robot_patrol/move_base rosrpc://10.1.199.229:47279
+[rosmaster.threadpool][ERROR] 2019-08-06 18:02:47,213: Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rosmaster/threadpool.py", line 218, in run
+    result = cmd(*args)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rosmaster/master_api.py", line 210, in publisher_update_task
+    ret = xmlrpcapi(api).publisherUpdate('/master', topic, pub_uris)
+  File "/usr/lib/python2.7/xmlrpclib.py", line 1243, in __call__
+    return self.__send(self.__name, args)
+  File "/usr/lib/python2.7/xmlrpclib.py", line 1602, in __request
+    verbose=self.__verbose
+  File "/usr/lib/python2.7/xmlrpclib.py", line 1283, in request
+    return self.single_request(host, handler, request_body, verbose)
+  File "/usr/lib/python2.7/xmlrpclib.py", line 1316, in single_request
+    return self.parse_response(response)
+  File "/usr/lib/python2.7/xmlrpclib.py", line 1493, in parse_response
+    return u.close()
+  File "/usr/lib/python2.7/xmlrpclib.py", line 800, in close
+    raise Fault(**self._stack[0])
+Fault: <Fault -1: 'publisherUpdate: unknown method name'>
+
+[rosmaster.master][INFO] 2019-08-06 18:02:47,214: publisherUpdate[/clock] -> http://10.1.199.229:33711/ []: sec=0.00, result=[0, 'Unknown Error', 0]
+[rosmaster.master][INFO] 2019-08-06 18:02:47,215: publisherUpdate[/rosout] -> http://10.1.199.229:36631/ ['http://10.1.199.229:33711/', 'http://10.1.199.229:38953/', 'http://10.1.199.229:34199/', 'http://10.1.199.229:38669/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2019-08-06 18:02:47,215: -SERVICE [/move_base/set_logger_level] /move_base rosrpc://10.1.199.229:36803
+[rosmaster.master][INFO] 2019-08-06 18:02:47,216: publisherUpdate[/clock] -> http://10.1.199.229:38953/ []
+[rosmaster.master][INFO] 2019-08-06 18:02:47,217: publisherUpdate[/clock] -> http://10.1.199.229:34199/ []
+[rosmaster.master][INFO] 2019-08-06 18:02:47,218: publisherUpdate[/clock] -> http://10.1.199.229:36631/ []
+[rosmaster.master][INFO] 2019-08-06 18:02:47,218: -PUB [/gazebo/link_states] /gazebo http://10.1.199.229:38669/
+[rosmaster.master][INFO] 2019-08-06 18:02:47,219: publisherUpdate[/clock] -> http://10.1.199.229:38953/ []: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2019-08-06 18:02:47,220: publisherUpdate[/clock] -> http://10.1.199.229:34199/ []: sec=0.00, result=[0, 'Unknown Error', 0]
+[rosmaster.master][INFO] 2019-08-06 18:02:47,221: publisherUpdate[/clock] -> http://10.1.199.229:36631/ []: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2019-08-06 18:02:47,221: -SUB [/amazon_warehouse_robot/teleop] /amazon_warehouse_robot/nodelet_manager http://10.1.199.229:36933/
+[rosmaster.master][INFO] 2019-08-06 18:02:47,222: publisherUpdate[/clock] -> http://10.1.199.229:38669/ []
+[rosmaster.master][INFO] 2019-08-06 18:02:47,223: -SERVICE [/amazon_warehouse_robot_patrol/move_base/set_logger_level] /amazon_warehouse_robot_patrol/move_base rosrpc://10.1.199.229:47279
+[rosmaster.master][INFO] 2019-08-06 18:02:47,224: publisherUpdate[/clock] -> http://10.1.199.229:38669/ []: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2019-08-06 18:02:47,225: -PUB [/gazebo/model_states] /gazebo http://10.1.199.229:38669/
+[rosmaster.master][INFO] 2019-08-06 18:02:47,226: -SUB [/amazon_warehouse_robot/nodelet_manager/bond] /amazon_warehouse_robot/nodelet_manager http://10.1.199.229:36933/
+[rosmaster.master][INFO] 2019-08-06 18:02:47,227: -SERVICE [/gazebo/spawn_sdf_model] /gazebo rosrpc://10.1.199.229:48351
+[rosmaster.master][INFO] 2019-08-06 18:02:47,228: -SERVICE [/amazon_warehouse_robot/nodelet_manager/get_loggers] /amazon_warehouse_robot/nodelet_manager rosrpc://10.1.199.229:40667
+[rosmaster.master][INFO] 2019-08-06 18:02:47,229: -SERVICE [/gazebo/spawn_urdf_model] /gazebo rosrpc://10.1.199.229:48351
+[rosmaster.master][INFO] 2019-08-06 18:02:47,230: -SERVICE [/amazon_warehouse_robot/nodelet_manager/set_logger_level] /amazon_warehouse_robot/nodelet_manager rosrpc://10.1.199.229:40667
+[rosmaster.master][INFO] 2019-08-06 18:02:47,232: -SERVICE [/gazebo/delete_model] /gazebo rosrpc://10.1.199.229:48351
+[rosmaster.master][INFO] 2019-08-06 18:02:47,233: -SERVICE [/amazon_warehouse_robot/nodelet_manager/load_nodelet] /amazon_warehouse_robot/nodelet_manager rosrpc://10.1.199.229:40667
+[rosmaster.master][INFO] 2019-08-06 18:02:47,234: -SERVICE [/gazebo/delete_light] /gazebo rosrpc://10.1.199.229:48351
+[rosmaster.master][INFO] 2019-08-06 18:02:47,235: -SERVICE [/amazon_warehouse_robot/nodelet_manager/unload_nodelet] /amazon_warehouse_robot/nodelet_manager rosrpc://10.1.199.229:40667
+[rosmaster.master][INFO] 2019-08-06 18:02:47,236: -SERVICE [/gazebo/get_model_properties] /gazebo rosrpc://10.1.199.229:48351
+[rosmaster.master][INFO] 2019-08-06 18:02:47,237: -SERVICE [/amazon_warehouse_robot/nodelet_manager/list] /amazon_warehouse_robot/nodelet_manager rosrpc://10.1.199.229:40667
+[rosmaster.master][INFO] 2019-08-06 18:02:47,239: -SERVICE [/gazebo/get_model_state] /gazebo rosrpc://10.1.199.229:48351
+[rosmaster.master][INFO] 2019-08-06 18:02:47,240: -SERVICE [/amazon_warehouse_robot/cmd_vel_mux/set_parameters] /amazon_warehouse_robot/nodelet_manager rosrpc://10.1.199.229:40667
+[rosmaster.master][INFO] 2019-08-06 18:02:47,241: -SERVICE [/gazebo/get_world_properties] /gazebo rosrpc://10.1.199.229:48351
+[rosmaster.master][INFO] 2019-08-06 18:02:47,243: -SERVICE [/gazebo/get_joint_properties] /gazebo rosrpc://10.1.199.229:48351
+[rosmaster.master][INFO] 2019-08-06 18:02:47,244: -SERVICE [/gazebo/get_link_properties] /gazebo rosrpc://10.1.199.229:48351
+[rosmaster.master][INFO] 2019-08-06 18:02:47,245: -SERVICE [/gazebo/get_link_state] /gazebo rosrpc://10.1.199.229:48351
+[rosmaster.master][INFO] 2019-08-06 18:02:47,246: -SERVICE [/gazebo/get_light_properties] /gazebo rosrpc://10.1.199.229:48351
+[rosmaster.master][INFO] 2019-08-06 18:02:47,247: -SERVICE [/gazebo/set_light_properties] /gazebo rosrpc://10.1.199.229:48351
+[rosmaster.master][INFO] 2019-08-06 18:02:47,248: -SERVICE [/gazebo/get_physics_properties] /gazebo rosrpc://10.1.199.229:48351
+[rosmaster.master][INFO] 2019-08-06 18:02:47,248: -SERVICE [/gazebo/set_link_properties] /gazebo rosrpc://10.1.199.229:48351
+[rosmaster.master][INFO] 2019-08-06 18:02:47,249: -SERVICE [/gazebo/set_physics_properties] /gazebo rosrpc://10.1.199.229:48351
+[rosmaster.master][INFO] 2019-08-06 18:02:47,250: -SERVICE [/gazebo/set_model_state] /gazebo rosrpc://10.1.199.229:48351
+[rosmaster.master][INFO] 2019-08-06 18:02:47,250: -SERVICE [/gazebo/set_model_configuration] /gazebo rosrpc://10.1.199.229:48351
+[rosmaster.master][INFO] 2019-08-06 18:02:47,251: -SERVICE [/gazebo/set_joint_properties] /gazebo rosrpc://10.1.199.229:48351
+[rosmaster.master][INFO] 2019-08-06 18:02:47,251: -SERVICE [/gazebo/set_link_state] /gazebo rosrpc://10.1.199.229:48351
+[rosmaster.master][INFO] 2019-08-06 18:02:47,252: -SERVICE [/gazebo/pause_physics] /gazebo rosrpc://10.1.199.229:48351
+[rosmaster.master][INFO] 2019-08-06 18:02:47,252: -SERVICE [/gazebo/unpause_physics] /gazebo rosrpc://10.1.199.229:48351
+[rosmaster.master][INFO] 2019-08-06 18:02:47,253: -SERVICE [/gazebo/apply_body_wrench] /gazebo rosrpc://10.1.199.229:48351
+[rosmaster.master][INFO] 2019-08-06 18:02:47,253: -SERVICE [/gazebo/apply_joint_effort] /gazebo rosrpc://10.1.199.229:48351
+[rosmaster.master][INFO] 2019-08-06 18:02:47,254: -SERVICE [/gazebo/clear_joint_forces] /gazebo rosrpc://10.1.199.229:48351
+[rosmaster.master][INFO] 2019-08-06 18:02:47,255: -SERVICE [/gazebo/clear_body_wrenches] /gazebo rosrpc://10.1.199.229:48351
+[rosmaster.master][INFO] 2019-08-06 18:02:47,255: -SERVICE [/gazebo/reset_simulation] /gazebo rosrpc://10.1.199.229:48351
+[rosmaster.master][INFO] 2019-08-06 18:02:47,256: -SERVICE [/gazebo/reset_world] /gazebo rosrpc://10.1.199.229:48351
+[rosmaster.master][INFO] 2019-08-06 18:02:47,257: -PUB [/gazebo/parameter_descriptions] /gazebo http://10.1.199.229:38669/
+[rosmaster.master][INFO] 2019-08-06 18:02:47,257: -PUB [/gazebo/parameter_updates] /gazebo http://10.1.199.229:38669/
+[rosmaster.master][INFO] 2019-08-06 18:02:47,258: -SERVICE [/gazebo/set_parameters] /gazebo rosrpc://10.1.199.229:48351
+[rosmaster.master][INFO] 2019-08-06 18:02:47,311: +PARAM [/move_base/global_costmap/obstacle_layer/raytrace_range] by /move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:47,312: -PARAM [/move_base/global_costmap/raytrace_range] by /move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:47,314: +PARAM [/amazon_warehouse_robot_patrol/move_base/global_costmap/obstacle_layer/raytrace_range] by /amazon_warehouse_robot_patrol/move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:47,316: -PUB [/rosout] /amazon_warehouse_robot/amcl http://10.1.199.229:33711/
+[rosmaster.master][INFO] 2019-08-06 18:02:47,317: -PARAM [/amazon_warehouse_robot_patrol/move_base/global_costmap/raytrace_range] by /amazon_warehouse_robot_patrol/move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:47,319: -PUB [/tf] /amazon_warehouse_robot/amcl http://10.1.199.229:33711/
+[rosmaster.master][INFO] 2019-08-06 18:02:47,321: +PARAM [/move_base/global_costmap/obstacle_layer/obstacle_range] by /move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:47,322: -PUB [/rosout] /amazon_warehouse_robot_patrol/amcl_patrol http://10.1.199.229:34199/
+[rosmaster.master][INFO] 2019-08-06 18:02:47,323: -PUB [/amazon_warehouse_robot/amcl_pose] /amazon_warehouse_robot/amcl http://10.1.199.229:33711/
+[rosmaster.master][INFO] 2019-08-06 18:02:47,323: publisherUpdate[/rosout] -> http://10.1.199.229:36631/ ['http://10.1.199.229:38953/', 'http://10.1.199.229:34199/', 'http://10.1.199.229:38669/']
+[rosmaster.master][INFO] 2019-08-06 18:02:47,323: publisherUpdate[/tf] -> http://10.1.199.229:33711/ ['http://10.1.199.229:34199/', 'http://10.1.199.229:38669/']
+[rosmaster.master][INFO] 2019-08-06 18:02:47,324: publisherUpdate[/rosout] -> http://10.1.199.229:36631/ ['http://10.1.199.229:38953/', 'http://10.1.199.229:34199/', 'http://10.1.199.229:38669/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2019-08-06 18:02:47,325: publisherUpdate[/tf] -> http://10.1.199.229:34199/ ['http://10.1.199.229:34199/', 'http://10.1.199.229:38669/']
+[rosmaster.master][INFO] 2019-08-06 18:02:47,326: publisherUpdate[/tf] -> http://10.1.199.229:33711/ ['http://10.1.199.229:34199/', 'http://10.1.199.229:38669/']: sec=0.00, exception=<Fault -1: 'publisherUpdate: unknown method name'>
+[rosmaster.master][INFO] 2019-08-06 18:02:47,327: publisherUpdate[/rosout] -> http://10.1.199.229:36631/ ['http://10.1.199.229:38953/', 'http://10.1.199.229:38669/']
+[rosmaster.master][INFO] 2019-08-06 18:02:47,328: -PARAM [/move_base/global_costmap/obstacle_range] by /move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:47,329: publisherUpdate[/rosout] -> http://10.1.199.229:36631/ ['http://10.1.199.229:38953/', 'http://10.1.199.229:38669/']: sec=0.00, result=[1, '', 0]
+[rosmaster.threadpool][ERROR] 2019-08-06 18:02:47,330: Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rosmaster/threadpool.py", line 218, in run
+    result = cmd(*args)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rosmaster/master_api.py", line 210, in publisher_update_task
+    ret = xmlrpcapi(api).publisherUpdate('/master', topic, pub_uris)
+  File "/usr/lib/python2.7/xmlrpclib.py", line 1243, in __call__
+    return self.__send(self.__name, args)
+  File "/usr/lib/python2.7/xmlrpclib.py", line 1602, in __request
+    verbose=self.__verbose
+  File "/usr/lib/python2.7/xmlrpclib.py", line 1283, in request
+    return self.single_request(host, handler, request_body, verbose)
+  File "/usr/lib/python2.7/xmlrpclib.py", line 1316, in single_request
+    return self.parse_response(response)
+  File "/usr/lib/python2.7/xmlrpclib.py", line 1493, in parse_response
+    return u.close()
+  File "/usr/lib/python2.7/xmlrpclib.py", line 800, in close
+    raise Fault(**self._stack[0])
+Fault: <Fault -1: 'publisherUpdate: unknown method name'>
+
+[rosmaster.master][INFO] 2019-08-06 18:02:47,331: publisherUpdate[/tf] -> http://10.1.199.229:34199/ ['http://10.1.199.229:34199/', 'http://10.1.199.229:38669/']: sec=0.00, exception=<Fault -1: 'publisherUpdate: unknown method name'>
+[rosmaster.master][INFO] 2019-08-06 18:02:47,331: publisherUpdate[/tf] -> http://10.1.199.229:33711/ ['http://10.1.199.229:38669/']
+[rosmaster.master][INFO] 2019-08-06 18:02:47,331: -PUB [/tf] /amazon_warehouse_robot_patrol/amcl_patrol http://10.1.199.229:34199/
+[rosmaster.master][INFO] 2019-08-06 18:02:47,333: +PARAM [/amazon_warehouse_robot_patrol/move_base/global_costmap/obstacle_layer/obstacle_range] by /amazon_warehouse_robot_patrol/move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:47,334: publisherUpdate[/tf] -> http://10.1.199.229:33711/ ['http://10.1.199.229:38669/']: sec=0.00, exception=<Fault -1: 'publisherUpdate: unknown method name'>
+[rosmaster.threadpool][ERROR] 2019-08-06 18:02:47,335: Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rosmaster/threadpool.py", line 218, in run
+    result = cmd(*args)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rosmaster/master_api.py", line 210, in publisher_update_task
+    ret = xmlrpcapi(api).publisherUpdate('/master', topic, pub_uris)
+  File "/usr/lib/python2.7/xmlrpclib.py", line 1243, in __call__
+    return self.__send(self.__name, args)
+  File "/usr/lib/python2.7/xmlrpclib.py", line 1602, in __request
+    verbose=self.__verbose
+  File "/usr/lib/python2.7/xmlrpclib.py", line 1283, in request
+    return self.single_request(host, handler, request_body, verbose)
+  File "/usr/lib/python2.7/xmlrpclib.py", line 1316, in single_request
+    return self.parse_response(response)
+  File "/usr/lib/python2.7/xmlrpclib.py", line 1493, in parse_response
+    return u.close()
+  File "/usr/lib/python2.7/xmlrpclib.py", line 800, in close
+    raise Fault(**self._stack[0])
+Fault: <Fault -1: 'publisherUpdate: unknown method name'>
+
+[rosmaster.master][INFO] 2019-08-06 18:02:47,335: -PUB [/amazon_warehouse_robot/particlecloud] /amazon_warehouse_robot/amcl http://10.1.199.229:33711/
+[rosmaster.master][INFO] 2019-08-06 18:02:47,338: publisherUpdate[/tf] -> http://10.1.199.229:34199/ ['http://10.1.199.229:38669/']
+[rosmaster.threadpool][ERROR] 2019-08-06 18:02:47,339: Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rosmaster/threadpool.py", line 218, in run
+    result = cmd(*args)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rosmaster/master_api.py", line 210, in publisher_update_task
+    ret = xmlrpcapi(api).publisherUpdate('/master', topic, pub_uris)
+  File "/usr/lib/python2.7/xmlrpclib.py", line 1243, in __call__
+    return self.__send(self.__name, args)
+  File "/usr/lib/python2.7/xmlrpclib.py", line 1602, in __request
+    verbose=self.__verbose
+  File "/usr/lib/python2.7/xmlrpclib.py", line 1283, in request
+    return self.single_request(host, handler, request_body, verbose)
+  File "/usr/lib/python2.7/xmlrpclib.py", line 1316, in single_request
+    return self.parse_response(response)
+  File "/usr/lib/python2.7/xmlrpclib.py", line 1493, in parse_response
+    return u.close()
+  File "/usr/lib/python2.7/xmlrpclib.py", line 800, in close
+    raise Fault(**self._stack[0])
+Fault: <Fault -1: 'publisherUpdate: unknown method name'>
+
+[rosmaster.master][INFO] 2019-08-06 18:02:47,339: -PARAM [/amazon_warehouse_robot_patrol/move_base/global_costmap/obstacle_range] by /amazon_warehouse_robot_patrol/move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:47,340: -PUB [/amazon_warehouse_robot_patrol/amcl_pose] /amazon_warehouse_robot_patrol/amcl_patrol http://10.1.199.229:34199/
+[rosmaster.master][INFO] 2019-08-06 18:02:47,342: publisherUpdate[/tf] -> http://10.1.199.229:34199/ ['http://10.1.199.229:38669/']: sec=0.00, exception=<Fault -1: 'publisherUpdate: unknown method name'>
+[rosmaster.master][INFO] 2019-08-06 18:02:47,344: -PUB [/amazon_warehouse_robot/amcl/parameter_descriptions] /amazon_warehouse_robot/amcl http://10.1.199.229:33711/
+[rosmaster.threadpool][ERROR] 2019-08-06 18:02:47,346: Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rosmaster/threadpool.py", line 218, in run
+    result = cmd(*args)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rosmaster/master_api.py", line 210, in publisher_update_task
+    ret = xmlrpcapi(api).publisherUpdate('/master', topic, pub_uris)
+  File "/usr/lib/python2.7/xmlrpclib.py", line 1243, in __call__
+    return self.__send(self.__name, args)
+  File "/usr/lib/python2.7/xmlrpclib.py", line 1602, in __request
+    verbose=self.__verbose
+  File "/usr/lib/python2.7/xmlrpclib.py", line 1283, in request
+    return self.single_request(host, handler, request_body, verbose)
+  File "/usr/lib/python2.7/xmlrpclib.py", line 1316, in single_request
+    return self.parse_response(response)
+  File "/usr/lib/python2.7/xmlrpclib.py", line 1493, in parse_response
+    return u.close()
+  File "/usr/lib/python2.7/xmlrpclib.py", line 800, in close
+    raise Fault(**self._stack[0])
+Fault: <Fault -1: 'publisherUpdate: unknown method name'>
+
+[rosmaster.master][INFO] 2019-08-06 18:02:47,348: -PUB [/amazon_warehouse_robot_patrol/particlecloud] /amazon_warehouse_robot_patrol/amcl_patrol http://10.1.199.229:34199/
+[rosmaster.master][INFO] 2019-08-06 18:02:47,350: -PUB [/amazon_warehouse_robot/amcl/parameter_updates] /amazon_warehouse_robot/amcl http://10.1.199.229:33711/
+[rosmaster.master][INFO] 2019-08-06 18:02:47,351: +PARAM [/move_base/global_costmap/obstacle_layer/laser_scan_sensor] by /move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:47,352: -PUB [/amazon_warehouse_robot_patrol/amcl_patrol/parameter_descriptions] /amazon_warehouse_robot_patrol/amcl_patrol http://10.1.199.229:34199/
+[rosmaster.master][INFO] 2019-08-06 18:02:47,354: -SUB [/clock] /amazon_warehouse_robot/amcl http://10.1.199.229:33711/
+[rosmaster.master][INFO] 2019-08-06 18:02:47,355: -PARAM [/move_base/global_costmap/laser_scan_sensor] by /move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:47,357: -PUB [/amazon_warehouse_robot_patrol/amcl_patrol/parameter_updates] /amazon_warehouse_robot_patrol/amcl_patrol http://10.1.199.229:34199/
+[rosmaster.master][INFO] 2019-08-06 18:02:47,359: -SUB [/tf] /amazon_warehouse_robot/amcl http://10.1.199.229:33711/
+[rosmaster.master][INFO] 2019-08-06 18:02:47,361: -SUB [/clock] /amazon_warehouse_robot_patrol/amcl_patrol http://10.1.199.229:34199/
+[rosmaster.master][INFO] 2019-08-06 18:02:47,363: +PARAM [/amazon_warehouse_robot_patrol/move_base/global_costmap/obstacle_layer/laser_scan_sensor] by /amazon_warehouse_robot_patrol/move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:47,364: -SUB [/tf_static] /amazon_warehouse_robot/amcl http://10.1.199.229:33711/
+[rosmaster.master][INFO] 2019-08-06 18:02:47,366: -SUB [/tf] /amazon_warehouse_robot_patrol/amcl_patrol http://10.1.199.229:34199/
+[rosmaster.master][INFO] 2019-08-06 18:02:47,367: -PARAM [/amazon_warehouse_robot_patrol/move_base/global_costmap/laser_scan_sensor] by /amazon_warehouse_robot_patrol/move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:47,369: +PARAM [/move_base/global_costmap/obstacle_layer/observation_sources] by /move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:47,370: -SUB [/amazon_warehouse_robot/amazon_warehouse_robot/laser/scan] /amazon_warehouse_robot/amcl http://10.1.199.229:33711/
+[rosmaster.master][INFO] 2019-08-06 18:02:47,371: -SUB [/tf_static] /amazon_warehouse_robot_patrol/amcl_patrol http://10.1.199.229:34199/
+[rosmaster.master][INFO] 2019-08-06 18:02:47,373: -PARAM [/move_base/global_costmap/observation_sources] by /move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:47,374: -SUB [/amazon_warehouse_robot/initialpose] /amazon_warehouse_robot/amcl http://10.1.199.229:33711/
+[rosmaster.master][INFO] 2019-08-06 18:02:47,375: -SUB [/amazon_warehouse_robot_patrol/amazon_warehouse_robot_patrol/laser/scan] /amazon_warehouse_robot_patrol/amcl_patrol http://10.1.199.229:34199/
+[rosmaster.master][INFO] 2019-08-06 18:02:47,378: -SUB [/amazon_warehouse_robot/map] /amazon_warehouse_robot/amcl http://10.1.199.229:33711/
+[rosmaster.master][INFO] 2019-08-06 18:02:47,379: +PARAM [/amazon_warehouse_robot_patrol/move_base/global_costmap/obstacle_layer/observation_sources] by /amazon_warehouse_robot_patrol/move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:47,380: -SUB [/amazon_warehouse_robot_patrol/initialpose] /amazon_warehouse_robot_patrol/amcl_patrol http://10.1.199.229:34199/
+[rosmaster.master][INFO] 2019-08-06 18:02:47,382: -SERVICE [/amazon_warehouse_robot/amcl/get_loggers] /amazon_warehouse_robot/amcl rosrpc://10.1.199.229:40497
+[rosmaster.master][INFO] 2019-08-06 18:02:47,383: -PARAM [/amazon_warehouse_robot_patrol/move_base/global_costmap/observation_sources] by /amazon_warehouse_robot_patrol/move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:47,384: -SUB [/amazon_warehouse_robot_patrol/map] /amazon_warehouse_robot_patrol/amcl_patrol http://10.1.199.229:34199/
+[rosmaster.master][INFO] 2019-08-06 18:02:47,385: +PARAM [/move_base/global_costmap/inflation_layer/cost_scaling_factor] by /move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:47,386: -SERVICE [/amazon_warehouse_robot/amcl/set_logger_level] /amazon_warehouse_robot/amcl rosrpc://10.1.199.229:40497
+[rosmaster.master][INFO] 2019-08-06 18:02:47,388: -SERVICE [/amazon_warehouse_robot_patrol/amcl_patrol/get_loggers] /amazon_warehouse_robot_patrol/amcl_patrol rosrpc://10.1.199.229:60403
+[rosmaster.master][INFO] 2019-08-06 18:02:47,389: -PARAM [/move_base/global_costmap/cost_scaling_factor] by /move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:47,390: -SERVICE [/amazon_warehouse_robot/global_localization] /amazon_warehouse_robot/amcl rosrpc://10.1.199.229:40497
+[rosmaster.master][INFO] 2019-08-06 18:02:47,392: -SERVICE [/amazon_warehouse_robot_patrol/amcl_patrol/set_logger_level] /amazon_warehouse_robot_patrol/amcl_patrol rosrpc://10.1.199.229:60403
+[rosmaster.master][INFO] 2019-08-06 18:02:47,394: -SERVICE [/amazon_warehouse_robot/request_nomotion_update] /amazon_warehouse_robot/amcl rosrpc://10.1.199.229:40497
+[rosmaster.master][INFO] 2019-08-06 18:02:47,395: +PARAM [/amazon_warehouse_robot_patrol/move_base/global_costmap/inflation_layer/cost_scaling_factor] by /amazon_warehouse_robot_patrol/move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:47,396: -SERVICE [/amazon_warehouse_robot_patrol/global_localization] /amazon_warehouse_robot_patrol/amcl_patrol rosrpc://10.1.199.229:60403
+[rosmaster.master][INFO] 2019-08-06 18:02:47,398: -SERVICE [/amazon_warehouse_robot/set_map] /amazon_warehouse_robot/amcl rosrpc://10.1.199.229:40497
+[rosmaster.master][INFO] 2019-08-06 18:02:47,399: -PARAM [/amazon_warehouse_robot_patrol/move_base/global_costmap/cost_scaling_factor] by /amazon_warehouse_robot_patrol/move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:47,400: -SERVICE [/amazon_warehouse_robot_patrol/request_nomotion_update] /amazon_warehouse_robot_patrol/amcl_patrol rosrpc://10.1.199.229:60403
+[rosmaster.master][INFO] 2019-08-06 18:02:47,402: +PARAM [/move_base/global_costmap/inflation_layer/inflation_radius] by /move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:47,403: -SERVICE [/amazon_warehouse_robot/amcl/set_parameters] /amazon_warehouse_robot/amcl rosrpc://10.1.199.229:40497
+[rosmaster.master][INFO] 2019-08-06 18:02:47,405: -SERVICE [/amazon_warehouse_robot_patrol/set_map] /amazon_warehouse_robot_patrol/amcl_patrol rosrpc://10.1.199.229:60403
+[rosmaster.master][INFO] 2019-08-06 18:02:47,406: -PARAM [/move_base/global_costmap/inflation_radius] by /move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:47,408: -SERVICE [/amazon_warehouse_robot_patrol/amcl_patrol/set_parameters] /amazon_warehouse_robot_patrol/amcl_patrol rosrpc://10.1.199.229:60403
+[rosmaster.master][INFO] 2019-08-06 18:02:47,409: +PARAM [/move_base/global_costmap/plugins] by /move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:47,410: +PARAM [/amazon_warehouse_robot_patrol/move_base/global_costmap/inflation_layer/inflation_radius] by /amazon_warehouse_robot_patrol/move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:47,413: -PARAM [/amazon_warehouse_robot_patrol/move_base/global_costmap/inflation_radius] by /amazon_warehouse_robot_patrol/move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:47,415: +PARAM [/amazon_warehouse_robot_patrol/move_base/global_costmap/plugins] by /amazon_warehouse_robot_patrol/move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:47,420: -PUB [/rosout] /amazon_warehouse_robot/cmd_vel_mux http://10.1.199.229:38953/
+[rosmaster.master][INFO] 2019-08-06 18:02:47,422: -PUB [/amazon_warehouse_robot/nodelet_manager/bond] /amazon_warehouse_robot/cmd_vel_mux http://10.1.199.229:38953/
+[rosmaster.master][INFO] 2019-08-06 18:02:47,425: -SUB [/clock] /amazon_warehouse_robot/cmd_vel_mux http://10.1.199.229:38953/
+[rosmaster.master][INFO] 2019-08-06 18:02:47,429: -SUB [/amazon_warehouse_robot/nodelet_manager/bond] /amazon_warehouse_robot/cmd_vel_mux http://10.1.199.229:38953/
+[rosmaster.master][INFO] 2019-08-06 18:02:47,430: publisherUpdate[/rosout] -> http://10.1.199.229:36631/ ['http://10.1.199.229:38669/']
+[rosmaster.master][INFO] 2019-08-06 18:02:47,432: publisherUpdate[/rosout] -> http://10.1.199.229:36631/ ['http://10.1.199.229:38669/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2019-08-06 18:02:47,432: publisherUpdate[/amazon_warehouse_robot/nodelet_manager/bond] -> http://10.1.199.229:38953/ []
+[rosmaster.master][INFO] 2019-08-06 18:02:47,434: publisherUpdate[/amazon_warehouse_robot/nodelet_manager/bond] -> http://10.1.199.229:38953/ []: sec=0.00, exception=<Fault -1: 'publisherUpdate: unknown method name'>
+[rosmaster.master][INFO] 2019-08-06 18:02:47,435: -SERVICE [/amazon_warehouse_robot/cmd_vel_mux/get_loggers] /amazon_warehouse_robot/cmd_vel_mux rosrpc://10.1.199.229:49745
+[rosmaster.threadpool][ERROR] 2019-08-06 18:02:47,437: Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rosmaster/threadpool.py", line 218, in run
+    result = cmd(*args)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rosmaster/master_api.py", line 210, in publisher_update_task
+    ret = xmlrpcapi(api).publisherUpdate('/master', topic, pub_uris)
+  File "/usr/lib/python2.7/xmlrpclib.py", line 1243, in __call__
+    return self.__send(self.__name, args)
+  File "/usr/lib/python2.7/xmlrpclib.py", line 1602, in __request
+    verbose=self.__verbose
+  File "/usr/lib/python2.7/xmlrpclib.py", line 1283, in request
+    return self.single_request(host, handler, request_body, verbose)
+  File "/usr/lib/python2.7/xmlrpclib.py", line 1316, in single_request
+    return self.parse_response(response)
+  File "/usr/lib/python2.7/xmlrpclib.py", line 1493, in parse_response
+    return u.close()
+  File "/usr/lib/python2.7/xmlrpclib.py", line 800, in close
+    raise Fault(**self._stack[0])
+Fault: <Fault -1: 'publisherUpdate: unknown method name'>
+
+[rosmaster.master][INFO] 2019-08-06 18:02:47,439: -SERVICE [/amazon_warehouse_robot/cmd_vel_mux/set_logger_level] /amazon_warehouse_robot/cmd_vel_mux rosrpc://10.1.199.229:49745
+[rosmaster.master][INFO] 2019-08-06 18:02:47,443: +PARAM [/move_base/global_costmap/static_layer/enabled] by /move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:47,446: +PARAM [/move_base/global_costmap/static_layer/enabled] by /move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:47,448: +PARAM [/amazon_warehouse_robot_patrol/move_base/global_costmap/static_layer/enabled] by /amazon_warehouse_robot_patrol/move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:47,450: +PARAM [/amazon_warehouse_robot_patrol/move_base/global_costmap/static_layer/enabled] by /amazon_warehouse_robot_patrol/move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:47,499: +PARAM [/move_base/global_costmap/obstacle_layer/enabled] by /move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:47,501: +PARAM [/amazon_warehouse_robot_patrol/move_base/global_costmap/obstacle_layer/enabled] by /amazon_warehouse_robot_patrol/move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:47,502: +PARAM [/move_base/global_costmap/obstacle_layer/footprint_clearing_enabled] by /move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:47,503: +PARAM [/amazon_warehouse_robot_patrol/move_base/global_costmap/obstacle_layer/footprint_clearing_enabled] by /amazon_warehouse_robot_patrol/move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:47,504: +PARAM [/move_base/global_costmap/obstacle_layer/max_obstacle_height] by /move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:47,506: +PARAM [/amazon_warehouse_robot_patrol/move_base/global_costmap/obstacle_layer/max_obstacle_height] by /amazon_warehouse_robot_patrol/move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:47,506: +PARAM [/move_base/global_costmap/obstacle_layer/combination_method] by /move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:47,507: +PARAM [/amazon_warehouse_robot_patrol/move_base/global_costmap/obstacle_layer/combination_method] by /amazon_warehouse_robot_patrol/move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:47,508: +PARAM [/move_base/global_costmap/obstacle_layer/enabled] by /move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:47,509: +PARAM [/amazon_warehouse_robot_patrol/move_base/global_costmap/obstacle_layer/enabled] by /amazon_warehouse_robot_patrol/move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:47,511: +PARAM [/move_base/global_costmap/obstacle_layer/footprint_clearing_enabled] by /move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:47,512: +PARAM [/amazon_warehouse_robot_patrol/move_base/global_costmap/obstacle_layer/footprint_clearing_enabled] by /amazon_warehouse_robot_patrol/move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:47,513: +PARAM [/move_base/global_costmap/obstacle_layer/max_obstacle_height] by /move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:47,514: +PARAM [/amazon_warehouse_robot_patrol/move_base/global_costmap/obstacle_layer/max_obstacle_height] by /amazon_warehouse_robot_patrol/move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:47,515: +PARAM [/move_base/global_costmap/obstacle_layer/combination_method] by /move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:47,516: +PARAM [/amazon_warehouse_robot_patrol/move_base/global_costmap/obstacle_layer/combination_method] by /amazon_warehouse_robot_patrol/move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:47,524: +PARAM [/move_base/global_costmap/inflation_layer/enabled] by /move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:47,525: +PARAM [/amazon_warehouse_robot_patrol/move_base/global_costmap/inflation_layer/enabled] by /amazon_warehouse_robot_patrol/move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:47,526: +PARAM [/move_base/global_costmap/inflation_layer/cost_scaling_factor] by /move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:47,527: +PARAM [/amazon_warehouse_robot_patrol/move_base/global_costmap/inflation_layer/cost_scaling_factor] by /amazon_warehouse_robot_patrol/move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:47,528: +PARAM [/move_base/global_costmap/inflation_layer/inflation_radius] by /move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:47,529: +PARAM [/amazon_warehouse_robot_patrol/move_base/global_costmap/inflation_layer/inflation_radius] by /amazon_warehouse_robot_patrol/move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:47,531: +PARAM [/move_base/global_costmap/inflation_layer/inflate_unknown] by /move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:47,532: +PARAM [/amazon_warehouse_robot_patrol/move_base/global_costmap/inflation_layer/inflate_unknown] by /amazon_warehouse_robot_patrol/move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:47,533: +PARAM [/move_base/global_costmap/inflation_layer/enabled] by /move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:47,534: +PARAM [/amazon_warehouse_robot_patrol/move_base/global_costmap/inflation_layer/enabled] by /amazon_warehouse_robot_patrol/move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:47,535: +PARAM [/move_base/global_costmap/inflation_layer/cost_scaling_factor] by /move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:47,536: +PARAM [/amazon_warehouse_robot_patrol/move_base/global_costmap/inflation_layer/cost_scaling_factor] by /amazon_warehouse_robot_patrol/move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:47,536: +PARAM [/move_base/global_costmap/inflation_layer/inflation_radius] by /move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:47,537: +PARAM [/amazon_warehouse_robot_patrol/move_base/global_costmap/inflation_layer/inflation_radius] by /amazon_warehouse_robot_patrol/move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:47,538: +PARAM [/move_base/global_costmap/inflation_layer/inflate_unknown] by /move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:47,539: +PARAM [/amazon_warehouse_robot_patrol/move_base/global_costmap/inflation_layer/inflate_unknown] by /amazon_warehouse_robot_patrol/move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:47,548: +PARAM [/amazon_warehouse_robot_patrol/move_base/global_costmap/footprint] by /amazon_warehouse_robot_patrol/move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:47,561: +PARAM [/move_base/global_costmap/transform_tolerance] by /move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:47,562: +PARAM [/amazon_warehouse_robot_patrol/move_base/global_costmap/transform_tolerance] by /amazon_warehouse_robot_patrol/move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:47,563: +PARAM [/move_base/global_costmap/update_frequency] by /move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:47,564: +PARAM [/amazon_warehouse_robot_patrol/move_base/global_costmap/update_frequency] by /amazon_warehouse_robot_patrol/move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:47,565: +PARAM [/move_base/global_costmap/publish_frequency] by /move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:47,566: +PARAM [/amazon_warehouse_robot_patrol/move_base/global_costmap/publish_frequency] by /amazon_warehouse_robot_patrol/move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:47,567: +PARAM [/move_base/global_costmap/width] by /move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:47,568: +PARAM [/amazon_warehouse_robot_patrol/move_base/global_costmap/width] by /amazon_warehouse_robot_patrol/move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:47,569: +PARAM [/move_base/global_costmap/height] by /move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:47,570: +PARAM [/amazon_warehouse_robot_patrol/move_base/global_costmap/height] by /amazon_warehouse_robot_patrol/move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:47,571: +PARAM [/move_base/global_costmap/resolution] by /move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:47,572: +PARAM [/amazon_warehouse_robot_patrol/move_base/global_costmap/resolution] by /amazon_warehouse_robot_patrol/move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:47,573: +PARAM [/move_base/global_costmap/origin_x] by /move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:47,574: +PARAM [/amazon_warehouse_robot_patrol/move_base/global_costmap/origin_x] by /amazon_warehouse_robot_patrol/move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:47,575: +PARAM [/move_base/global_costmap/origin_y] by /move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:47,576: +PARAM [/amazon_warehouse_robot_patrol/move_base/global_costmap/origin_y] by /amazon_warehouse_robot_patrol/move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:47,577: +PARAM [/amazon_warehouse_robot/move_base/global_costmap/footprint] by /move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:47,578: +PARAM [/amazon_warehouse_robot_patrol/move_base/global_costmap/footprint] by /amazon_warehouse_robot_patrol/move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:47,579: +PARAM [/move_base/global_costmap/robot_radius] by /move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:47,580: +PARAM [/amazon_warehouse_robot_patrol/move_base/global_costmap/robot_radius] by /amazon_warehouse_robot_patrol/move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:47,581: +PARAM [/move_base/global_costmap/footprint_padding] by /move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:47,582: +PARAM [/amazon_warehouse_robot_patrol/move_base/global_costmap/footprint_padding] by /amazon_warehouse_robot_patrol/move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:47,583: +PARAM [/move_base/global_costmap/transform_tolerance] by /move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:47,585: +PARAM [/amazon_warehouse_robot_patrol/move_base/global_costmap/transform_tolerance] by /amazon_warehouse_robot_patrol/move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:47,586: +PARAM [/move_base/global_costmap/update_frequency] by /move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:47,587: +PARAM [/amazon_warehouse_robot_patrol/move_base/global_costmap/update_frequency] by /amazon_warehouse_robot_patrol/move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:47,588: +PARAM [/move_base/global_costmap/publish_frequency] by /move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:47,589: +PARAM [/amazon_warehouse_robot_patrol/move_base/global_costmap/publish_frequency] by /amazon_warehouse_robot_patrol/move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:47,590: +PARAM [/move_base/global_costmap/width] by /move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:47,591: +PARAM [/amazon_warehouse_robot_patrol/move_base/global_costmap/width] by /amazon_warehouse_robot_patrol/move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:47,592: +PARAM [/move_base/global_costmap/height] by /move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:47,594: +PARAM [/amazon_warehouse_robot_patrol/move_base/global_costmap/height] by /amazon_warehouse_robot_patrol/move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:47,595: +PARAM [/move_base/global_costmap/resolution] by /move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:47,596: +PARAM [/amazon_warehouse_robot_patrol/move_base/global_costmap/resolution] by /amazon_warehouse_robot_patrol/move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:47,597: +PARAM [/move_base/global_costmap/origin_x] by /move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:47,598: +PARAM [/amazon_warehouse_robot_patrol/move_base/global_costmap/origin_x] by /amazon_warehouse_robot_patrol/move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:47,599: +PARAM [/move_base/global_costmap/origin_y] by /move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:47,600: +PARAM [/amazon_warehouse_robot_patrol/move_base/global_costmap/origin_y] by /amazon_warehouse_robot_patrol/move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:47,601: +PARAM [/amazon_warehouse_robot/move_base/global_costmap/footprint] by /move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:47,603: +PARAM [/amazon_warehouse_robot_patrol/move_base/global_costmap/footprint] by /amazon_warehouse_robot_patrol/move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:47,604: +PARAM [/move_base/global_costmap/robot_radius] by /move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:47,605: +PARAM [/amazon_warehouse_robot_patrol/move_base/global_costmap/robot_radius] by /amazon_warehouse_robot_patrol/move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:47,606: +PARAM [/move_base/global_costmap/footprint_padding] by /move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:47,607: +PARAM [/amazon_warehouse_robot_patrol/move_base/global_costmap/footprint_padding] by /amazon_warehouse_robot_patrol/move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:47,645: +PARAM [/move_base/local_costmap/obstacle_layer/raytrace_range] by /move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:47,646: -PARAM [/move_base/local_costmap/raytrace_range] by /move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:47,648: +PARAM [/amazon_warehouse_robot_patrol/move_base/local_costmap/obstacle_layer/raytrace_range] by /amazon_warehouse_robot_patrol/move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:47,650: -PARAM [/amazon_warehouse_robot_patrol/move_base/local_costmap/raytrace_range] by /amazon_warehouse_robot_patrol/move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:47,653: +PARAM [/move_base/local_costmap/obstacle_layer/obstacle_range] by /move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:47,656: -PARAM [/move_base/local_costmap/obstacle_range] by /move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:47,657: +PARAM [/amazon_warehouse_robot_patrol/move_base/local_costmap/obstacle_layer/obstacle_range] by /amazon_warehouse_robot_patrol/move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:47,659: -PARAM [/amazon_warehouse_robot_patrol/move_base/local_costmap/obstacle_range] by /amazon_warehouse_robot_patrol/move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:47,668: +PARAM [/move_base/local_costmap/obstacle_layer/laser_scan_sensor] by /move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:47,670: -PARAM [/move_base/local_costmap/laser_scan_sensor] by /move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:47,672: +PARAM [/amazon_warehouse_robot_patrol/move_base/local_costmap/obstacle_layer/laser_scan_sensor] by /amazon_warehouse_robot_patrol/move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:47,674: -PARAM [/amazon_warehouse_robot_patrol/move_base/local_costmap/laser_scan_sensor] by /amazon_warehouse_robot_patrol/move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:47,676: +PARAM [/move_base/local_costmap/obstacle_layer/observation_sources] by /move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:47,678: -PARAM [/move_base/local_costmap/observation_sources] by /move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:47,681: +PARAM [/amazon_warehouse_robot_patrol/move_base/local_costmap/obstacle_layer/observation_sources] by /amazon_warehouse_robot_patrol/move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:47,683: -PARAM [/amazon_warehouse_robot_patrol/move_base/local_costmap/observation_sources] by /amazon_warehouse_robot_patrol/move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:47,684: +PARAM [/move_base/local_costmap/inflation_layer/cost_scaling_factor] by /move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:47,687: -PARAM [/move_base/local_costmap/cost_scaling_factor] by /move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:47,689: +PARAM [/amazon_warehouse_robot_patrol/move_base/local_costmap/inflation_layer/cost_scaling_factor] by /amazon_warehouse_robot_patrol/move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:47,691: -PARAM [/amazon_warehouse_robot_patrol/move_base/local_costmap/cost_scaling_factor] by /amazon_warehouse_robot_patrol/move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:47,694: +PARAM [/move_base/local_costmap/inflation_layer/inflation_radius] by /move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:47,696: -PARAM [/move_base/local_costmap/inflation_radius] by /move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:47,697: +PARAM [/amazon_warehouse_robot_patrol/move_base/local_costmap/inflation_layer/inflation_radius] by /amazon_warehouse_robot_patrol/move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:47,698: +PARAM [/move_base/local_costmap/plugins] by /move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:47,700: -PARAM [/amazon_warehouse_robot_patrol/move_base/local_costmap/inflation_radius] by /amazon_warehouse_robot_patrol/move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:47,702: +PARAM [/amazon_warehouse_robot_patrol/move_base/local_costmap/plugins] by /amazon_warehouse_robot_patrol/move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:47,761: +PARAM [/move_base/local_costmap/obstacle_layer/enabled] by /move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:47,763: +PARAM [/move_base/local_costmap/obstacle_layer/footprint_clearing_enabled] by /move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:47,764: +PARAM [/amazon_warehouse_robot_patrol/move_base/local_costmap/obstacle_layer/enabled] by /amazon_warehouse_robot_patrol/move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:47,765: +PARAM [/move_base/local_costmap/obstacle_layer/max_obstacle_height] by /move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:47,766: +PARAM [/amazon_warehouse_robot_patrol/move_base/local_costmap/obstacle_layer/footprint_clearing_enabled] by /amazon_warehouse_robot_patrol/move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:47,768: +PARAM [/move_base/local_costmap/obstacle_layer/combination_method] by /move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:47,769: +PARAM [/amazon_warehouse_robot_patrol/move_base/local_costmap/obstacle_layer/max_obstacle_height] by /amazon_warehouse_robot_patrol/move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:47,771: +PARAM [/move_base/local_costmap/obstacle_layer/enabled] by /move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:47,772: +PARAM [/amazon_warehouse_robot_patrol/move_base/local_costmap/obstacle_layer/combination_method] by /amazon_warehouse_robot_patrol/move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:47,773: +PARAM [/move_base/local_costmap/obstacle_layer/footprint_clearing_enabled] by /move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:47,774: +PARAM [/amazon_warehouse_robot_patrol/move_base/local_costmap/obstacle_layer/enabled] by /amazon_warehouse_robot_patrol/move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:47,775: +PARAM [/move_base/local_costmap/obstacle_layer/max_obstacle_height] by /move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:47,776: +PARAM [/amazon_warehouse_robot_patrol/move_base/local_costmap/obstacle_layer/footprint_clearing_enabled] by /amazon_warehouse_robot_patrol/move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:47,778: +PARAM [/move_base/local_costmap/obstacle_layer/combination_method] by /move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:47,779: +PARAM [/amazon_warehouse_robot_patrol/move_base/local_costmap/obstacle_layer/max_obstacle_height] by /amazon_warehouse_robot_patrol/move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:47,781: +PARAM [/amazon_warehouse_robot_patrol/move_base/local_costmap/obstacle_layer/combination_method] by /amazon_warehouse_robot_patrol/move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:47,787: +PARAM [/move_base/local_costmap/inflation_layer/enabled] by /move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:47,789: +PARAM [/move_base/local_costmap/inflation_layer/cost_scaling_factor] by /move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:47,791: +PARAM [/move_base/local_costmap/inflation_layer/inflation_radius] by /move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:47,792: +PARAM [/amazon_warehouse_robot_patrol/move_base/local_costmap/inflation_layer/enabled] by /amazon_warehouse_robot_patrol/move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:47,794: +PARAM [/move_base/local_costmap/inflation_layer/inflate_unknown] by /move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:47,795: +PARAM [/amazon_warehouse_robot_patrol/move_base/local_costmap/inflation_layer/cost_scaling_factor] by /amazon_warehouse_robot_patrol/move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:47,796: +PARAM [/move_base/local_costmap/inflation_layer/enabled] by /move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:47,797: +PARAM [/amazon_warehouse_robot_patrol/move_base/local_costmap/inflation_layer/inflation_radius] by /amazon_warehouse_robot_patrol/move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:47,799: +PARAM [/move_base/local_costmap/inflation_layer/cost_scaling_factor] by /move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:47,800: +PARAM [/amazon_warehouse_robot_patrol/move_base/local_costmap/inflation_layer/inflate_unknown] by /amazon_warehouse_robot_patrol/move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:47,801: +PARAM [/move_base/local_costmap/inflation_layer/inflation_radius] by /move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:47,802: +PARAM [/amazon_warehouse_robot_patrol/move_base/local_costmap/inflation_layer/enabled] by /amazon_warehouse_robot_patrol/move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:47,804: +PARAM [/move_base/local_costmap/inflation_layer/inflate_unknown] by /move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:47,805: +PARAM [/amazon_warehouse_robot_patrol/move_base/local_costmap/inflation_layer/cost_scaling_factor] by /amazon_warehouse_robot_patrol/move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:47,808: +PARAM [/amazon_warehouse_robot_patrol/move_base/local_costmap/inflation_layer/inflation_radius] by /amazon_warehouse_robot_patrol/move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:47,810: +PARAM [/amazon_warehouse_robot_patrol/move_base/local_costmap/inflation_layer/inflate_unknown] by /amazon_warehouse_robot_patrol/move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:47,825: +PARAM [/amazon_warehouse_robot_patrol/move_base/local_costmap/footprint] by /amazon_warehouse_robot_patrol/move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:47,840: +PARAM [/move_base/local_costmap/transform_tolerance] by /move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:47,843: +PARAM [/move_base/local_costmap/update_frequency] by /move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:47,845: +PARAM [/move_base/local_costmap/publish_frequency] by /move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:47,847: +PARAM [/move_base/local_costmap/width] by /move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:47,848: +PARAM [/amazon_warehouse_robot_patrol/move_base/local_costmap/transform_tolerance] by /amazon_warehouse_robot_patrol/move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:47,850: +PARAM [/move_base/local_costmap/height] by /move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:47,850: +PARAM [/amazon_warehouse_robot_patrol/move_base/local_costmap/update_frequency] by /amazon_warehouse_robot_patrol/move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:47,852: +PARAM [/move_base/local_costmap/resolution] by /move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:47,853: +PARAM [/amazon_warehouse_robot_patrol/move_base/local_costmap/publish_frequency] by /amazon_warehouse_robot_patrol/move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:47,854: +PARAM [/move_base/local_costmap/origin_x] by /move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:47,856: +PARAM [/amazon_warehouse_robot_patrol/move_base/local_costmap/width] by /amazon_warehouse_robot_patrol/move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:47,857: +PARAM [/move_base/local_costmap/origin_y] by /move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:47,858: +PARAM [/amazon_warehouse_robot_patrol/move_base/local_costmap/height] by /amazon_warehouse_robot_patrol/move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:47,859: +PARAM [/amazon_warehouse_robot/move_base/local_costmap/footprint] by /move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:47,861: +PARAM [/amazon_warehouse_robot_patrol/move_base/local_costmap/resolution] by /amazon_warehouse_robot_patrol/move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:47,862: +PARAM [/move_base/local_costmap/robot_radius] by /move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:47,863: +PARAM [/amazon_warehouse_robot_patrol/move_base/local_costmap/origin_x] by /amazon_warehouse_robot_patrol/move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:47,864: +PARAM [/move_base/local_costmap/footprint_padding] by /move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:47,866: +PARAM [/amazon_warehouse_robot_patrol/move_base/local_costmap/origin_y] by /amazon_warehouse_robot_patrol/move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:47,867: +PARAM [/move_base/local_costmap/transform_tolerance] by /move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:47,868: +PARAM [/amazon_warehouse_robot_patrol/move_base/local_costmap/footprint] by /amazon_warehouse_robot_patrol/move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:47,869: +PARAM [/move_base/local_costmap/update_frequency] by /move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:47,871: +PARAM [/amazon_warehouse_robot_patrol/move_base/local_costmap/robot_radius] by /amazon_warehouse_robot_patrol/move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:47,872: +PARAM [/move_base/local_costmap/publish_frequency] by /move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:47,873: +PARAM [/amazon_warehouse_robot_patrol/move_base/local_costmap/footprint_padding] by /amazon_warehouse_robot_patrol/move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:47,874: +PARAM [/move_base/local_costmap/width] by /move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:47,876: +PARAM [/move_base/local_costmap/height] by /move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:47,877: +PARAM [/amazon_warehouse_robot_patrol/move_base/local_costmap/transform_tolerance] by /amazon_warehouse_robot_patrol/move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:47,878: +PARAM [/move_base/local_costmap/resolution] by /move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:47,879: +PARAM [/amazon_warehouse_robot_patrol/move_base/local_costmap/update_frequency] by /amazon_warehouse_robot_patrol/move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:47,880: +PARAM [/move_base/local_costmap/origin_x] by /move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:47,882: +PARAM [/amazon_warehouse_robot_patrol/move_base/local_costmap/publish_frequency] by /amazon_warehouse_robot_patrol/move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:47,883: +PARAM [/move_base/local_costmap/origin_y] by /move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:47,884: +PARAM [/amazon_warehouse_robot_patrol/move_base/local_costmap/width] by /amazon_warehouse_robot_patrol/move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:47,885: +PARAM [/amazon_warehouse_robot/move_base/local_costmap/footprint] by /move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:47,887: +PARAM [/amazon_warehouse_robot_patrol/move_base/local_costmap/height] by /amazon_warehouse_robot_patrol/move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:47,888: +PARAM [/move_base/local_costmap/robot_radius] by /move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:47,889: +PARAM [/amazon_warehouse_robot_patrol/move_base/local_costmap/resolution] by /amazon_warehouse_robot_patrol/move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:47,890: +PARAM [/move_base/local_costmap/footprint_padding] by /move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:47,891: +PARAM [/amazon_warehouse_robot_patrol/move_base/local_costmap/origin_x] by /amazon_warehouse_robot_patrol/move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:47,893: +PARAM [/amazon_warehouse_robot_patrol/move_base/local_costmap/origin_y] by /amazon_warehouse_robot_patrol/move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:47,894: +PARAM [/amazon_warehouse_robot_patrol/move_base/local_costmap/footprint] by /amazon_warehouse_robot_patrol/move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:47,897: +PARAM [/amazon_warehouse_robot_patrol/move_base/local_costmap/robot_radius] by /amazon_warehouse_robot_patrol/move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:47,900: +PARAM [/amazon_warehouse_robot_patrol/move_base/local_costmap/footprint_padding] by /amazon_warehouse_robot_patrol/move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:48,034: +PARAM [/move_base/TrajectoryPlannerROS/acc_lim_x] by /move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:48,036: +PARAM [/move_base/TrajectoryPlannerROS/acc_lim_y] by /move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:48,039: +PARAM [/move_base/TrajectoryPlannerROS/acc_lim_theta] by /move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:48,041: +PARAM [/move_base/TrajectoryPlannerROS/max_vel_x] by /move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:48,043: +PARAM [/move_base/TrajectoryPlannerROS/min_vel_x] by /move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:48,046: +PARAM [/move_base/TrajectoryPlannerROS/max_vel_theta] by /move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:48,047: +PARAM [/amazon_warehouse_robot_patrol/move_base/TrajectoryPlannerROS/acc_lim_x] by /amazon_warehouse_robot_patrol/move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:48,049: +PARAM [/move_base/TrajectoryPlannerROS/min_vel_theta] by /move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:48,050: +PARAM [/amazon_warehouse_robot_patrol/move_base/TrajectoryPlannerROS/acc_lim_y] by /amazon_warehouse_robot_patrol/move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:48,051: +PARAM [/move_base/TrajectoryPlannerROS/min_in_place_vel_theta] by /move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:48,052: +PARAM [/amazon_warehouse_robot_patrol/move_base/TrajectoryPlannerROS/acc_lim_theta] by /amazon_warehouse_robot_patrol/move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:48,054: +PARAM [/move_base/TrajectoryPlannerROS/sim_time] by /move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:48,055: +PARAM [/amazon_warehouse_robot_patrol/move_base/TrajectoryPlannerROS/max_vel_x] by /amazon_warehouse_robot_patrol/move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:48,056: +PARAM [/move_base/TrajectoryPlannerROS/sim_granularity] by /move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:48,058: +PARAM [/amazon_warehouse_robot_patrol/move_base/TrajectoryPlannerROS/min_vel_x] by /amazon_warehouse_robot_patrol/move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:48,059: +PARAM [/move_base/TrajectoryPlannerROS/angular_sim_granularity] by /move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:48,060: +PARAM [/amazon_warehouse_robot_patrol/move_base/TrajectoryPlannerROS/max_vel_theta] by /amazon_warehouse_robot_patrol/move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:48,061: +PARAM [/move_base/TrajectoryPlannerROS/pdist_scale] by /move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:48,062: +PARAM [/amazon_warehouse_robot_patrol/move_base/TrajectoryPlannerROS/min_vel_theta] by /amazon_warehouse_robot_patrol/move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:48,064: +PARAM [/move_base/TrajectoryPlannerROS/gdist_scale] by /move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:48,065: +PARAM [/amazon_warehouse_robot_patrol/move_base/TrajectoryPlannerROS/min_in_place_vel_theta] by /amazon_warehouse_robot_patrol/move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:48,066: +PARAM [/move_base/TrajectoryPlannerROS/occdist_scale] by /move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:48,067: +PARAM [/amazon_warehouse_robot_patrol/move_base/TrajectoryPlannerROS/sim_time] by /amazon_warehouse_robot_patrol/move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:48,069: +PARAM [/move_base/TrajectoryPlannerROS/oscillation_reset_dist] by /move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:48,070: +PARAM [/amazon_warehouse_robot_patrol/move_base/TrajectoryPlannerROS/sim_granularity] by /amazon_warehouse_robot_patrol/move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:48,071: +PARAM [/move_base/TrajectoryPlannerROS/escape_reset_dist] by /move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:48,072: +PARAM [/amazon_warehouse_robot_patrol/move_base/TrajectoryPlannerROS/angular_sim_granularity] by /amazon_warehouse_robot_patrol/move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:48,074: +PARAM [/move_base/TrajectoryPlannerROS/escape_reset_theta] by /move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:48,075: +PARAM [/amazon_warehouse_robot_patrol/move_base/TrajectoryPlannerROS/pdist_scale] by /amazon_warehouse_robot_patrol/move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:48,077: +PARAM [/move_base/TrajectoryPlannerROS/vx_samples] by /move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:48,077: +PARAM [/amazon_warehouse_robot_patrol/move_base/TrajectoryPlannerROS/gdist_scale] by /amazon_warehouse_robot_patrol/move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:48,079: +PARAM [/move_base/TrajectoryPlannerROS/vtheta_samples] by /move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:48,080: +PARAM [/amazon_warehouse_robot_patrol/move_base/TrajectoryPlannerROS/occdist_scale] by /amazon_warehouse_robot_patrol/move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:48,081: +PARAM [/move_base/TrajectoryPlannerROS/heading_lookahead] by /move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:48,082: +PARAM [/amazon_warehouse_robot_patrol/move_base/TrajectoryPlannerROS/oscillation_reset_dist] by /amazon_warehouse_robot_patrol/move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:48,084: +PARAM [/move_base/TrajectoryPlannerROS/holonomic_robot] by /move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:48,085: +PARAM [/amazon_warehouse_robot_patrol/move_base/TrajectoryPlannerROS/escape_reset_dist] by /amazon_warehouse_robot_patrol/move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:48,086: +PARAM [/move_base/TrajectoryPlannerROS/escape_vel] by /move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:48,087: +PARAM [/amazon_warehouse_robot_patrol/move_base/TrajectoryPlannerROS/escape_reset_theta] by /amazon_warehouse_robot_patrol/move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:48,089: +PARAM [/move_base/TrajectoryPlannerROS/dwa] by /move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:48,090: +PARAM [/amazon_warehouse_robot_patrol/move_base/TrajectoryPlannerROS/vx_samples] by /amazon_warehouse_robot_patrol/move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:48,091: +PARAM [/move_base/TrajectoryPlannerROS/heading_scoring] by /move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:48,092: +PARAM [/amazon_warehouse_robot_patrol/move_base/TrajectoryPlannerROS/vtheta_samples] by /amazon_warehouse_robot_patrol/move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:48,094: +PARAM [/move_base/TrajectoryPlannerROS/heading_scoring_timestep] by /move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:48,095: +PARAM [/amazon_warehouse_robot_patrol/move_base/TrajectoryPlannerROS/heading_lookahead] by /amazon_warehouse_robot_patrol/move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:48,096: +PARAM [/move_base/TrajectoryPlannerROS/simple_attractor] by /move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:48,097: +PARAM [/amazon_warehouse_robot_patrol/move_base/TrajectoryPlannerROS/holonomic_robot] by /amazon_warehouse_robot_patrol/move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:48,098: +PARAM [/move_base/TrajectoryPlannerROS/y_vels] by /move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:48,100: +PARAM [/amazon_warehouse_robot_patrol/move_base/TrajectoryPlannerROS/escape_vel] by /amazon_warehouse_robot_patrol/move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:48,101: +PARAM [/move_base/TrajectoryPlannerROS/restore_defaults] by /move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:48,102: +PARAM [/amazon_warehouse_robot_patrol/move_base/TrajectoryPlannerROS/dwa] by /amazon_warehouse_robot_patrol/move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:48,103: +PARAM [/move_base/TrajectoryPlannerROS/acc_lim_x] by /move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:48,105: +PARAM [/amazon_warehouse_robot_patrol/move_base/TrajectoryPlannerROS/heading_scoring] by /amazon_warehouse_robot_patrol/move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:48,106: +PARAM [/move_base/TrajectoryPlannerROS/acc_lim_y] by /move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:48,107: +PARAM [/amazon_warehouse_robot_patrol/move_base/TrajectoryPlannerROS/heading_scoring_timestep] by /amazon_warehouse_robot_patrol/move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:48,108: +PARAM [/move_base/TrajectoryPlannerROS/acc_lim_theta] by /move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:48,109: +PARAM [/amazon_warehouse_robot_patrol/move_base/TrajectoryPlannerROS/simple_attractor] by /amazon_warehouse_robot_patrol/move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:48,111: +PARAM [/move_base/TrajectoryPlannerROS/max_vel_x] by /move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:48,112: +PARAM [/amazon_warehouse_robot_patrol/move_base/TrajectoryPlannerROS/y_vels] by /amazon_warehouse_robot_patrol/move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:48,113: +PARAM [/move_base/TrajectoryPlannerROS/min_vel_x] by /move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:48,114: +PARAM [/amazon_warehouse_robot_patrol/move_base/TrajectoryPlannerROS/restore_defaults] by /amazon_warehouse_robot_patrol/move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:48,115: +PARAM [/move_base/TrajectoryPlannerROS/max_vel_theta] by /move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:48,117: +PARAM [/amazon_warehouse_robot_patrol/move_base/TrajectoryPlannerROS/acc_lim_x] by /amazon_warehouse_robot_patrol/move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:48,118: +PARAM [/move_base/TrajectoryPlannerROS/min_vel_theta] by /move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:48,119: +PARAM [/amazon_warehouse_robot_patrol/move_base/TrajectoryPlannerROS/acc_lim_y] by /amazon_warehouse_robot_patrol/move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:48,120: +PARAM [/move_base/TrajectoryPlannerROS/min_in_place_vel_theta] by /move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:48,121: +PARAM [/amazon_warehouse_robot_patrol/move_base/TrajectoryPlannerROS/acc_lim_theta] by /amazon_warehouse_robot_patrol/move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:48,123: +PARAM [/move_base/TrajectoryPlannerROS/sim_time] by /move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:48,124: +PARAM [/amazon_warehouse_robot_patrol/move_base/TrajectoryPlannerROS/max_vel_x] by /amazon_warehouse_robot_patrol/move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:48,125: +PARAM [/move_base/TrajectoryPlannerROS/sim_granularity] by /move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:48,126: +PARAM [/amazon_warehouse_robot_patrol/move_base/TrajectoryPlannerROS/min_vel_x] by /amazon_warehouse_robot_patrol/move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:48,128: +PARAM [/move_base/TrajectoryPlannerROS/angular_sim_granularity] by /move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:48,129: +PARAM [/amazon_warehouse_robot_patrol/move_base/TrajectoryPlannerROS/max_vel_theta] by /amazon_warehouse_robot_patrol/move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:48,130: +PARAM [/move_base/TrajectoryPlannerROS/pdist_scale] by /move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:48,132: +PARAM [/amazon_warehouse_robot_patrol/move_base/TrajectoryPlannerROS/min_vel_theta] by /amazon_warehouse_robot_patrol/move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:48,133: +PARAM [/move_base/TrajectoryPlannerROS/gdist_scale] by /move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:48,134: +PARAM [/amazon_warehouse_robot_patrol/move_base/TrajectoryPlannerROS/min_in_place_vel_theta] by /amazon_warehouse_robot_patrol/move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:48,135: +PARAM [/move_base/TrajectoryPlannerROS/occdist_scale] by /move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:48,137: +PARAM [/amazon_warehouse_robot_patrol/move_base/TrajectoryPlannerROS/sim_time] by /amazon_warehouse_robot_patrol/move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:48,138: +PARAM [/move_base/TrajectoryPlannerROS/oscillation_reset_dist] by /move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:48,139: +PARAM [/amazon_warehouse_robot_patrol/move_base/TrajectoryPlannerROS/sim_granularity] by /amazon_warehouse_robot_patrol/move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:48,140: +PARAM [/move_base/TrajectoryPlannerROS/escape_reset_dist] by /move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:48,142: +PARAM [/amazon_warehouse_robot_patrol/move_base/TrajectoryPlannerROS/angular_sim_granularity] by /amazon_warehouse_robot_patrol/move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:48,143: +PARAM [/move_base/TrajectoryPlannerROS/escape_reset_theta] by /move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:48,144: +PARAM [/amazon_warehouse_robot_patrol/move_base/TrajectoryPlannerROS/pdist_scale] by /amazon_warehouse_robot_patrol/move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:48,145: +PARAM [/move_base/TrajectoryPlannerROS/vx_samples] by /move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:48,147: +PARAM [/amazon_warehouse_robot_patrol/move_base/TrajectoryPlannerROS/gdist_scale] by /amazon_warehouse_robot_patrol/move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:48,148: +PARAM [/move_base/TrajectoryPlannerROS/vtheta_samples] by /move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:48,149: +PARAM [/amazon_warehouse_robot_patrol/move_base/TrajectoryPlannerROS/occdist_scale] by /amazon_warehouse_robot_patrol/move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:48,150: +PARAM [/move_base/TrajectoryPlannerROS/heading_lookahead] by /move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:48,152: +PARAM [/amazon_warehouse_robot_patrol/move_base/TrajectoryPlannerROS/oscillation_reset_dist] by /amazon_warehouse_robot_patrol/move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:48,153: +PARAM [/move_base/TrajectoryPlannerROS/holonomic_robot] by /move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:48,154: +PARAM [/amazon_warehouse_robot_patrol/move_base/TrajectoryPlannerROS/escape_reset_dist] by /amazon_warehouse_robot_patrol/move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:48,155: +PARAM [/move_base/TrajectoryPlannerROS/escape_vel] by /move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:48,156: +PARAM [/amazon_warehouse_robot_patrol/move_base/TrajectoryPlannerROS/escape_reset_theta] by /amazon_warehouse_robot_patrol/move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:48,158: +PARAM [/move_base/TrajectoryPlannerROS/dwa] by /move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:48,159: +PARAM [/amazon_warehouse_robot_patrol/move_base/TrajectoryPlannerROS/vx_samples] by /amazon_warehouse_robot_patrol/move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:48,160: +PARAM [/move_base/TrajectoryPlannerROS/heading_scoring] by /move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:48,162: +PARAM [/amazon_warehouse_robot_patrol/move_base/TrajectoryPlannerROS/vtheta_samples] by /amazon_warehouse_robot_patrol/move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:48,162: +PARAM [/move_base/TrajectoryPlannerROS/heading_scoring_timestep] by /move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:48,164: +PARAM [/amazon_warehouse_robot_patrol/move_base/TrajectoryPlannerROS/heading_lookahead] by /amazon_warehouse_robot_patrol/move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:48,165: +PARAM [/move_base/TrajectoryPlannerROS/simple_attractor] by /move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:48,166: +PARAM [/amazon_warehouse_robot_patrol/move_base/TrajectoryPlannerROS/holonomic_robot] by /amazon_warehouse_robot_patrol/move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:48,168: +PARAM [/move_base/TrajectoryPlannerROS/y_vels] by /move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:48,169: +PARAM [/amazon_warehouse_robot_patrol/move_base/TrajectoryPlannerROS/escape_vel] by /amazon_warehouse_robot_patrol/move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:48,170: +PARAM [/move_base/TrajectoryPlannerROS/restore_defaults] by /move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:48,171: +PARAM [/amazon_warehouse_robot_patrol/move_base/TrajectoryPlannerROS/dwa] by /amazon_warehouse_robot_patrol/move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:48,174: +PARAM [/amazon_warehouse_robot_patrol/move_base/TrajectoryPlannerROS/heading_scoring] by /amazon_warehouse_robot_patrol/move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:48,175: +PARAM [/move_base/conservative_reset/reset_distance] by /move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:48,176: +PARAM [/amazon_warehouse_robot_patrol/move_base/TrajectoryPlannerROS/heading_scoring_timestep] by /amazon_warehouse_robot_patrol/move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:48,177: +PARAM [/move_base/aggressive_reset/reset_distance] by /move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:48,178: +PARAM [/amazon_warehouse_robot_patrol/move_base/TrajectoryPlannerROS/simple_attractor] by /amazon_warehouse_robot_patrol/move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:48,180: +PARAM [/amazon_warehouse_robot_patrol/move_base/TrajectoryPlannerROS/y_vels] by /amazon_warehouse_robot_patrol/move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:48,182: +PARAM [/amazon_warehouse_robot_patrol/move_base/TrajectoryPlannerROS/restore_defaults] by /amazon_warehouse_robot_patrol/move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:48,186: +PARAM [/amazon_warehouse_robot_patrol/move_base/conservative_reset/reset_distance] by /amazon_warehouse_robot_patrol/move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:48,188: +PARAM [/amazon_warehouse_robot_patrol/move_base/aggressive_reset/reset_distance] by /amazon_warehouse_robot_patrol/move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:48,245: +PARAM [/move_base/base_global_planner] by /move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:48,247: +PARAM [/move_base/base_local_planner] by /move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:48,249: +PARAM [/move_base/planner_frequency] by /move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:48,252: +PARAM [/move_base/controller_frequency] by /move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:48,254: +PARAM [/move_base/planner_patience] by /move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:48,256: +PARAM [/amazon_warehouse_robot_patrol/move_base/base_global_planner] by /amazon_warehouse_robot_patrol/move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:48,257: +PARAM [/move_base/controller_patience] by /move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:48,258: +PARAM [/amazon_warehouse_robot_patrol/move_base/base_local_planner] by /amazon_warehouse_robot_patrol/move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:48,259: +PARAM [/move_base/max_planning_retries] by /move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:48,261: +PARAM [/amazon_warehouse_robot_patrol/move_base/planner_frequency] by /amazon_warehouse_robot_patrol/move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:48,262: +PARAM [/move_base/conservative_reset_dist] by /move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:48,263: +PARAM [/amazon_warehouse_robot_patrol/move_base/controller_frequency] by /amazon_warehouse_robot_patrol/move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:48,264: +PARAM [/move_base/recovery_behavior_enabled] by /move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:48,266: +PARAM [/amazon_warehouse_robot_patrol/move_base/planner_patience] by /amazon_warehouse_robot_patrol/move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:48,267: +PARAM [/move_base/clearing_rotation_allowed] by /move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:48,268: +PARAM [/amazon_warehouse_robot_patrol/move_base/controller_patience] by /amazon_warehouse_robot_patrol/move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:48,269: +PARAM [/move_base/shutdown_costmaps] by /move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:48,270: +PARAM [/amazon_warehouse_robot_patrol/move_base/max_planning_retries] by /amazon_warehouse_robot_patrol/move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:48,272: +PARAM [/move_base/oscillation_timeout] by /move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:48,273: +PARAM [/amazon_warehouse_robot_patrol/move_base/conservative_reset_dist] by /amazon_warehouse_robot_patrol/move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:48,274: +PARAM [/move_base/oscillation_distance] by /move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:48,276: +PARAM [/amazon_warehouse_robot_patrol/move_base/recovery_behavior_enabled] by /amazon_warehouse_robot_patrol/move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:48,276: +PARAM [/move_base/restore_defaults] by /move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:48,278: +PARAM [/amazon_warehouse_robot_patrol/move_base/clearing_rotation_allowed] by /amazon_warehouse_robot_patrol/move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:48,279: +PARAM [/move_base/base_global_planner] by /move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:48,280: +PARAM [/amazon_warehouse_robot_patrol/move_base/shutdown_costmaps] by /amazon_warehouse_robot_patrol/move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:48,282: +PARAM [/move_base/base_local_planner] by /move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:48,283: +PARAM [/amazon_warehouse_robot_patrol/move_base/oscillation_timeout] by /amazon_warehouse_robot_patrol/move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:48,284: +PARAM [/move_base/planner_frequency] by /move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:48,285: +PARAM [/amazon_warehouse_robot_patrol/move_base/oscillation_distance] by /amazon_warehouse_robot_patrol/move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:48,286: +PARAM [/move_base/controller_frequency] by /move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:48,288: +PARAM [/amazon_warehouse_robot_patrol/move_base/restore_defaults] by /amazon_warehouse_robot_patrol/move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:48,289: +PARAM [/move_base/planner_patience] by /move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:48,290: +PARAM [/amazon_warehouse_robot_patrol/move_base/base_global_planner] by /amazon_warehouse_robot_patrol/move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:48,291: +PARAM [/move_base/controller_patience] by /move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:48,293: +PARAM [/amazon_warehouse_robot_patrol/move_base/base_local_planner] by /amazon_warehouse_robot_patrol/move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:48,293: +PARAM [/move_base/max_planning_retries] by /move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:48,295: +PARAM [/amazon_warehouse_robot_patrol/move_base/planner_frequency] by /amazon_warehouse_robot_patrol/move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:48,296: +PARAM [/move_base/conservative_reset_dist] by /move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:48,298: +PARAM [/amazon_warehouse_robot_patrol/move_base/controller_frequency] by /amazon_warehouse_robot_patrol/move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:48,298: +PARAM [/move_base/recovery_behavior_enabled] by /move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:48,300: +PARAM [/amazon_warehouse_robot_patrol/move_base/planner_patience] by /amazon_warehouse_robot_patrol/move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:48,301: +PARAM [/move_base/clearing_rotation_allowed] by /move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:48,302: +PARAM [/amazon_warehouse_robot_patrol/move_base/controller_patience] by /amazon_warehouse_robot_patrol/move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:48,304: +PARAM [/move_base/shutdown_costmaps] by /move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:48,305: +PARAM [/amazon_warehouse_robot_patrol/move_base/max_planning_retries] by /amazon_warehouse_robot_patrol/move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:48,306: +PARAM [/move_base/oscillation_timeout] by /move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:48,307: +PARAM [/amazon_warehouse_robot_patrol/move_base/conservative_reset_dist] by /amazon_warehouse_robot_patrol/move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:48,309: +PARAM [/move_base/oscillation_distance] by /move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:48,310: +PARAM [/amazon_warehouse_robot_patrol/move_base/recovery_behavior_enabled] by /amazon_warehouse_robot_patrol/move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:48,311: +PARAM [/move_base/restore_defaults] by /move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:48,312: +PARAM [/amazon_warehouse_robot_patrol/move_base/clearing_rotation_allowed] by /amazon_warehouse_robot_patrol/move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:48,314: +PARAM [/amazon_warehouse_robot_patrol/move_base/shutdown_costmaps] by /amazon_warehouse_robot_patrol/move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:48,315: +PARAM [/amazon_warehouse_robot_patrol/move_base/oscillation_timeout] by /amazon_warehouse_robot_patrol/move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:48,316: +PARAM [/amazon_warehouse_robot_patrol/move_base/oscillation_distance] by /amazon_warehouse_robot_patrol/move_base
+[rosmaster.master][INFO] 2019-08-06 18:02:48,317: +PARAM [/amazon_warehouse_robot_patrol/move_base/restore_defaults] by /amazon_warehouse_robot_patrol/move_base
+[rosmaster.master][INFO] 2019-08-06 18:03:02,462: -PUB [/rosout_agg] /rosout http://10.1.199.229:36631/
+[rosmaster.master][INFO] 2019-08-06 18:03:02,463: -SUB [/clock] /rosout http://10.1.199.229:36631/
+[rosmaster.master][INFO] 2019-08-06 18:03:02,464: -SUB [/rosout] /rosout http://10.1.199.229:36631/
+[rosmaster.master][INFO] 2019-08-06 18:03:02,465: -SERVICE [/rosout/get_loggers] /rosout rosrpc://10.1.199.229:34187
+[rosmaster.master][INFO] 2019-08-06 18:03:02,467: -SERVICE [/rosout/set_logger_level] /rosout rosrpc://10.1.199.229:34187
+[rosmaster.main][INFO] 2019-08-06 18:03:02,503: keyboard interrupt, will exit
+[rosmaster.main][INFO] 2019-08-06 18:03:02,503: stopping master...
+[rospy.core][INFO] 2019-08-06 18:03:02,503: signal_shutdown [atexit]
