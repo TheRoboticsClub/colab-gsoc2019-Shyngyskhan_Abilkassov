@@ -63,8 +63,7 @@ if __name__ == '__main__':
     motors = PublisherMotors("/amazon_warehouse_robot/teleop", 0.5, 0.25)
     pose = ListenerPose3d("/amazon_warehouse_robot/odom")
 
-    pathListener = ListenerPath("/move_base/NavfnROS/plan")
-    # goalPublisher = PublisherGoal("/move_base/current_goal")
+    pathListener = ListenerPath("/amazon_warehouse_robot/move_base/NavfnROS/plan")
     moveBaseClient = MoveBaseClient()
 
     vel = Velocity(0, 0, motors.getMaxV(), motors.getMaxW())

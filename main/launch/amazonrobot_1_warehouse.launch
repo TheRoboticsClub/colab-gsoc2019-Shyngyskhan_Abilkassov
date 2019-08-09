@@ -132,11 +132,11 @@
     <remap from="/move_base_patrol/TrajectoryPlannerROS/local_plan"                       to="/amazon_warehouse_robot_patrol/move_base/TrajectoryPlannerROS/local_plan" />
     <remap from="/move_base_patrol/TrajectoryPlannerROS/parameter_descriptions"           to="/amazon_warehouse_robot_patrol/move_base/TrajectoryPlannerROS/parameter_descriptions" />
     <remap from="/move_base_patrol/TrajectoryPlannerROS/parameter_updates"                to="/amazon_warehouse_robot_patrol/move_base/TrajectoryPlannerROS/parameter_updates" />
-
-    <remap from="/cmd_vel"                                                         to="/amazon_warehouse_robot_patrol/move_base/cmd_vel" />
-    <remap from="/move_base/cancel"                                                to="/amazon_warehouse_robot_patrol/move_base/cancel" />
+       
+    <remap from="/cmd_vel"                                                                to="/amazon_warehouse_robot_patrol/move_base/cmd_vel" />
+    <remap from="/move_base/cancel"                                                       to="/amazon_warehouse_robot_patrol/move_base/cancel" />
     <remap from="/move_base_patrol/current_goal"                                          to="/amazon_warehouse_robot_patrol/move_base/current_goal" />
-    <remap from="/move_base/feedback"                                              to="/amazon_warehouse_robot_patrol/move_base/feedback" />
+    <remap from="/move_base/feedback"                                                     to="/amazon_warehouse_robot_patrol/move_base/feedback" />
 
     <remap from="/move_base_patrol/global_costmap/costmap"                                to="/amazon_warehouse_robot_patrol/move_base/global_costmap/costmap" />
     <remap from="/move_base_patrol/global_costmap/costmap_updates"                        to="/amazon_warehouse_robot_patrol/move_base/global_costmap/costmap_updates" />
@@ -150,7 +150,7 @@
     <remap from="/move_base_patrol/global_costmap/static_layer/parameter_descriptions"    to="/amazon_warehouse_robot_patrol/move_base/global_costmap/static_layer/parameter_descriptions" />
     <remap from="/move_base_patrol/global_costmap/static_layer/parameter_updates"         to="/amazon_warehouse_robot_patrol/move_base/global_costmap/static_layer/parameter_updates" />
 
-    <remap from="/move_base/goal"                                                  to="/amazon_warehouse_robot_patrol/move_base/goal" />
+    <remap from="/move_base/goal"                                                         to="/amazon_warehouse_robot_patrol/move_base/goal" />
 
     <remap from="/move_base_patrol/local_costmap/costmap"                                 to="/amazon_warehouse_robot_patrol/move_base/local_costmap/costmap" />
     <remap from="/move_base_patrol/local_costmap/costmap_updates"                         to="/amazon_warehouse_robot_patrol/move_base/local_costmap/costmap_updates" />
@@ -164,9 +164,9 @@
 
     <remap from="/move_base_patrol/parameter_descriptions"                                to="/amazon_warehouse_robot_patrol/move_base/parameter_descriptions" />
     <remap from="/move_base_patrol/parameter_updates"                                     to="/amazon_warehouse_robot_patrol/move_base/parameter_updates" />
-    <remap from="/move_base/result"                                                to="/amazon_warehouse_robot_patrol/move_base/result" />
-    <remap from="/move_base/status"                                                to="/amazon_warehouse_robot_patrol/move_base/status" />
-    <remap from="/move_base_simple/goal"                                           to="/amazon_warehouse_robot_patrol/move_base_simple/goal" />
+    <remap from="/move_base/result"                                                       to="/amazon_warehouse_robot_patrol/move_base/result" />
+    <remap from="/move_base/status"                                                       to="/amazon_warehouse_robot_patrol/move_base/status" />
+    <remap from="/move_base_simple/goal"                                                  to="/amazon_warehouse_robot_patrol/move_base_simple/goal" />
   </node>
 
 </launch>
