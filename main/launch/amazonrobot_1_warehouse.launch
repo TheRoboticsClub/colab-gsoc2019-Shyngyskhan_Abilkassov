@@ -47,6 +47,7 @@
     <param name="global_frame_id" value="$(arg global_frame_id)"/>
 
     <remap from="/amcl_pose" to="/amazon_warehouse_robot/amcl_pose" />
+    <remap from="/particlecloud" to="/amazon_warehouse_robot/particlecloud" />
   </node>
 
   <!-- Move base node. Used for global and local navigation. -->
@@ -117,6 +118,7 @@
     <param name="global_frame_id" value="map"/>
 
     <remap from="/amcl_pose" to="/amazon_warehouse_robot_patrol/amcl_pose" />
+    <remap from="/particlecloud" to="/amazon_warehouse_robot_patrol/particlecloud" />
   </node>
 
   <node pkg="move_base" type="move_base" respawn="false" name="move_base_patrol" output="screen">
@@ -133,7 +135,7 @@
     <remap from="/move_base_patrol/TrajectoryPlannerROS/parameter_descriptions"           to="/amazon_warehouse_robot_patrol/move_base/TrajectoryPlannerROS/parameter_descriptions" />
     <remap from="/move_base_patrol/TrajectoryPlannerROS/parameter_updates"                to="/amazon_warehouse_robot_patrol/move_base/TrajectoryPlannerROS/parameter_updates" />
        
-    <remap from="/cmd_vel"                                                                to="/amazon_warehouse_robot_patrol/move_base/cmd_vel" />
+    <remap from="/cmd_vel"                                                                to="/amazon_warehouse_robot_patrol/cmd_vel" />
     <remap from="/move_base/cancel"                                                       to="/amazon_warehouse_robot_patrol/move_base/cancel" />
     <remap from="/move_base_patrol/current_goal"                                          to="/amazon_warehouse_robot_patrol/move_base/current_goal" />
     <remap from="/move_base/feedback"                                                     to="/amazon_warehouse_robot_patrol/move_base/feedback" />
