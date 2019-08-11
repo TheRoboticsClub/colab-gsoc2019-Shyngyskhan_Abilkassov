@@ -21,42 +21,23 @@
   <node pkg="tf" type="static_transform_publisher" name="base_to_laser_main" 
     args="0.139000 0.000000 0.15 0.000000 0.000000 0.000000 /amazon_warehouse_robot/base /amazon_warehouse_robot/hokuyo_link 20" />
 
-  <!-- Multiplexer is used to choose one controller at a time -->
+  <node pkg="tf" type="static_transform_publisher" name="map_to_odom_main" 
+    args="0 0 0 0 0 0 /map /amazon_warehouse_robot/odom 20" />
+
   <node pkg="nodelet" type="nodelet" name="nodelet_manager" args="manager"/>
   <node pkg="nodelet" type="nodelet" name="cmd_vel_mux" args="load yocs_cmd_vel_mux/CmdVelMuxNodelet nodelet_manager">
     <remap from="/cmd_vel_mux/output/cmd_vel"           to="/amazon_warehouse_robot/cmd_vel" />
     <param name="yaml_cfg_file" value="./config/mux_params.yaml"/>
   </node>
 
-  <!-- AMCL params. Used to generate map to odom transform -->
-  <arg name="use_map_topic"   default="true"/>
-  <arg name="scan_topic"      default="amazon_warehouse_robot/laser/scan"/> 
-  <arg name="odom_frame_id"   default="amazon_warehouse_robot/odom"/>
-  <arg name="base_frame_id"   default="amazon_warehouse_robot/base"/>
-  <arg name="global_frame_id" default="map"/>
-
-  <node pkg="amcl" type="amcl" name="amcl"  output="screen">
-    <param name="use_map_topic" value="$(arg use_map_topic)"/>
-    <param name="odom_model_type" value="diff"/>
-    <param name="gui_publish_rate" value="10.0"/>
-    <param name="laser_max_beams" value="60"/>
-    <param name="laser_max_range" value="10.0"/>
-    <param name="odom_frame_id" value="$(arg odom_frame_id)"/>
-    <param name="base_frame_id" value="$(arg base_frame_id)"/>
-    <remap from="scan" to="$(arg scan_topic)"/>
-    <param name="global_frame_id" value="$(arg global_frame_id)"/>
-
-    <remap from="/amcl_pose" to="/amazon_warehouse_robot/amcl_pose" />
-    <remap from="/particlecloud" to="/amazon_warehouse_robot/particlecloud" />
-  </node>
-
-  <!-- Move base node. Used for global and local navigation. -->
   <node pkg="move_base" type="move_base" respawn="false" name="move_base" output="screen">
     <rosparam file="./config/main_robot/costmap_common_params.yaml" command="load" ns="global_costmap" /> 
     <rosparam file="./config/main_robot/costmap_common_params.yaml" command="load" ns="local_costmap" />
     <rosparam file="./config/main_robot/local_costmap_params.yaml" command="load" />
     <rosparam file="./config/main_robot/global_costmap_params.yaml" command="load" /> 
     <rosparam file="./config/main_robot/base_local_planner_params.yaml" command="load" />
+
+    <remap from="/odom" to="/amazon_warehouse_robot/odom"/>
 
     <remap from="/move_base/NavfnROS/plan"                                         to="/amazon_warehouse_robot/move_base/NavfnROS/plan" />
     <remap from="/move_base/TrajectoryPlannerROS/cost_cloud"                       to="/amazon_warehouse_robot/move_base/TrajectoryPlannerROS/cost_cloud" />
@@ -101,25 +82,12 @@
     <remap from="/move_base_simple/goal"                                           to="/amazon_warehouse_robot/move_base_simple/goal" />
   </node>
 
-
   <!-- Same nodes for the second (patrol) robot -->
-  <node pkg="tf" type="static_transform_publisher" name="base_to_laser_patrol" 
+  <!-- <node pkg="tf" type="static_transform_publisher" name="base_to_laser_patrol" 
     args="0.139000 0.000000 0.15 0.000000 0.000000 0.000000 /amazon_warehouse_robot_patrol/base /amazon_warehouse_robot_patrol/hokuyo_link 20" />
 
-  <node pkg="amcl" type="amcl" name="amcl_patrol"  output="screen">
-    <param name="use_map_topic" value="true"/>
-    <param name="odom_model_type" value="diff"/>
-    <param name="gui_publish_rate" value="10.0"/>
-    <param name="laser_max_beams" value="60"/>
-    <param name="laser_max_range" value="10.0"/>
-    <param name="odom_frame_id" value="amazon_warehouse_robot_patrol/odom"/>
-    <param name="base_frame_id" value="amazon_warehouse_robot_patrol/base"/>
-    <remap from="scan" to="amazon_warehouse_robot_patrol/laser/scan"/>
-    <param name="global_frame_id" value="map"/>
-
-    <remap from="/amcl_pose" to="/amazon_warehouse_robot_patrol/amcl_pose" />
-    <remap from="/particlecloud" to="/amazon_warehouse_robot_patrol/particlecloud" />
-  </node>
+  <node pkg="tf" type="static_transform_publisher" name="map_to_odom_patrol" 
+      args="3 0 0 0 0 0 /map /amazon_warehouse_robot_patrol/odom 20" />
 
   <node pkg="move_base" type="move_base" respawn="false" name="move_base_patrol" output="screen">
     <rosparam file="./config/patrol_robot/costmap_common_params.yaml" command="load" ns="global_costmap" /> 
@@ -127,6 +95,8 @@
     <rosparam file="./config/patrol_robot/local_costmap_params.yaml" command="load" />
     <rosparam file="./config/patrol_robot/global_costmap_params.yaml" command="load" /> 
     <rosparam file="./config/patrol_robot/base_local_planner_params.yaml" command="load" />
+
+    <remap from="/odom" to="/amazon_warehouse_robot_patrol/odom"/>
 
     <remap from="/move_base_patrol/NavfnROS/plan"                                         to="/amazon_warehouse_robot_patrol/move_base/NavfnROS/plan" />
     <remap from="/move_base_patrol/TrajectoryPlannerROS/cost_cloud"                       to="/amazon_warehouse_robot_patrol/move_base/TrajectoryPlannerROS/cost_cloud" />
@@ -169,6 +139,6 @@
     <remap from="/move_base/result"                                                       to="/amazon_warehouse_robot_patrol/move_base/result" />
     <remap from="/move_base/status"                                                       to="/amazon_warehouse_robot_patrol/move_base/status" />
     <remap from="/move_base_simple/goal"                                                  to="/amazon_warehouse_robot_patrol/move_base_simple/goal" />
-  </node>
+  </node> -->
 
 </launch>
