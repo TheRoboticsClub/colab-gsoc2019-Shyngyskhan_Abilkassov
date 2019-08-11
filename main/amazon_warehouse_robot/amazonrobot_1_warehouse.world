@@ -179,7 +179,7 @@
       </include>
     </model>
 
-   <model name="amazon_warehouse_robot_patrol">
+   <!-- <model name="amazon_warehouse_robot_patrol">
       <include>
         <uri>model://amazon_warehouse_robot</uri>
 	      <pose>3 0 0 0 0 3.14</pose>
@@ -191,8 +191,15 @@
             </plugin>
           </sensor>
 	      </gazebo>
+      </include> 
+    </model>-->
+
+    <!-- <model name="amazon_warehouse_robot_patrol">
+      <include>
+        <uri>model://amazon_warehouse_robot</uri>
+	      <pose>3 0 0 0 0 0</pose>
       </include>
-    </model>
+    </model> -->
 
     <!-- Walls that surround the warehouse -->
       <include>
