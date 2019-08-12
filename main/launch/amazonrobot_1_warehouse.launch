@@ -87,7 +87,7 @@
     args="0.139000 0.000000 0.15 0.000000 0.000000 0.000000 /amazon_warehouse_robot_patrol/amazon_warehouse_robot::chassis /amazon_warehouse_robot_patrol/hokuyo_link 20" />
 
   <node pkg="tf" type="static_transform_publisher" name="map_to_odom_patrol" 
-      args="3 0 0 0 0 0 /map /amazon_warehouse_robot_patrol/odom 20" />
+      args="0 0 0 0 0 0 /map /amazon_warehouse_robot_patrol/odom 20" />
 
   <node pkg="move_base" type="move_base" respawn="false" name="move_base_patrol" output="screen">
     <rosparam file="./config/patrol_robot/costmap_common_params.yaml" command="load" ns="global_costmap" /> 
