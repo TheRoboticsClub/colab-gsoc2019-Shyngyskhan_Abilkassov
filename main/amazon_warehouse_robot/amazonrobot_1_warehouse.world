@@ -172,12 +172,12 @@
 
 
     <!-- Our Robot model --> 
-    <model name="amazon_warehouse_robot">
+    <!-- <model name="amazon_warehouse_robot">
       <include>
         <uri>model://amazon_warehouse_robot</uri>
 	      <pose>0 0 0 0 0 0</pose>
       </include>
-    </model>
+    </model> -->
 
    <!-- <model name="amazon_warehouse_robot_patrol">
       <include>
@@ -194,12 +194,12 @@
       </include> 
     </model>-->
 
-    <!-- <model name="amazon_warehouse_robot_patrol">
+    <model name="amazon_warehouse_robot_patrol">
       <include>
         <uri>model://amazon_warehouse_robot</uri>
-	      <pose>3 0 0 0 0 0</pose>
+	      <pose>0 0 0 0 0 0</pose>
       </include>
-    </model> -->
+    </model>
 
     <!-- Walls that surround the warehouse -->
       <include>
