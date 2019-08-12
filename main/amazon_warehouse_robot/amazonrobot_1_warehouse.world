@@ -197,7 +197,7 @@
     <model name="amazon_warehouse_robot_patrol">
       <include>
         <uri>model://amazon_warehouse_robot</uri>
-	      <pose>0 0 0 0 0 0</pose>
+	      <pose>3 0 0 0 0 0</pose>
       </include>
     </model>
 
