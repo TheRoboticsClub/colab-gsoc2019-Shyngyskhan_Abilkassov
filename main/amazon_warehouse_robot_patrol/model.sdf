@@ -5,7 +5,7 @@
       <static>false</static>
 
       <link name="chassis">
-         <pose>0 0 .05 0 0 0</pose>
+         <pose>3 0 .05 0 0 0</pose>
          <inertial>
             <inertia>
                <ixx>0</ixx>
@@ -92,7 +92,7 @@
       </link>
 
       <link name="left_wheel">
-         <pose>0 0.30 0.05 0 1.5707 1.5707</pose>
+         <pose>3 0.30 0.05 0 1.5707 1.5707</pose>
          <collision name="collision">
             <geometry>
                <cylinder>
@@ -112,7 +112,7 @@
       </link>
 
       <link name="right_wheel">
-         <pose>0 -0.30 0.05 0 1.5707 1.5707</pose>
+         <pose>3 -0.30 0.05 0 1.5707 1.5707</pose>
          <collision name="collision">
             <geometry>
                <cylinder>
@@ -133,7 +133,7 @@
 
       <!-- Hokuyo laser -->
       <link name="laser">
-         <pose>0.139000 0.000000 0.15 0.000000 0.000000 0.000000</pose>
+         <pose>3.139000 0.000000 0.15 0.000000 0.000000 0.000000</pose>
          <gravity>0</gravity>
          <inertial>
             <mass>0.100000</mass>
@@ -212,7 +212,7 @@
 
       <!-- Lift platform -->
       <link name="top_lift">
-         <pose>0 0 0.2 0 0 0</pose>
+         <pose>3 0 0.2 0 0 0</pose>
          <collision name="collision">
             <geometry>
                <cylinder>
@@ -333,5 +333,6 @@
          <odometrySource>world</odometrySource>
          <publishTf>1</publishTf>
       </plugin>
+
    </model>
 </sdf>
