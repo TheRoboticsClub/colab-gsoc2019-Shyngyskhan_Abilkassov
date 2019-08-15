@@ -53,8 +53,8 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         self.playButton.setCheckable(True)
         #self.stopButton.clicked.connect(self.stopClicked)
 
-        plannerList = ['RRTstar', 'SORRTstar','BITstar', 'FMTstar', 'InformedRRTstar', 'PRMstar']
-        self.plannerBox.addItems(plannerList)
+        # plannerList = ['RRTstar', 'SORRTstar','BITstar', 'FMTstar', 'InformedRRTstar', 'PRMstar']
+        # self.plannerBox.addItems(plannerList)
         # objectiveList = ['PathClearance', 'PathLength', 'ThresholdPathLength', 'WeightedLengthAndClearanceCombo']
         # self.objectiveBox.addItems(objectiveList)
         self.liftDropButton.clicked.connect(self.liftDropExecute)
@@ -119,9 +119,9 @@ class MainWindow(QMainWindow, Ui_MainWindow):
 
     def getPathClicked(self):
         pList = []
-        pList.append(self.getPlanner())
+        # pList.append(self.getPlanner())
         #pList.append(self.getObjective())
-        pList.append(self.getRunTime())
+        # pList.append(self.getRunTime())
         self.getPathSig.emit(pList)
 
     def playClicked(self):
@@ -143,12 +143,12 @@ class MainWindow(QMainWindow, Ui_MainWindow):
             self.teleop.stopSIG.emit()
 
     def setXYValues(self,newW,newV):
-        self.WValue.setText(str(newW))
-        self.VValue.setText(str(-newV))
+        # self.WValue.setText(str(newW))
+        # self.VValue.setText(str(-newV))
         myW = newW * self.vel.getMaxW()
         myV = -newV * self.vel.getMaxV()
-        # self.vel.setV(myV)
-        # self.vel.setW(myW)
+        self.vel.setV(myV)
+        self.vel.setW(myW)
 
     def getPlanner(self):
         planner = self.plannerBox.currentText()

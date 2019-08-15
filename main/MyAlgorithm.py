@@ -192,7 +192,7 @@ class MyAlgorithm(threading.Thread):
         print ('Isexecuting: ' + str(self.executingTask))
         print ('Button: ' + str(self.pickNewPalletPressed))
         print ('Pose: ' + str(pose))
-        print ('goalAchieved: ' + str(goalAchieved) + "\n")
+        print ('taskCompleted: ' + str(self.taskCompleted) + "\n")
 
         if goalAchieved:
             self.executingTask = False
@@ -286,7 +286,7 @@ class MyAlgorithm(threading.Thread):
                     destInWorld = self.grid.gridToWorld(validDest[0], validDest[1])
                     self.client.sendGoalToClient(destInWorld[0], destInWorld[1], yaw = 3.14)
                     self.drawPath()    
-                elif (abs(pose[0] - 380) < 2) and (abs(pose[1] - 175) < 2):
+                elif (abs(pose[0] - 380) < 3) and (abs(pose[1] - 175) < 2):
                     ## Dropping old pallet at dest
                     self.liftDropExecute()
                     

@@ -109,10 +109,6 @@ class TeleopWidget(QWidget):
 
         #print "v: %f w: %f" % (v_normalized,w_normalized)
 
-        # -----
-        # Teleop is temporarily turned of as it affects the performance of move_base package
-        # doesn't help
         self.winParent.setXYValues(w_normalized,v_normalized)
-        # -----
 
         painter.drawImage(self.line.x()-self.qimage.width()/2, self.line.y()-self.qimage.height()/2, self.qimage);

@@ -18,7 +18,7 @@
 
   <!-- Nodes for the main robot -->
   <!-- Main robot laser to base transform -->
-  <!-- <node pkg="tf" type="static_transform_publisher" name="base_to_laser_main" 
+  <node pkg="tf" type="static_transform_publisher" name="base_to_laser_main" 
     args="0.139000 0.000000 0.15 0.000000 0.000000 0.000000 /amazon_warehouse_robot/amazon_warehouse_robot::chassis /amazon_warehouse_robot/hokuyo_link 20" />
 
   <node pkg="tf" type="static_transform_publisher" name="map_to_odom_main" 
@@ -80,10 +80,10 @@
     <remap from="/move_base/result"                                                to="/amazon_warehouse_robot/move_base/result" />
     <remap from="/move_base/status"                                                to="/amazon_warehouse_robot/move_base/status" />
     <remap from="/move_base_simple/goal"                                           to="/amazon_warehouse_robot/move_base_simple/goal" />
-  </node> -->
+  </node>
 
   <!-- Same nodes for the second (patrol) robot -->
-  <node pkg="tf" type="static_transform_publisher" name="base_to_laser_patrol" 
+  <!-- <node pkg="tf" type="static_transform_publisher" name="base_to_laser_patrol" 
     args="0.139000 0.000000 0.15 0.000000 0.000000 0.000000 /amazon_warehouse_robot_patrol/amazon_warehouse_robot::chassis /amazon_warehouse_robot_patrol/hokuyo_link 20" />
 
   <node pkg="tf" type="static_transform_publisher" name="map_to_odom_patrol" 
@@ -139,6 +139,6 @@
     <remap from="/move_base/result"                                                       to="/amazon_warehouse_robot_patrol/move_base/result" />
     <remap from="/move_base/status"                                                       to="/amazon_warehouse_robot_patrol/move_base/status" />
     <remap from="/move_base_simple/goal"                                                  to="/amazon_warehouse_robot_patrol/move_base_simple/goal" />
-  </node>
+  </node> -->
 
 </launch>
